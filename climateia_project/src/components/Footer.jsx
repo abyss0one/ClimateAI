@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <div className="flex md:flex-row justify-between items-stretch mb-4  md:mx-20">
+      <div className="flex  justify-between items-stretch mb-4  md:mx-20">
         <div className=" text-2xl font-['Poppins'] font-bold ">
           Climate AI
           <div className=" text-justify text-sm font-['Corbel'] leading-[22.4px] text-[#565656] w-[350px] ">
