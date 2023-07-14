@@ -7,6 +7,7 @@ import ModifiedPrediction from "./components/ModifiedPrediction";
 import AdviceNTips from "./components/AdviceNTips";
 import Footer from "./components/Footer";
 import Btn_down from "./components/Btn_down";
+
 function App() {
   const [count, setCount] = useState(0);
 

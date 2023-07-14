@@ -1,4 +1,6 @@
 import React from 'react'
+import LineChart from "./LineChart";
+
 
 const Context = () => {
   return (
@@ -25,10 +27,9 @@ const Context = () => {
           <div className="text-center text-2xl font-['Corbel'] text-[#415c2e] bg-[transparent] mb-5 w-2/3 h-[16.99%]">
             Business Idea Planning
           </div>
-          <img
-            src="https://file.rendit.io/n/bLoTL5ohBcqPN1q5DGxx.png"
-            className="min-h-0 min-w-0"
-          />
+          <div className="min-h-0 min-w-0"> 
+          <LineChart />
+          </div>
           <div className="text-center font-['Corbel'] leading-[22.4px] text-[#658e47] self-stretch mr-3 h-[12.9%]">
             We present you a proposal and discuss niffty-gritty like
           </div>
@@ -63,9 +64,14 @@ const Context = () => {
     </div>
     <img
       src="https://file.rendit.io/n/vgowFxEpwLSfBDecrhYT.png"
-      className="min-h-0 min-w-0"
+      className=" min-h-0 min-w-0"
     />
   </div>
+
+
+
+
+  
   )
 }
 
