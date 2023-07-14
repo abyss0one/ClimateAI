@@ -24,7 +24,6 @@ const Footer = () => {
             <br />
             <a href="#">Education and Awareness</a>
           </div>
-          <div></div>
         </div>
         <div className="text-xl font-['Corbel']  w-20 ">
           Company
