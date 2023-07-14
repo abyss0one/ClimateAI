@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <div className="flex  justify-between items-stretch mb-4  md:mx-20">
+      <div className="flex justify-between items-stretch mb-4 mx-20  ">
         <div className=" text-2xl font-['Poppins'] font-bold ">
           Climate AI
           <div className=" text-justify text-sm font-['Corbel'] leading-[22.4px] text-[#565656] w-[350px] ">
@@ -13,9 +13,9 @@ const Footer = () => {
             decisions.
           </div>
         </div>
-        <div className="whitespace-nowrap text-xl font-['Corbel'] w-24 ">
+        <div className="whitespace-nowrap text-xl font-['Corbel']  ">
           What We Do
-          <div className="whitespace-nowrap text-sm font-Corbel leading-[28px] self-center w-[148px]  mb-px">
+          <div className="whitespace-nowrap text-sm font-Corbel leading-[28px]">
             <a href="#">Climate prediction</a>
             <br />
             <a href="#">Data Analysis</a>
@@ -25,17 +25,17 @@ const Footer = () => {
             <a href="#">Education and Awareness</a>
           </div>
         </div>
-        <div className="text-xl font-['Corbel']  w-20 ">
+        <div className="text-xl font-['Corbel'] ">
           Company
-          <div className="whitespace-nowrap text-sm font-Corbel leading-[28px] w-24 ">
+          <div className="whitespace-nowrap text-sm font-Corbel leading-[28px] ">
             <a href="#">About Us</a>
             <br />
             <a href="#">Become Investor</a>
           </div>
         </div>
-        <div className="text-xl font-['Corbel']  w-16 ">
+        <div className="text-xl font-['Corbel']   ">
           Support
-          <div className="text-sm font-Corbel leading-[28px] w-12 ">
+          <div className="text-sm font-Corbel leading-[28px] ">
             <a href="#">FAQ</a>
             <br />
             <a href="#">Policy</a>
@@ -43,9 +43,9 @@ const Footer = () => {
             <a href="#">Business</a>
           </div>
         </div>
-        <div className="text-xl font-['Corbel']  w-16 ">
+        <div className="text-xl font-['Corbel']   ">
           Contact
-          <div className="whitespace-nowrap text-sm font-Corbel leading-[28px] w-16 ">
+          <div className="whitespace-nowrap text-sm font-Corbel leading-[28px]  ">
             <a href="#">E-mail</a>
             <br />
             <a href="#">Support 24</a>
