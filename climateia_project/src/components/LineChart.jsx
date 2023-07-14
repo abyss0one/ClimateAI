@@ -27,8 +27,8 @@ ChartJS.register(
   Filler
 );
 
-const scores = [59.3, 27.8, 34.7];
-const labels = [2019, 2020, 2021];
+const scores = [12.3,1.9,89.5,38.9,20.0,9.5,2.7,67.9, 13.1, 11.3 ,7.6, 33];
+const labels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const options = {
   fill: true,
@@ -41,7 +41,7 @@ const options = {
   responsive: true,
   plugins: {
     legend: {
-      display: true,
+      display: false,
     },
   },
 };
@@ -52,7 +52,6 @@ export default function BarChart() {
     return {
       datasets: [
         {
-          label: "Ocupaciones hoteles",
           tension: 0.3,
           data: scores,
           backgroundColor: colors,
