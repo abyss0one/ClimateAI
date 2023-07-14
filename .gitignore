@@ -1,2 +1,2 @@
-*.csv
-*.gpkg
+datasets
+node_modules
