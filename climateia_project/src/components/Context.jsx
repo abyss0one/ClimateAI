@@ -2,20 +2,13 @@ import React from 'react'
 
 const Context = () => {
   return (
-    <div className="flex flex-row gap-1 items-center mb-12 ml-32 mr-24">
-    <div className="self-start flex flex-col justify-between mt-6 gap-3 w-1/2">
-      <div className="text-justify text-sm font-['Corbel'] leading-[22.4px] text-[#757575] mr-px">
-        La sequía, escasez de lluvias y altas temperaturas son una
-        preocupación en Cataluña. Hay un drástico descenso en las
-        precipitaciones, reduciendo los recursos hídricos. Las altas
-        temperaturas agravadas por el cambio climático aumentan la
-        evaporación. Gráficos de barras mostrarán el declive de las
-        lluvias y su impacto en el suministro de agua. Es urgente abordar
-        la situación con gestión del agua eficiente, conciencia sobre su
-        uso y alternativas sostenibles para enfrentar la sequía y el
-        cambio climático en Cataluña.
+    <div className="flex flex-row gap-1 items-center mb-12 mx-auto">
+    <div className="flex flex-col justify-between mt-6 gap-3 w-1/2 mx-auto">
+    <h1 className=''>What's happening</h1>
+      <div className="text-justify text-m font-['Corbel'] leading-[30px] text-[#757575]">
+      Drought, low rainfall and high temperatures are a concern in Catalonia. There is a drastic decrease in rainfall, reducing water resources. High temperatures aggravated by climate change increase evaporation. Bar graphs will show the decline in rainfall and its impact on water supply. It is urgent to address the situation with efficient water management, water use awareness and sustainable alternatives to face drought and climate change in Catalonia.
       </div>
-      <div className="flex flex-row ml-px gap-5 items-center">
+      <div className="flex flex-row  gap-5 items-center">
         <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-1/2 h-[329px] items-center px-5 py-4 rounded-[30px]">
           <div className="text-center text-2xl font-['Corbel'] text-[#415c2e] bg-[transparent] mb-5 w-2/3 h-[16.99%]">
             Business Idea Planning
