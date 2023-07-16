@@ -1,4 +1,3 @@
-
 //  MAPA ANTERIOR + BTN  AÑO
 import React, { Component } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
@@ -55,8 +54,6 @@ class Map_DefaultPrediction extends Component {
 
     return (
       <div>
-        <h1 style={{ textAlign: "center" }}>My Map</h1>
-
         {/* Formulario de selección de año */}
         <div>
           <label htmlFor="yearSelect">Seleccionar Año:</label>
