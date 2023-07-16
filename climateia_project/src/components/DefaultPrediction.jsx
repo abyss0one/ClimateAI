@@ -1,23 +1,22 @@
 import React from "react";
+import Map_DefaultPrediction from "./DefaultPrediction";
 
 const DefaultPrediction = () => {
   return (
     <div>
-      <div className="text-center text-4xl font-['Corbel'] text-[#658e47] bg-[linear-gradient(180deg,_#658e47_0%,_#658e47_100%)] mb-20 ml-[148px] mr-24">
+      <div className="text-center text-4xl font-Poppins text-text_green text-bold mb-20 mx-auto">
         Prediction
       </div>
-      <div className="flex flex-row gap-10 items-center mb-12 mx-32">
+      <div className="flex flex-row gap-10 items-center mb-12 md:mx-32">
         <div className="flex flex-col gap-6 w-1/2 h-[451px]">
-          <div className="text-justify font-['Corbel'] leading-[25.6px] text-[#565656] h-[21.06%]">
-            A continuación podrás realizar
-            {"  "}
-            tu prediccion de temperatura ,lluvia e índice de squía estimada para
-            la fecha que desees.
+          <div className="text-justify font-Poppins leading-[25.6px] text-text_color_body h-[21.06%]">
+            Then you can make your prediction of temperature, rainfall and
+            drought index estimated for the date you want.
             <br />
-            Introduce los datos requeridos en los siguientes campos:
+            Enter the required data in the following fields:
           </div>
           <div className="border-solid border-[#134e1c] overflow-hidden bg-[#f9fcff] relative flex flex-col items-end mb-6 mr-32 px-12 border-2 rounded">
-            <div className="w-[425px] text-2xl font-['SF_Pro_Text'] font-medium tracking-[0.26961862564086914] text-[#648f4d] absolute top-5 left-16 h-5">
+            <div className="w-[425px] text-2xl font-['SF_Pro_Text'] font-medium tracking-[0.26961862564086914] text-text_green absolute top-5 left-16 h-5">
               New York, United States
             </div>
             <img
@@ -26,7 +25,7 @@ const DefaultPrediction = () => {
             />
           </div>
           <div className="border-solid border-[#134e1c] overflow-hidden bg-[#f9fcff] relative flex flex-col items-end mb-12 mr-32 px-12 border-2 rounded">
-            <div className="w-[425px] text-2xl font-['SF_Pro_Text'] font-medium tracking-[0.26961862564086914] text-[#648f4d] absolute top-5 left-16 h-5">
+            <div className="w-[425px] text-2xl font-['SF_Pro_Text'] font-medium tracking-[0.26961862564086914] text-text_green absolute top-5 left-16 h-5">
               New York, United States
             </div>
             <img
@@ -40,7 +39,7 @@ const DefaultPrediction = () => {
             </div>
           </div>
         </div>
-        <div className="text-justify font-['Corbel'] leading-[25.6px] text-[#565656] self-start w-1/2">
+        <div className="text-justify font-Poppins leading-[25.6px] text-text_color_body self-start w-1/2">
           La interacción entre la temperatura y la cantidad de lluvia es
           fundamental para determinar el índice de sequía. Un aumento de la
           temperatura puede acelerar la evaporación y reducir la disponibilidad
