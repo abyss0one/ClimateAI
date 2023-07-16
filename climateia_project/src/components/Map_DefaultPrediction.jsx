@@ -13,7 +13,7 @@ class Map_DefaultPrediction extends Component {
       selectedYear: new Date().getFullYear(),
     };
   }
-
+// prueba
   componentDidMount() {
     console.log(mapData);
   }
