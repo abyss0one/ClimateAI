@@ -49,8 +49,8 @@ const Hero = () => {
             cambios climáticos en el área de Cataluña.
           </div>
         </div>
-        <button className="bg-white mx-auto justify-center h-16 items-center rounded-[60px] mb-8 transition-colors hover:bg-hover_btn hover:text-white hover:font-bold">
-          <div className="text-xl font-Poppins text-text_green mx-8 md:mx-24 font-bold">
+        <button className="bg-white mx-auto justify-center h-16 items-center rounded-[60px] mb-8 transition-colors hover:bg-hover_btn  hover:font-bold">
+          <div className="text-xl font-Poppins text-text_green mx-8 md:mx-24 font-bold hover:text-white">
             START
           </div>
         </button>

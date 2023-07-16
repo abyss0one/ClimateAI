@@ -54,17 +54,25 @@ class Map_DefaultPrediction extends Component {
 
     return (
       <div>
-        {/* Formulario de selección de año */}
-        <div>
-          <label htmlFor="yearSelect">Seleccionar Año:</label>
-          <select
-            id="yearSelect"
-            value={selectedYear}
-            onChange={this.handleYearSelect}
-          >
-            {yearOptions}
-          </select>
-        </div>
+        <form className="bg-gray-100 p-6 rounded-lg">
+          {/* Formulario de selección de año */}
+          <div className="mb-4">
+            <label
+              htmlFor="yearSelect"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Select year:
+            </label>
+            <select
+              id="yearSelect"
+              value={selectedYear}
+              onChange={this.handleYearSelect}
+              className="block w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-indigo-500"
+            >
+              {yearOptions}
+            </select>
+          </div>
+        </form>
 
         {mapVisible && (
           <MapContainer
@@ -136,23 +144,24 @@ class ComarcaSelector extends Component {
     const { mapData, selectedComarca } = this.props;
 
     return (
-      <div>
-        <h2>Comarca Selector</h2>
-        <select
-          value={selectedComarca ? selectedComarca.properties.cartodb_id : ""}
-          onChange={this.handleSelectChange}
-        >
-          <option value="">All Comarcas</option>
-          {mapData.map((comarca) => (
-            <option
-              key={comarca.properties.cartodb_id}
-              value={comarca.properties.cartodb_id}
-            >
-              {comarca.properties.nom_comar}
-            </option>
-          ))}
-        </select>
-      </div>
+      <form>
+              <select
+        value={selectedComarca ? selectedComarca.properties.cartodb_id : ""}
+        onChange={this.handleSelectChange}
+        className="block w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-indigo-500"
+      >
+        <option value="">All Comarcas</option>
+        {mapData.map((comarca) => (
+          <option
+            key={comarca.properties.cartodb_id}
+            value={comarca.properties.cartodb_id}
+          >
+            {comarca.properties.nom_comar}
+          </option>
+        ))}
+      </select>
+      </form>
+
     );
   }
 }

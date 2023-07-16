@@ -4,25 +4,27 @@ import Map_DefaultPrediction from "./Map_DefaultPrediction";
 const DefaultPrediction = () => {
   return (
     <div>
-      <div className="text-center text-4xl font-Poppins text-text_green text-bold mb-20 mx-auto">
+      <div className="text-center text-4xl font-Poppins text-text_green text-bold mb-14 mx-auto">
         Prediction
       </div>
-      <div className="flex flex-row gap-10  mb-12 mx-32 items-stretch">
-        <div className="flex flex-col gap-6 w-1/2">
-          <div className="text-justify font-Poppins leading-[25.6px] text-text_color_body">
+      <div className="flex flex-col lg:flex-row gap-8 mb-12 lg:mx-[200px] mx-6">
+        <div className="text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-text_color_body  xs:w-100% w-full lg:w-1/2">
+          <p>
             Then you can make your prediction of temperature, rainfall and
-            drought index estimated for the date you want.
-            <br />
+            drought index estimated for the date you want. <br />
             Enter the required data in the following fields:
+          </p>
+          <div className="w-full mt-[25%]">
+            <Map_DefaultPrediction />
           </div>
-          <Map_DefaultPrediction />
-          <div className="shadow-[0px_16px_30px_0px_rgba(50,_175,_100,_0.15)] bg-white self-start flex flex-col justify-center ml-32 h-16 shrink-0 items-center rounded-[35px]">
-            <div className="text-center text-lg font-Poppins font-bold text-text_green w-2/5 mx-12">
+          <div className="w-full lg:w-[30%] flex justify-center py-3 rounded-[35px] border border-text_green transition-colors hover:bg-hover_btn hover:font-bold mt-[25%]">
+            <button className="text-lg font-Poppins font-bold text-text_green w-full hover:text-white">
               PREDICT
-            </div>
+            </button>
           </div>
         </div>
-        <div className="text-justify font-Poppins leading-[25.6px] text-text_color_body self-start w-1/2">
+
+        <div className="text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-text_color_body xs:w-100% w-full lg:w-1/2 ">
           The interaction between temperature and rainfall is critical in
           determining the drought index. An increase in temperature can
           accelerate evaporation and reduce water availability, aggravating
@@ -44,8 +46,7 @@ const DefaultPrediction = () => {
           analyzed. atmospheric circulation patterns. These factors are combined
           with modeling and statistical analysis techniques to generate rainfall
           forecasts that help to understand precipitation patterns and estimate
-          the amount and distribution of rainfall in Barcelona. Translated with
-          www.DeepL.com/Translator (free version)
+          the amount and distribution of rainfall in Barcelona.
         </div>
       </div>
     </div>
