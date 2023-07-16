@@ -56,10 +56,10 @@ class Map_DefaultPrediction extends Component {
       <div>
         <form className="bg-gray-100 p-6 rounded-lg">
           {/* Formulario de selección de año */}
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="yearSelect"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-text_green font-bold mb-2"
             >
               Select year:
             </label>
@@ -67,7 +67,7 @@ class Map_DefaultPrediction extends Component {
               id="yearSelect"
               value={selectedYear}
               onChange={this.handleYearSelect}
-              className="block w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-indigo-500"
+              className="block w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-text_green"
             >
               {yearOptions}
             </select>
@@ -76,9 +76,9 @@ class Map_DefaultPrediction extends Component {
 
         {mapVisible && (
           <MapContainer
-            style={{ height: "80vh", width: "70%" }}
+            style={{ height: "85vh", width: "100%" }}
             zoom={7.5}
-            center={[41.90871072316908, 1.8147071013757636]}
+            center={[41.92038080757445, 1.5259606707365279]}
           >
             <TileLayer
               attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
@@ -144,24 +144,31 @@ class ComarcaSelector extends Component {
     const { mapData, selectedComarca } = this.props;
 
     return (
-      <form>
-              <select
-        value={selectedComarca ? selectedComarca.properties.cartodb_id : ""}
-        onChange={this.handleSelectChange}
-        className="block w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-indigo-500"
-      >
-        <option value="">All Comarcas</option>
-        {mapData.map((comarca) => (
-          <option
-            key={comarca.properties.cartodb_id}
-            value={comarca.properties.cartodb_id}
+      <form className="bg-gray-100 p-6 rounded-lg mt-5">
+        <div>
+          <label
+            htmlFor="yearSelect"
+            className="block text-text_green font-bold mb-2"
           >
-            {comarca.properties.nom_comar}
-          </option>
-        ))}
-      </select>
+            Select comarca:
+          </label>
+          <select
+            value={selectedComarca ? selectedComarca.properties.cartodb_id : ""}
+            onChange={this.handleSelectChange}
+            className="block w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-text_green"
+          >
+            <option value="">Comarcas...</option>
+            {mapData.map((comarca) => (
+              <option
+                key={comarca.properties.cartodb_id}
+                value={comarca.properties.cartodb_id}
+              >
+                {comarca.properties.nom_comar}
+              </option>
+            ))}
+          </select>
+        </div>
       </form>
-
     );
   }
 }
