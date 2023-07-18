@@ -41,10 +41,10 @@ const Context = () => {
 
     <div class="flex flex-col gap-3 lg:flex-row lg:gap-3">
   <div class="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white rounded-[30px] p-4">
-    <img src="../../public/assets/IPE9_1km_20230630_w.png" class="w-full h-full object-contain" />
+    <img src="/assets/IPE9_1km_20230630_w.png" class="w-full h-full object-contain" />
   </div>
   <div class="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white rounded-[30px] p-4">
-    <img src="../../public/assets/IPE36_1km_20230630_w.png" class="w-full h-full object-contain" />
+    <img src="/assets/IPE36_1km_20230630_w.png" class="w-full h-full object-contain" />
   </div>
 </div>
 
