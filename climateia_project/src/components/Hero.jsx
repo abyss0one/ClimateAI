@@ -20,6 +20,9 @@ const Hero = () => {
             className="self-center mr-[700px] mt-5 h"
           />
           <a href="" className="text-white text-[18px] hover-underline">
+            Context
+          </a>
+          <a href="" className="text-white text-[18px] hover-underline">
             Prediction
           </a>
           <a href="#" className="text-white text-[18px] hover-underline">

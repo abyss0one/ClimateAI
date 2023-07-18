@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Context = () => {
   return (
     <div className="flex flex-row gap-1 items-center mb-12 mx-auto">

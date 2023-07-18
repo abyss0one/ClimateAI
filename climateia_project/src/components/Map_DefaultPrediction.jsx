@@ -1,4 +1,4 @@
-//  MAPA ANTERIOR + BTN  AÑO
+// //  MAPA ANTERIOR + BTN  AÑO
 import React, { Component } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import mapData from "../data/archivo_actualizado.json";
@@ -174,3 +174,4 @@ class ComarcaSelector extends Component {
 }
 
 export default Map_DefaultPrediction;
+

@@ -263,6 +263,7 @@ class Form_DefaultPrediction extends Component {
     this.state = {
       selectedComarca: "",
       selectedYear: "7",
+      showError: false,
     };
   }
 
@@ -271,7 +272,11 @@ class Form_DefaultPrediction extends Component {
     const selectedComarca = mapData.features.find(
       (comarca) => comarca.properties.cartodb_id === selectedComarcaId
     );
-    this.setState({ selectedComarca: selectedComarca ? selectedComarca.properties.nom_comar : "" });
+    this.setState({
+      selectedComarca: selectedComarca
+        ? selectedComarca.properties.nom_comar
+        : "",
+    });
   };
 
   handleYearSelect = (event) => {
@@ -284,15 +289,17 @@ class Form_DefaultPrediction extends Component {
     const comarcas = selectedComarca;
     const fecha_prediction = selectedYear;
 
-    // Aquí puedes realizar cualquier acción con las variables comarcas y fecha_prediction
-    // Por ejemplo, puedes llamar a una función pasando estas variables como argumentos
-
-    console.log("Comarcas seleccionadas:", comarcas);
-    console.log("Fecha de predicción seleccionada:", fecha_prediction);
+    if (comarcas) {
+      console.log("Comarcas seleccionadas:", comarcas);
+      console.log("Fecha de predicción seleccionada:", fecha_prediction);
+      this.setState({ showError: false });
+    } else {
+      this.setState({ showError: true });
+    }
   };
 
   render() {
-    const { selectedComarca, selectedYear } = this.state;
+    const { selectedComarca, selectedYear, showError } = this.state;
 
     const currentYear = new Date().getFullYear();
     const yearOptions = [
@@ -304,10 +311,17 @@ class Form_DefaultPrediction extends Component {
       { value: "365", label: "1 año" },
     ];
 
+    const comarcaOptions = [
+      { value: "", label: selectedComarca ? selectedComarca : "Comarcas..." },
+      ...mapData.features.map((comarca) => ({
+        value: comarca.properties.cartodb_id.toString(),
+        label: comarca.properties.nom_comar,
+      })),
+    ];
+
     return (
       <div>
         <form className="bg-gray-100 p-6 rounded-lg">
-          {/* Formulario de selección de año */}
           <div className="mb-6">
             <label
               htmlFor="yearSelect"
@@ -329,7 +343,6 @@ class Form_DefaultPrediction extends Component {
             </select>
           </div>
 
-          {/* Formulario de selección de comarca */}
           <div>
             <label
               htmlFor="comarcaSelect"
@@ -343,27 +356,28 @@ class Form_DefaultPrediction extends Component {
               onChange={this.handleComarcaSelect}
               className="block w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-text_green"
             >
-              <option value="">Comarcas...</option>
-              {mapData.features.map((comarca) => (
-                <option
-                  key={comarca.properties.cartodb_id}
-                  value={comarca.properties.cartodb_id}
-                >
-                  {comarca.properties.nom_comar}
+              {comarcaOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
                 </option>
               ))}
             </select>
+            {showError && (
+              <p className="text-red-500 mt-2">
+                Por favor, seleccione una comarca.
+              </p>
+            )}
           </div>
-
-          {/* Botón de almacenamiento */}
+        </form>
+        <div className="w-full lg:w-[30%] flex justify-center py-3 rounded-[35px] border border-text_green transition-colors hover:bg-hover_btn hover:font-bold mt-[5%]">
           <button
             type="button"
             onClick={this.handleButtonClick}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+            className="text-lg font-Poppins font-bold text-text_green w-full hover:text-white"
           >
-            Almacenar
+            Predict
           </button>
-        </form>
+        </div>
       </div>
     );
   }
