@@ -1,5 +1,6 @@
 import React from "react";
 import Map_DefaultPrediction from "./Map_DefaultPrediction";
+import Form_DefaultPrediction from "./Form_DefaultPrediction";
 
 const DefaultPrediction = () => {
   return (
@@ -15,16 +16,11 @@ const DefaultPrediction = () => {
             Enter the required data in the following fields:
           </p>
           <div className="w-full mt-[5%]">
-            {/* <Map_DefaultPrediction /> */}
-          </div>
-          <div className="w-full lg:w-[30%] flex justify-center py-3 rounded-[35px] border border-text_green transition-colors hover:bg-hover_btn hover:font-bold mt-[5%]">
-            <button className="text-lg font-Poppins font-bold text-text_green w-full hover:text-white">
-              PREDICT
-            </button>
+            <Form_DefaultPrediction />
           </div>
         </div>
 
-        <div className="text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-text_color_body xs:w-100% w-full lg:w-1/2 ">
+        <div className="Texto_Visible text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-text_color_body xs:w-100% w-full lg:w-1/2 ">
           The interaction between temperature and rainfall is critical in
           determining the drought index. An increase in temperature can
           accelerate evaporation and reduce water availability, aggravating
@@ -47,6 +43,9 @@ const DefaultPrediction = () => {
           with modeling and statistical analysis techniques to generate rainfall
           forecasts that help to understand precipitation patterns and estimate
           the amount and distribution of rainfall in Barcelona.
+        </div>
+        <div className="Mapa_Oculto">
+          <Map_DefaultPrediction />
         </div>
       </div>
     </div>
