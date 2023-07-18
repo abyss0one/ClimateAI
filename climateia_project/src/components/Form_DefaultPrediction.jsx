@@ -1,4 +1,3 @@
-
 // import React, { Component } from "react";
 // import mapData from "../data/archivo_actualizado.json";
 
@@ -130,7 +129,6 @@
 
 // export default Form_DefaultPrediction;
 
-
 import React, { Component } from "react";
 import Map_DefaultPrediction from "./Map_DefaultPrediction";
 import mapData from "../data/archivo_actualizado.json";
@@ -163,7 +161,10 @@ class Form_DefaultPrediction extends Component {
     );
 
     if (selectedComarca) {
-      console.log("Comarca seleccionada:", selectedComarca.properties.nom_comar);
+      console.log(
+        "Comarca seleccionada:",
+        selectedComarca.properties.nom_comar
+      );
       console.log("Año seleccionado:", selectedYear);
       this.setState({ showError: false, showMap: true });
     } else {
@@ -190,7 +191,7 @@ class Form_DefaultPrediction extends Component {
               htmlFor="yearSelect"
               className="block text-text_green font-bold mb-2"
             >
-              Select year:
+              Selecciona periodo:
             </label>
             <select
               id="yearSelect"
@@ -212,7 +213,7 @@ class Form_DefaultPrediction extends Component {
               htmlFor="comarcaSelect"
               className="block text-text_green font-bold mb-2"
             >
-              Select comarca:
+              Selecciona comarca:
             </label>
             <select
               id="comarcaSelect"
@@ -242,11 +243,15 @@ class Form_DefaultPrediction extends Component {
             Predict
           </button>
         </div>
-        {showMap && <Map_DefaultPrediction selectedComarca={selectedComarcaId} selectedYear={selectedYear} />}
+        {showMap && (
+          <Map_DefaultPrediction
+            selectedComarca={selectedComarcaId}
+            selectedYear={selectedYear}
+          />
+        )}
       </div>
     );
   }
 }
 
 export default Form_DefaultPrediction;
-

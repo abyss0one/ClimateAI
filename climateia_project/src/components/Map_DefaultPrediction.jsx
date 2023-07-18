@@ -228,7 +228,9 @@ class Map_DefaultPrediction extends Component {
                 data={filteredMapData.features}
                 style={(feature) => ({
                   fillColor:
-                    feature.properties.cartodb_id === selectedComarca ? "#ff0000" : "#3388ff",
+                    feature.properties.cartodb_id === selectedComarca
+                      ? "#ff0000"
+                      : "#3388ff",
                   weight: 1,
                   color: "#ffffff",
                   fillOpacity:
@@ -237,13 +239,14 @@ class Map_DefaultPrediction extends Component {
                 onEachFeature={(feature, layer) => {
                   const properties = feature.properties;
                   layer.bindPopup(`
-                    <div>
-                      <h2>${properties.nom_comar}</h2>
-                      <p>Superficie: ${properties.sup_comar} km²</p>
-                      <p>Temperatura: ${properties.temperatura_media}°C</p>
-                      <p>Precipitación: ${properties.precipitacion_media} mm</p>
-                      <p>Humedad: ${properties.humedad_media}%</p>
-                    </div>
+                  <div>
+  <h2 style="color: #48924f; font-weight: bold; text-transform: uppercase;">${properties.nom_comar}</h2>
+  <p>Superficie: ${properties.sup_comar} km²</p>
+  <p>Temperatura: ${properties.temperatura_media}°C</p>
+  <p>Precipitación: ${properties.precipitacion_media} mm</p>
+  <p>Humedad: ${properties.humedad_media}%</p>
+</div>
+
                   `);
                   layer.on({
                     mouseover: () => {
@@ -254,7 +257,9 @@ class Map_DefaultPrediction extends Component {
                       layer.closePopup();
                       layer.setStyle({
                         fillColor:
-                          feature.properties.cartodb_id === selectedComarca ? "#ff0000" : "#3388ff",
+                          feature.properties.cartodb_id === selectedComarca
+                            ? "#ff0000"
+                            : "#3388ff",
                       });
                     },
                   });
@@ -269,5 +274,3 @@ class Map_DefaultPrediction extends Component {
 }
 
 export default Map_DefaultPrediction;
-
-
