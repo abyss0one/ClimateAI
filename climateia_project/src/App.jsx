@@ -8,6 +8,7 @@ import AdviceNTips from "./components/AdviceNTips";
 import Footer from "./components/Footer";
 import Btn_down from "./components/Btn_down";
 import Form_DefaultPrediction from "./components/Form_DefaultPrediction"
+import Map_DefaultPrediction from "./components/Map_DefaultPrediction";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
     <>
       <div>
       <Form_DefaultPrediction/>
+      <Map_DefaultPrediction/>
         <Hero />
         <Context />
         <DefaultPrediction />

@@ -15,7 +15,7 @@ const DefaultPrediction = () => {
             Enter the required data in the following fields:
           </p>
           <div className="w-full mt-[5%]">
-            <Map_DefaultPrediction />
+            {/* <Map_DefaultPrediction /> */}
           </div>
           <div className="w-full lg:w-[30%] flex justify-center py-3 rounded-[35px] border border-text_green transition-colors hover:bg-hover_btn hover:font-bold mt-[5%]">
             <button className="text-lg font-Poppins font-bold text-text_green w-full hover:text-white">
