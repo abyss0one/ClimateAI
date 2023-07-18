@@ -2,9 +2,9 @@ import React from "react";
 
 const ModifiedPrediction = () => {
   return (
-    <div>
-      <div className="text-center text-4xl font-['Corbel'] text-[#658e47] bg-[linear-gradient(180deg,_#658e47_0%,_#658e47_100%)] mb-16 ml-[148px] mr-24">
-        Interact
+    <div id="modified_prediction">
+      <div className="text-center text-4xl font-Poppins text-text_green text-bold mb-14 mx-auto">
+        Interactúa
       </div>
       <div className="flex flex-row gap-8 items-center mb-16 mx-32">
         <div className="self-start relative flex flex-col w-1/2">
@@ -77,3 +77,4 @@ const ModifiedPrediction = () => {
 };
 
 export default ModifiedPrediction;
+

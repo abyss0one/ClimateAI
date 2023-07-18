@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
 
-    <div className="px-4 sm:px-6 lg:px-8">
+    <div id="contact"  className="px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row md:justify-between md:items-stretch mb-4">
         <div className="md:w-1/2">
           <div className="text-2xl font-bold font-Poppins md:pl-4">
@@ -17,18 +17,18 @@ const Footer = () => {
           </div>
         </div>
 
-      <div className="text-xl font-Corbel mt-4 md:w-1/4 md:mt-0 md:text-left">
+      <div className="text-xl font-Poppins mt-4 md:w-1/4 md:mt-0 md:text-left">
         Company
-        <div className="whitespace-nowrap text-sm font-Corbel leading-[28px]">
+        <div className="whitespace-nowrap text-sm font-Poppins leading-[28px]">
           <a href="#">About Us</a>
           <br />
           <a href="#">Become Investor</a>
         </div>
       </div>
       
-      <div className="text-xl font-Corbel mt-4 md:w-1/4 md:mt-0 md:text-left">
+      <div className="text-xl font-Poppins mt-4 md:w-1/4 md:mt-0 md:text-left">
         Contact
-        <div className="whitespace-nowrap text-sm font-Corbel leading-[28px]">
+        <div className="whitespace-nowrap text-sm font-Poppins leading-[28px]">
           <a href="#">E-mail</a>
           <br />
           <a href="#">Support 24</a>
@@ -68,8 +68,8 @@ const Footer = () => {
           />
         </a>    </div>
     
-    <div className="bg-[#415c2e] flex h-16 items-center justify-center">
-      <div className="text-white text-20 font-Corbel">
+    <div className="bg-background_brown w-100% flex h-16 items-center justify-center">
+      <div className="text-white text-20 font-Poppins">
         Copyright © 2023 Climate AI
       </div>
     </div>

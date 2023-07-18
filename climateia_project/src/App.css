@@ -55,7 +55,7 @@
 }
 .floating-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   width: 40px;
   height: 40px;
@@ -82,3 +82,22 @@
   font-size: 20px;
 }
 
+.floating-button2 {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  background-color: #6b6565c5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.floating-button.visible2 {
+  opacity: 1;
+}

@@ -1,71 +1,105 @@
-import React from 'react'
+import React from "react";
 import LineChart from "./LineChart";
 import BarChart from "./BarChart";
-import LineChartCat from './LineChartCat';
-import BarChartCat from './BarChartCat';
-
+import LineChartCat from "./LineChartCat";
+import BarChartCat from "./BarChartCat";
 
 const Context = () => {
   return (
-<div class="flex flex-col items-center mb-20 ml-4 mr-4 sm:ml-[148px] sm:mr-24">
-  <div class="flex flex-col justify-between mt-6 gap-3 w-full">
-
-
-    <h1 class="">What's happening</h1>
-    <div class="text-justify text-m font-['Corbel'] leading-[30px] text-[#757575]">
-      Drought, low rainfall and high temperatures are a concern in Catalonia. There is a drastic decrease in rainfall, reducing water resources. High temperatures aggravated by climate change increase evaporation. Bar graphs will show the decline in rainfall and its impact on water supply. It is urgent to address the situation with efficient water management, water use awareness and sustainable alternatives to face drought and climate change in Catalonia.
-    </div>
-    
-    <div class="flex flex-col gap-5 lg:flex-row">
-      <div class="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
-        <div class="text-center text-2xl font-['Corbel'] text-[#415c2e] bg-[transparent] mb-5 w-2/3 h-[16.99%]">
-          Pluviometría media mensual - Barcelona
+    <div id="context" className="flex flex-col items-center mb-20 ml-4 mr-4 sm:ml-[148px] sm:mr-24">
+      <div className="flex flex-col justify-between mt-6 gap-3 w-full">
+        <div className="text-center text-4xl font-Poppins text-text_green text-bold mb-14 mx-auto">
+          Contexto
         </div>
-        <div class="aspect-w-2 aspect-h-1 w-full items-center justify-center">
-          <LineChartCat />
+        <div className="text-justify text-m font-Poppins leading-[30px] text-text_color_body">
+          La sequía, las escasas precipitaciones y las altas temperaturas
+          preocupan a Cataluña. Hay una disminución drástica de las
+          precipitaciones, reduciendo los recursos hídricos. Las altas
+          temperaturas agravadas por el cambio climático aumentan la
+          evaporación. Los gráficos de barras mostrarán la disminución de las
+          precipitaciones y su impacto en el suministro de agua. Es urgente
+          abordar la situación con una gestión eficiente del agua,
+          concienciación sobre el uso del agua y alternativas sostenibles para
+          hacer frente a la sequía y el cambio climático en Cataluña.
+        </div>
+        <div className="flex flex-col gap-5 lg:flex-row">
+          <div className=" shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
+            <div className="text-center text-2xl font-Poppins text-text_green bg-[transparent] mb-5 w-2/3 h-[16.99%]">
+              Pluviometría media mensual - Barcelona
+            </div>
+            <div className="aspect-w-2 aspect-h-1 w-full items-center justify-center">
+              <LineChartCat />
+            </div>
+          </div>
+          <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
+            <div className="text-center text-2xl font-Poppins text-text_green bg-[transparent] mb-5 w-2/3 h-[16.99%]">
+              Temperatura media mensual - Barcelona
+            </div>
+            <div className="aspect-w-2 aspect-h-1 w-full items-center justify-center">
+              <BarChartCat />
+            </div>
+          </div>
+        </div>
+
+        <div className="text-justify text-m font-Poppins leading-[30px] text-text_color_body">
+          <p>
+            La sequía pluviométrica se puede evaluar utilizando varios índices.
+            Uno de los más ampliamente utilizados es el índice SPI (del inglés
+            Standardized Precipitation Index), también conocido como Índice de
+            Precipitación Estándar (IPE), que permite realizar una evaluación
+            del déficit o exceso de precipitación en el territorio y para una
+            variedad de escaleras temporales. Los intervalos más largos
+            (superiores a 12 meses) aportan información sobre el estado de las
+            aguas subterráneas, los cursos de agua y el almacenamiento de agua
+            en los embalses. Por el contrario, los intervalos más cortos
+            (inferiores a 9 meses) son útiles para estimar la humedad del suelo,
+            aspecto muy importante para la agricultura y los bosques, y
+            responden de forma inmediata a la presencia o ausencia de
+            precipitaciones.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-3 lg:flex-row lg:gap-3">
+          <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white rounded-[30px] p-4">
+            <img
+              src="/assets/IPE9_1km_20230630_w.png"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white rounded-[30px] p-4">
+            <img
+              src="/assets/IPE36_1km_20230630_w.png"
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
+
+        <div className="text-justify text-m font-['Corbel'] leading-[30px] text-text_color_body">
+          <p>
+            &gt; 2.5 Condiciones de humedad excepcional <br />
+            2.0 a 2.5 Condiciones de humedad extrema
+            <br />
+            1.5 a 2.0 Condiciones de humedad fuerte
+            <br />
+            1.0 a 1.5 Condiciones de humedad moderada
+            <br />
+            1.0 a -1.0 Condiciones de normalidad
+            <br />
+            -1.0 a -1.5 Condiciones de sequía moderada
+            <br />
+            -1.5 a -2.0 Condiciones de sequía fuerte
+            <br />
+            -2.0 a -2.5 Condiciones de sequía extrema
+            <br />
+            &lt;-2.5 Condiciones de sequía excepcional
+            <br />
+            Fuente:
+            https://www.meteo.cat/wpweb/climatologia/evolucio-observada-del-clima/estat-de-la-sequera/
+          </p>
         </div>
       </div>
-      <div class="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
-        <div class="text-center text-2xl font-['Corbel'] text-[#415c2e] bg-[transparent] mb-5 w-2/3 h-[16.99%]">
-          Temperatura media mensual - Barcelona
-        </div>
-        <div class="aspect-w-2 aspect-h-1 w-full items-center justify-center">
-          <BarChartCat />
-        </div>
-      </div>
     </div>
+  );
+};
 
-    <div class="text-justify text-m font-['Corbel'] leading-[30px] text-[#757575]">
-      La sequera pluviomètrica es pot avaluar utilitzant diversos índexs. Un dels més àmpliament utilitzats és l’índex SPI (de l’anglès Standardized Precipitation Index), també conegut com a Índex de Precipitació Estàndard (IPE), que permet fer una avaluació del dèficit o excés de precipitació al territori i per a una varietat d’escales temporals. Els intervals més llargs (superiors a 12 mesos) aporten informació sobre l’estat de les aigües subterrànies, dels cursos d’aigua i de l’emmagatzematge d’aigua als embassaments. Per contra, els intervals més curts (inferiors a 9 mesos) són útils per a estimar la humitat del sòl, aspecte molt important per a l’agricultura i els boscos, i responen de manera immediata a la presència o absència de precipitacions.
-    </div>
-
-    <div class="flex flex-col gap-3 lg:flex-row lg:gap-3">
-  <div class="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white rounded-[30px] p-4">
-    <img src="/assets/IPE9_1km_20230630_w.png" class="w-full h-full object-contain" />
-  </div>
-  <div class="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white rounded-[30px] p-4">
-    <img src="/assets/IPE36_1km_20230630_w.png" class="w-full h-full object-contain" />
-  </div>
-</div>
-
-    <div class="text-justify text-m font-['Corbel'] leading-[30px] text-[#757575]">
-      <p>
-        &gt; 2.5, condicions d’humitat excepcional <br />
-        2.0 a 2.5 condicions d’humitat extrema <br />
-        1.5 a 2.0 condicions d’humitat forta <br />
-        1.0 a 1.5, condicions d’humitat moderada <br />
-        1.0 a -1.0, condicions de normalitat <br />
-        -1.0 a -1.5, condicions de sequera moderada <br />
-        -1.5 a -2.0, condicions de sequera forta <br />
-        -2.0 a -2.5, condicions de sequera extrema <br />
-        &lt;-2.5, condicions de sequera excepcional <br />
-        Fuente: https://www.meteo.cat/wpweb/climatologia/evolucio-observada-del-clima/estat-de-la-sequera/
-      </p>
-    </div>
-  </div>
-</div>
-
-  )
-}
-
-export default Context
+export default Context;
