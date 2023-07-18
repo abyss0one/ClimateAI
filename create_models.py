@@ -29,6 +29,9 @@ for comarca in df['comarca'].unique():
 comarques_bcn = list(dicc_comarques.keys())
 joblib.dump(comarques_bcn, 'comarques.joblib')
 
+dicc_models = dict()
+dicc_poly_features = dict()
+
 for i in range(len(comarques_bcn)):
     x = dicc_comarques[comarques_bcn[i]].drop(["precip", "data_lectura"], axis=1)
     y = dicc_comarques[comarques_bcn[i]].precip
@@ -42,4 +45,18 @@ for i in range(len(comarques_bcn)):
     model = LinearRegression()
     model.fit(x_train_poly, y_train)
 
+    y_pred = model.predict(x_test_poly) 
+    mse = mean_squared_error(y_test, y_pred)
+    r2 = r2_score(y_test, y_pred)
+    print(f'Modelo {i}: ')
+    print(f"Error cuadrático medio (MSE): {mse}")
+    print(f"R2 Score: {r2}\n")
+
+    dicc_models[comarques_bcn[i]] = model
+    dicc_poly_features[comarques_bcn[i]] = poly_features
+    
+
     joblib.dump(model, f'{folder_output}m{i}.pkl')
+
+joblib.dump(dicc_models, folder_output + "all_models.pkl")
+joblib.dump(dicc_poly_features, folder_output + "all_features.pkl")
