@@ -1,67 +1,52 @@
 import React from "react";
+import Map_DefaultPrediction from "./Map_DefaultPrediction";
 
 const DefaultPrediction = () => {
   return (
     <div>
-      <div className="text-center text-4xl font-['Corbel'] text-[#658e47] bg-[linear-gradient(180deg,_#658e47_0%,_#658e47_100%)] mb-20 ml-[148px] mr-24">
+      <div className="text-center text-4xl font-Poppins text-text_green text-bold mb-14 mx-auto">
         Prediction
       </div>
-      <div className="flex flex-row gap-10 items-center mb-12 mx-32">
-        <div className="flex flex-col gap-6 w-1/2 h-[451px]">
-          <div className="text-justify font-['Corbel'] leading-[25.6px] text-[#565656] h-[21.06%]">
-            A continuación podrás realizar
-            {"  "}
-            tu prediccion de temperatura ,lluvia e índice de squía estimada para
-            la fecha que desees.
-            <br />
-            Introduce los datos requeridos en los siguientes campos:
+      <div className="flex flex-col lg:flex-row gap-8 mb-12 lg:mx-[200px] mx-6">
+        <div className="text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-text_color_body  xs:w-100% w-full lg:w-1/2">
+          <p>
+            Then you can make your prediction of temperature, rainfall and
+            drought index estimated for the date you want. <br />
+            Enter the required data in the following fields:
+          </p>
+          <div className="w-full mt-[5%]">
+            {/* <Map_DefaultPrediction /> */}
           </div>
-          <div className="border-solid border-[#134e1c] overflow-hidden bg-[#f9fcff] relative flex flex-col items-end mb-6 mr-32 px-12 border-2 rounded">
-            <div className="w-[425px] text-2xl font-['SF_Pro_Text'] font-medium tracking-[0.26961862564086914] text-[#648f4d] absolute top-5 left-16 h-5">
-              New York, United States
-            </div>
-            <img
-              src="https://file.rendit.io/n/sW3Xa5IE0JzmPAyENHhO.svg"
-              className="min-h-0 min-w-0 w-16"
-            />
-          </div>
-          <div className="border-solid border-[#134e1c] overflow-hidden bg-[#f9fcff] relative flex flex-col items-end mb-12 mr-32 px-12 border-2 rounded">
-            <div className="w-[425px] text-2xl font-['SF_Pro_Text'] font-medium tracking-[0.26961862564086914] text-[#648f4d] absolute top-5 left-16 h-5">
-              New York, United States
-            </div>
-            <img
-              src="https://file.rendit.io/n/FMNDdmRRV9s0RruPETPT.svg"
-              className="min-h-0 min-w-0 w-16"
-            />
-          </div>
-          <div className="shadow-[0px_16px_30px_0px_rgba(50,_175,_100,_0.15)] bg-white self-start flex flex-col justify-center ml-32 h-16 shrink-0 items-center rounded-[35px]">
-            <div className="text-center text-lg font-['Poppins'] font-bold text-[#6cb981] w-2/5 mx-12">
+          <div className="w-full lg:w-[30%] flex justify-center py-3 rounded-[35px] border border-text_green transition-colors hover:bg-hover_btn hover:font-bold mt-[5%]">
+            <button className="text-lg font-Poppins font-bold text-text_green w-full hover:text-white">
               PREDICT
-            </div>
+            </button>
           </div>
         </div>
-        <div className="text-justify font-['Corbel'] leading-[25.6px] text-[#565656] self-start w-1/2">
-          La interacción entre la temperatura y la cantidad de lluvia es
-          fundamental para determinar el índice de sequía. Un aumento de la
-          temperatura puede acelerar la evaporación y reducir la disponibilidad
-          de agua, agravando la sequía. Por otro lado, una disminución en la
-          cantidad de lluvia puede llevar a un déficit hídrico.
+
+        <div className="text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-text_color_body xs:w-100% w-full lg:w-1/2 ">
+          The interaction between temperature and rainfall is critical in
+          determining the drought index. An increase in temperature can
+          accelerate evaporation and reduce water availability, aggravating
+          drought. On the other hand, a decrease in the amount of rainfall can
+          lead to a water deficit.
           <br />
           <br />
-          Para predecir la temperatura y la lluvia en Barcelona, se tienen en
-          cuenta varios factores. Para la temperatura, se consideran datos
-          históricos, tendencias climáticas, patrones estacionales, así como la
-          influencia de fenómenos como El Niño y La Niña. Además, se utilizan
-          modelos numéricos y algoritmos de predicción basados en variables
-          atmosféricas, como la presión, la humedad y la radiación solar.
+          To predict temperature and rainfall in Barcelona, several factors are
+          taken into account. For temperature, historical data, climate trends,
+          seasonal patterns, as well as the influence of phenomena such as El
+          Niño and La Niña are considered. In addition, numerical models and
+          numerical models and prediction algorithms based on atmospheric
+          variables such as pressure, humidity and solar radiation are also
+          used.
           <br />
           <br />
-          En cuanto a la lluvia, se analizan datos históricos de
-          precipitaciones, modelos climáticos, oscilaciones atmosféricas y
-          patrones de circulación atmosférica. Estos factores se combinan con
-          técnicas de modelado y análisis estadístico para generar pronósticos
-          de lluvia que ayuden a comprender los patrones de precipitación y
-          estimar la cantidad y la distribución de las lluvias en Barcelona.
+          For rainfall, historical precipitation data, climate models,
+          atmospheric oscillations and atmospheric circulation patterns are
+          analyzed. atmospheric circulation patterns. These factors are combined
+          with modeling and statistical analysis techniques to generate rainfall
+          forecasts that help to understand precipitation patterns and estimate
+          the amount and distribution of rainfall in Barcelona.
         </div>
       </div>
     </div>
