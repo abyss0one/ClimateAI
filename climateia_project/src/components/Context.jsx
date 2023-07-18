@@ -6,12 +6,15 @@ import BarChartCat from "./BarChartCat";
 
 const Context = () => {
   return (
-    <div id="context" className="flex flex-col items-center mb-20 ml-4 mr-4 sm:ml-[148px] sm:mr-24">
+    <div
+      id="context"
+      className="flex flex-col items-center mb-20 ml-4 mr-4 sm:ml-[148px] sm:mr-24"
+    >
       <div className="flex flex-col justify-between mt-6 gap-3 w-full">
-        <div className="text-center text-4xl font-Poppins text-text_green text-bold mb-14 mx-auto">
+        <div className="text-center justify-center items-center  text-3xl font-Poppins text-text_green text-bold mx-8 md:mx-24">
           Contexto
         </div>
-        <div className="text-justify text-m font-Poppins leading-[30px] text-text_color_body">
+        <div className="my-8 text-justify text-xs md:text-[16px] font-Poppins leading-[30px] text-text_color_body">
           La sequía, las escasas precipitaciones y las altas temperaturas
           preocupan a Cataluña. Hay una disminución drástica de las
           precipitaciones, reduciendo los recursos hídricos. Las altas
@@ -41,7 +44,7 @@ const Context = () => {
           </div>
         </div>
 
-        <div className="text-justify text-m font-Poppins leading-[30px] text-text_color_body">
+        <div className="my-8 text-justify text-xs md:text-[16px] font-Poppins leading-[30px] text-text_color_body">
           <p>
             La sequía pluviométrica se puede evaluar utilizando varios índices.
             Uno de los más ampliamente utilizados es el índice SPI (del inglés
@@ -74,28 +77,20 @@ const Context = () => {
           </div>
         </div>
 
-        <div className="text-justify text-m font-['Corbel'] leading-[30px] text-text_color_body">
-          <p>
-            &gt; 2.5 Condiciones de humedad excepcional <br />
-            2.0 a 2.5 Condiciones de humedad extrema
-            <br />
-            1.5 a 2.0 Condiciones de humedad fuerte
-            <br />
-            1.0 a 1.5 Condiciones de humedad moderada
-            <br />
-            1.0 a -1.0 Condiciones de normalidad
-            <br />
-            -1.0 a -1.5 Condiciones de sequía moderada
-            <br />
-            -1.5 a -2.0 Condiciones de sequía fuerte
-            <br />
-            -2.0 a -2.5 Condiciones de sequía extrema
-            <br />
-            &lt;-2.5 Condiciones de sequía excepcional
-            <br />
-            Fuente:
-            https://www.meteo.cat/wpweb/climatologia/evolucio-observada-del-clima/estat-de-la-sequera/
-          </p>
+        <div className="text-justify text-xs md:text-[16px] font-Popins leading-[30px] text-text_color_body">
+          <ul>
+            <li> &gt; 2.5 Condiciones de humedad excepcional</li>
+            <li>2.0 a 2.5 Condiciones de humedad extrema</li>
+            <li>1.5 a 2.0 Condiciones de humedad fuerte</li>
+            <li>1.0 a 1.5 Condiciones de humedad moderada</li>
+            <li>1.0 a -1.0 Condiciones de normalidad</li>
+            <li>-1.0 a -1.5 Condiciones de sequía moderada</li>
+            <li>-1.5 a -2.0 Condiciones de sequía fuerte</li>
+            <li>-2.0 a -2.5 Condiciones de sequía extrema</li>
+            <li>&lt;-2.5 Condiciones de sequía excepcional</li>
+          </ul>
+          <p>Fuente:
+            https://www.meteo.cat/wpweb/climatologia/evolucio-observada-del-clima/estat-de-la-sequera/</p>
         </div>
       </div>
     </div>

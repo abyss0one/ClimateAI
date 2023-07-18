@@ -103,13 +103,13 @@ class Form_DefaultPrediction extends Component {
             )}
           </div>
         </form>
-        <div className="w-full lg:w-[30%] flex justify-center py-3 rounded-[35px] border border-text_green transition-colors hover:bg-hover_btn hover:font-bold mt-[5%]">
+        <div className="w-full lg:w-[30%] flex justify-center py-3 rounded-[35px] border border-text_green transition-colors hover:bg-hover_btn hover:font-bold mt-[5%] mb-[5%]">
           <button
             type="button"
             onClick={this.handleButtonClick}
-            className="text-lg font-Poppins font-bold text-text_green w-full hover:text-white"
+            className="text-lg font-Poppins font-bold text-text_green w-full hover:text-white justify-center " 
           >
-            Predict
+            Predecir
           </button>
         </div>
         {showMap && (

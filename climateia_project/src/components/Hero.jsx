@@ -7,7 +7,7 @@
 // } from "react-icons/ri";
 // const Hero = () => {
 //   const [showMenu, setShowMenu] = useState(false);
-  
+
 //   return (
 //     <div className="overflow-hidden relative flex flex-col w-full">
 //       <div className="bg-[url(https://file.rendit.io/n/Ox0uyT8qDYqqfx8xY8aw.png)] bg-cover bg-50%_50% flex flex-col gap-10 mb-10 h-screen">
@@ -72,7 +72,11 @@
 // export default Hero;
 
 import React, { useState } from "react";
-import { RiCheckboxBlankCircleFill, RiMenu3Fill, RiCloseLine } from "react-icons/ri";
+import {
+  RiCheckboxBlankCircleFill,
+  RiMenu3Fill,
+  RiCloseLine,
+} from "react-icons/ri";
 
 const Hero = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -85,7 +89,7 @@ const Hero = () => {
 
   return (
     <div className="overflow-hidden relative flex flex-col w-full">
-      <div className="bg-[url(https://file.rendit.io/n/Ox0uyT8qDYqqfx8xY8aw.png)] bg-cover bg-50%_50% flex flex-col gap-10 mb-10 h-screen">
+      <div className="bg-[url(https://file.rendit.io/n/Ox0uyT8qDYqqfx8xY8aw.png)] bg-cover bg-50%_50% flex flex-col gap-10 h-screen">
         <nav
           className={`flex items-center font-Poppins justify-center flex-row gap-20 mb-40 ml-4 fixed w-[80%] md:w-[40%] xl:w-full h-full ${
             showMenu ? "left-0" : "-left-full"
@@ -131,7 +135,10 @@ const Hero = () => {
             Contacta
           </a>
         </nav>
-        <button onClick={() => setShowMenu(!showMenu)} className="text-2xl p-2 xl:hidden">
+        <button
+          onClick={() => setShowMenu(!showMenu)}
+          className="text-2xl p-2 xl:hidden"
+        >
           {showMenu ? <RiCloseLine /> : <RiMenu3Fill />}
         </button>
         <div className="text-[100px] font-Poppins lg:text-[160px] font-bold text-white text-center">
@@ -139,12 +146,15 @@ const Hero = () => {
         </div>
         <div className="bg-[rgba(24,24,24,0.37)] flex flex-col justify-center h-32 lg:mx-[200px] px-8 rounded-[20px] mx-6">
           <div className="text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-white">
-            La inteligencia artificial para la predicción climatológica. Obtén pronósticos confiables del tiempo y descubre información detallada sobre el clima, incluyendo análisis históricos, para anticipar cambios climáticos en el área de Cataluña.
+            La inteligencia artificial para la predicción climatológica. Obtén
+            pronósticos confiables del tiempo y descubre información detallada
+            sobre el clima, incluyendo análisis históricos, para anticipar
+            cambios climáticos en el área de Cataluña.
           </div>
         </div>
-        <button className="bg-white mx-auto justify-center h-16 items-center rounded-[60px] mb-8 transition-colors hover:bg-hover_btn  hover:font-bold">
+        <button className="bg-white mx-auto justify-center h-16 items-center rounded-[60px] mb-14 transition-colors hover:bg-hover_btn  hover:font-bold">
           <div className="text-xl font-Poppins text-text_green mx-8 md:mx-24 font-bold hover:text-white">
-            START
+            <a href="#context">Comenzar</a>
           </div>
         </button>
       </div>

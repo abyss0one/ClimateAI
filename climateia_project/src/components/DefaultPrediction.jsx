@@ -57,7 +57,6 @@
 
 // export default DefaultPrediction;
 
-
 import React from "react";
 import Map_DefaultPrediction from "./Map_DefaultPrediction";
 import Form_DefaultPrediction from "./Form_DefaultPrediction";
@@ -67,11 +66,11 @@ const handleButtonClick = () => {
 const DefaultPrediction = () => {
   return (
     <div id="prediction">
-      <div className="text-center text-4xl font-Poppins text-text_green text-bold mb-14 mx-auto">
+      <div className="text-center text-3xl font-Poppins text-text_green text-bold mb-14 mx-auto">
         Predicción
       </div>
-      <div className="flex flex-col lg:flex-row gap-8 mb-12 lg:mx-[200px] mx-6">
-        <div className="text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-text_color_body  xs:w-100% w-full lg:w-1/2">
+      <div className="flex flex-col lg:flex-row gap-8 mb-20 ml-4 mr-4 sm:ml-[148px] sm:mr-24">
+        <div className="text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-text_color_body  xs:w-100% w-full lg:w-1/2 leading-[30px]">
           <p>
             A continuación podrá realizar su predicción de temperatura,
             precipitaciones e índice de sequía estimados para la fecha que
@@ -84,7 +83,7 @@ const DefaultPrediction = () => {
           </div>
         </div>
 
-        <div className="Texto_Visible text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-text_color_body xs:w-100% w-full lg:w-1/2 ">
+        <div className="Texto_Visible text-justify font-Poppins md:leading-[30px]  text-xs md:text-[16px] text-text_color_body xs:w-100% w-full lg:w-1/2 leading-[30px]">
           <div className="">
             La interacción entre temperatura y precipitaciones es fundamental
             para determinar el índice de sequía. Un aumento de la temperatura
@@ -109,7 +108,7 @@ const DefaultPrediction = () => {
             distribución de las precipitaciones en Barcelona.
           </div>
         </div>
-        <div className="Mapa_Oculto">
+        <div className="Mapa_Oculto my-8">
           <Map_DefaultPrediction />
         </div>
       </div>
