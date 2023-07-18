@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import Context from "./components/Context";
 import DefaultPrediction from "./components/DefaultPrediction";
 import ModifiedPrediction from "./components/ModifiedPrediction";
-import AdviceNTips from "./components/AdviceNTips";
+// import AdviceNTips from "./components/AdviceNTips";
 import Footer from "./components/Footer";
 import Btn_down from "./components/Btn_down";
 import Form_DefaultPrediction from "./components/Form_DefaultPrediction"
@@ -22,7 +22,7 @@ function App() {
         <Context />
         <DefaultPrediction />
         <ModifiedPrediction />
-        <AdviceNTips />
+        {/* <AdviceNTips /> */}
         <Footer />
         <Btn_down/>
       </div>
