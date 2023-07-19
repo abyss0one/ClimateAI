@@ -38,6 +38,7 @@
 import sys
 import joblib
 import pandas as pd
+from datetime import datetime
 
 # def load_models(model_path):
 #     try:
@@ -48,11 +49,21 @@ import pandas as pd
 #         print(f"Error al cargar el modelo: {str(e)}")
 #         return None
 
-def predict(model, features, fecha_prediction, datos):
+def predict(model, features,fecha_actual, fecha_prediction, datos):
     try:
         # Realizar las predicciones utilizando el modelo y los parámetros
         # Aquí debes implementar tu lógica de predicción basada en el modelo cargado
-        
+
+        # los dos modelos necesitan valor_anterior, mes
+
+        dict_models_temp = joblib.load("./models/all_temp_models.pkl")
+        dict_models_hume = joblib.load("./models/all_hume_models.pkl")
+
+        dict_features_temp = joblib.load("./models/all_temp_features.pkl")
+        dict_features_hume = joblib.load("./models/all_hume_features.pkl")
+
+        #HACER PREDICCION DE TEMP Y HUME DESPUES DE LA PREDICCION DE PREC
+
         # Ejemplo de predicción ficticia
         for i in range(fecha_prediction):
             pred_poly = features.transform(datos)
@@ -65,8 +76,8 @@ def predict(model, features, fecha_prediction, datos):
 
 if __name__ == "__main__":
     # Obtener la ruta del modelo y las variables como argumentos de línea de comandos
-    if len(sys.argv) > 3:
-        id_comarca = sys.argv[1]
+    if len(sys.argv) == 3:
+        id_comarca = int(sys.argv[1])
         # comarca = sys.argv[2]
         fecha_prediction = sys.argv[2]
         
@@ -74,12 +85,19 @@ if __name__ == "__main__":
         dict_features = joblib.load("./models/all_features.pkl")
         dict_comarques = joblib.load("./comarques.joblib")
 
+        print(dict_comarques)
+        print(dict_comarques[id_comarca])
+
         df = pd.read_csv("./datasets_models/data.csv")
-        datos =  df[df.comarca == dict_comarques[str(id_comarca)]].iloc[-1].values[-3:]
+        df['data_lectura'] = pd.to_datetime(df['data_lectura'])
+
+        df = df.sort_values(by='data_lectura', ascending=False)
+        fecha_actualizada = df.iloc[0]['data_lectura']
+        datos =  df.iloc[0][['temp', 'hume', 'temp_anterior', 'precip_anterior', 'hume_anterior']]
 
         if dict_models is not None:
             # Realizar la predicción
-            prediction = predict(dict_models[dict_comarques[str(id_comarca)]], dict_features[dict_comarques[str(id_comarca)]], fecha_prediction, datos)
+            prediction = predict(dict_models[dict_comarques[id_comarca]], dict_features[dict_comarques[id_comarca]], fecha_actualizada, fecha_prediction, datos)
             print("Predicción:", prediction)
     else:
         print("Por favor, especifique la ruta del modelo y los parámetros como argumentos.")

@@ -35,7 +35,7 @@ dicc_models = dict()
 dicc_poly_features = dict()
 
 for i in range(len(comarques_bcn)):
-    x = dicc_comarques[comarques_bcn[i]].drop(["precip", "data_lectura", "hume", "temp"], axis=1)
+    x = dicc_comarques[comarques_bcn[i]].drop(["precip", "data_lectura"], axis=1)
     y = dicc_comarques[comarques_bcn[i]].precip
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=47)
