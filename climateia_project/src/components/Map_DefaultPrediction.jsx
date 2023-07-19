@@ -216,8 +216,8 @@ class Map_DefaultPrediction extends Component {
         {mapVisible && (
           <div>
             <MapContainer
-              style={{ height: "85vh", width: "100%" }}
-              zoom={7.5}
+              style={{ height: "50vh", width: "100%" }}
+              zoom={7.2}
               center={[41.92038080757445, 1.5259606707365279]}
             >
               <TileLayer
