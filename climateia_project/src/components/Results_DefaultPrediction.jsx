@@ -2,14 +2,14 @@ import React from "react";
 
 const Results_DefaultPrediction = () => {
   const commonShadow =
-    "shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-row justify-end h-32 shrink-0 items-center rounded-[30px]";
-  const commonImg = "min-h-0 min-w-0 w-8 shrink-0";
+    "shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-row justify-center h-32 items-center rounded-[30px]";
+  const commonImg = "min-h-0 min-w-0 w-8";
   const commonText =
     "text-center font-Poppins text-[#415c2e] bg-[transparent] h-full";
 
   return (
     <>
-      <div className={commonShadow + " gap-4"}>
+      <div className={commonShadow + " gap-3"}>
         <img
           src="https://file.rendit.io/n/YEd8w5sfU8i9gyOuN5qM.svg"
           className={commonImg}

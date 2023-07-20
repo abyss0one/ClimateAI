@@ -165,7 +165,7 @@ import React, { useState } from "react";
 import Map_DefaultPrediction from "./Map_DefaultPrediction";
 import Form_DefaultPrediction from "./Form_DefaultPrediction";
 import Results_DefaultPrediction from "./Results_DefaultPrediction";
-import { WiNightStormShowers, WiThermometer,WiRaindrop } from "react-icons/wi";
+import { WiNightStormShowers, WiThermometer, WiRaindrop } from "react-icons/wi";
 import { BsDropletHalf } from "react-icons/bs";
 const DefaultPrediction = () => {
   const [showInfo, setShowInfo] = useState(true);
@@ -218,26 +218,8 @@ const DefaultPrediction = () => {
             cambios, y siempre es recomendable verificar la predicción más
             cercana a la fecha de interés para obtener información actualizada.
           </div>
-          <div>
-            {/* <h2 className="text-text_green text-bold">RESULTADOS</h2>
-            <ul>
-              <li>
-                <WiThermometer className="icons_results"/>Temperatura:
-              </li>
-              <li>
-                <WiNightStormShowers className="icons_results"/>
-                Lluvia:
-              </li>
-              <li>
-              Indice de sequía SPI:
-                <WiRaindrop className="icons_results" />
-                <BsDropletHalf className="icons_results"/>
-              </li>
-            </ul> */}
-            <div className="w-[40%]">
-
-            <Results_DefaultPrediction/>
-            </div>
+          <div className={`w-[40%]  mt-10 ${showInfo ? "hidden" : "block" }` }>
+            <Results_DefaultPrediction />
           </div>
         </div>
         <div
@@ -247,9 +229,6 @@ const DefaultPrediction = () => {
             showInfo={showInfo}
             setShowInfo={setShowInfo}
           />
-        </div>
-        <div className=" my-8">
-          <Map_DefaultPrediction />
         </div>
       </div>
     </div>
