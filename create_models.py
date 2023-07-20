@@ -40,7 +40,7 @@ for i in range(len(comarques_bcn)):
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=47)
 
-    poly_features = PolynomialFeatures(degree=2)
+    poly_features = PolynomialFeatures(degree=4)
     x_train_poly = poly_features.fit_transform(x_train)
     x_test_poly = poly_features.transform(x_test)
 

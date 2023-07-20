@@ -76,7 +76,7 @@ def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, m
             pred_hume = model_hume.predict(poly_hume)
             print("stop 4")
 
-            datos = [[pred_temp, pred_hume, aux[0], prediction, aux[1]]]
+            datos = [[pred_temp[0], pred_hume[0], aux[0], prediction, aux[1]]]
             print(datos)
 
         
