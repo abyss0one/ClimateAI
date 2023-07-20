@@ -1,9 +1,47 @@
-
 // VERSION 3 AGREGADA FUNCION DE DESAPARECER TEXTO
 import React, { Component } from "react";
 import Map_DefaultPrediction from "./Map_DefaultPrediction";
 import mapData from "../data/archivo_actualizado.json";
 import Info_1 from "./Info_1";
+
+const handlePredictionSubmit = (id, dias) => {
+
+  // const selectedFile = 'src/public/assets/dh_' + comarca + '.json'
+  // console.log(selectedFile)
+    const url = 'http://localhost:5000/prediction/'+id+'/'+dias;
+    fetch(url, {
+      method: 'GET',
+      // body: formData,
+    })
+      .then((response) => response.text())
+      .then((result) => {
+        console.log(result); // Mensaje de respuesta del servidor
+      })
+      .catch((error) => {
+        console.error('Error al enviar el archivo:', error);
+      });
+  };
+
+
+const handleSPISubmit = (id,pre) => {
+  const selectedFile = 'dh_' + id + '.json'
+  console.log(selectedFile)
+    const url = 'http://localhost:5000/calculate_SPI/'+selectedFile+'/'+pre;
+    fetch(url, {
+      method: 'GET',
+      // body: formData,
+    })
+      .then((response) => response.text())
+      .then((result) => {
+        console.log(result); // Mensaje de respuesta del servidor
+      })
+      .catch((error) => {
+        console.error('Error al enviar el archivo:', error);
+      });
+  };
+
+
+
 // const [prediction, setPrediction] = React.useState (0);
 class Form_DefaultPrediction extends Component {
   constructor(props) {
@@ -26,6 +64,8 @@ class Form_DefaultPrediction extends Component {
     this.setState({ selectedYear });
   };
 
+
+
   handleButtonClick = () => {
     const { selectedComarcaId, selectedYear } = this.state;
     const selectedComarca = mapData.features.find(
@@ -38,19 +78,26 @@ class Form_DefaultPrediction extends Component {
         selectedComarca.properties.nom_comar
       );
       console.log("Periodo seleccionado:", selectedYear);
-            // this.pythonConnect(selectedComarcaId, selectedYear);
+            // handlePredictionSubmit(selectedComarcaId,selectedYear);
+            handleSPISubmit( selectedComarcaId,'55.66');
+
+
       this.setState({ showError: false, showMap: true });
       this.props.setShowInfo(false); // Actualizamos el estado showInfo del componente DefaultPrediction
     } else {
       this.setState({ showError: true, showMap: false });
     }
   };
+
   // pythonConnect = (comarca, fecha) => {
-  //   const { spawn } = require("child_process");
   //   const pythonScriptPath = "../src/py/server.py";
 
   //   const COMARCA = Form_DefaultPrediction.state.selectedComarca;
   //   const fecha_prediction = Form_DefaultPrediction.state.selectedYear;
+
+  //   console.log(pythonScriptPath);
+  //   console.log(COMARCA);
+  //   console.log(fecha_prediction);
 
   //   const pythonScript = spawn("python", [
   //     pythonScriptPath,
@@ -77,7 +124,11 @@ class Form_DefaultPrediction extends Component {
   //   const { spawn } = require("child_process");
   //   const pythonScriptPath = "../src/py/SPI.py";
 
-  //   // datosHist = leer el json y calcular la media
+  //   datosHist = 'src/public/assets/dh_' + comarca + '.json'
+
+  //   console.log(pythonScriptPath)
+  //   console.log(datosHist)
+  //   console.log({prediction})
 
   //   const pythonScript = spawn("python", [
   //     pythonScriptPath,
