@@ -66,16 +66,17 @@ if __name__ == "__main__":
         model_path = sys.argv[1]
         comarca = sys.argv[2]
         fecha_prediction = sys.argv[3]
-        
+
         # Cargar el modelo
         model = load_model(model_path)
-        
+
         if model is not None:
             # Realizar la predicción
             prediction = predict(model, comarca, fecha_prediction)
             print("Predicción:", prediction)
     else:
         print("Por favor, especifique la ruta del modelo y los parámetros como argumentos.")
+
 # En este código, se ha agregado la función load_model para cargar el modelo desde el archivo pkl utilizando la biblioteca joblib. Luego, se ha agregado la función predict que realiza la predicción utilizando el modelo y los parámetros comarca y fecha_prediction. Dentro de esta función, debes implementar la lógica de predicción específica para tu modelo.
 
 # En el bloque if __name__ == "__main__", se obtiene la ruta del modelo y los parámetros comarca y fecha_prediction como argumentos de línea de comandos. Luego, se carga el modelo utilizando load_model y se realiza la predicción utilizando predict. El resultado de la predicción se imprime en la consola.
