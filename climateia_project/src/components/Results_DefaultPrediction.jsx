@@ -2,7 +2,7 @@ import React from "react";
 
 const Results_DefaultPrediction = () => {
   const commonShadow =
-    "shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-row justify-center h-32 items-center rounded-[30px]";
+    "shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-row justify-center h-20  items-center rounded-[30px]";
   const commonImg = "min-h-0 min-w-0 w-8";
   const commonText =
     "text-center font-Poppins text-[#415c2e] bg-[transparent] h-full";
@@ -18,20 +18,20 @@ const Results_DefaultPrediction = () => {
           <div className="text-center w-[180px] h-[42.03%] font-bold leading-[22.4px] text-[#658e47] absolute top-10 left-0">
             25 º C
           </div>
-          <div className={commonText + " text-2xl font-bold"}>Temperatura</div>
+          <div className={commonText + " text-xl font-bold"}>Temperatura</div>
         </div>
       </div>
 
       <div className={commonShadow + " gap-1"}>
         <img
           src="https://file.rendit.io/n/sOBspRzRkGrffSNZxAIj.svg"
-          className="min-h-0 min-w-0 w-12 shrink-0"
+          className="min-h-0 min-w-0 w-12 "
         />
         <div className="relative flex flex-col pb-5 w-[180px]">
           <div className="text-center w-[180px] h-[42.03%] font-bold leading-[22.4px] text-[#658e47] absolute top-10 left-0">
             12 mm
           </div>
-          <div className={commonText + " text-2xl font-bold"}>
+          <div className={commonText + " text-xl font-bold"}>
             Precipitación
           </div>
         </div>
@@ -40,13 +40,13 @@ const Results_DefaultPrediction = () => {
       <div className={commonShadow + " pt-6"}>
         <img
           src="https://file.rendit.io/n/BFDKisltuTtE978bOMpq.svg"
-          className="min-h-0 min-w-0 self-start mt-2 w-8 shrink-0"
+          className="min-h-0 min-w-0 self-start mt-2 w-8"
         />
         <div className="relative flex flex-col pb-5 w-48">
           <div className="text-center w-48 h-[42.03%] font-bold leading-[22.4px] text-[#658e47] absolute top-10 left-0">
             1.4 %
           </div>
-          <div className={commonText + " text-2xl font-bold"}>Sequía IPS</div>
+          <div className={commonText + " text-xl font-bold"}>Sequía IPS</div>
         </div>
       </div>
     </>
