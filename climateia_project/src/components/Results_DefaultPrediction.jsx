@@ -31,14 +31,14 @@ const Results_DefaultPrediction = () => {
     }
   };
   // Función para obtener el mensaje según el valor de SPI
-  const getTemperatureMessage = (precipitacion) => {
+  const getRainMessage = (precipitacion) => {
     if (precipitacion / 24 < 2.0) {
       return "Lluvias débiles";
     } else if (precipitacion / 24 >= 2.0 && precipitacion / 24 <= 15) {
       return "Lluvias moderadas";
-    } else if (precipitacion / 24 >= 15 && precipitacion / 24 <= 30) {
+    } else if (precipitacion / 24 > 15 && precipitacion / 24 <= 30) {
       return "Lluvias fuertes";
-    } else if (precipitacion / 24 >= 30 && precipitacion / 24 <= 60) {
+    } else if (precipitacion / 24 > 30 && precipitacion / 24 <= 60) {
       return "Lluvias muy fuertes";
     } else if (precipitacion / 24 > 60) {
       return "Torrenciales";
@@ -75,7 +75,7 @@ const Results_DefaultPrediction = () => {
             />
             <div className="relative flex flex-col pb-5 w-[180px]">
               <div className="text-center w-[180px] h-[42.03%] font-bold leading-[22.4px] text-[#658e47] absolute top-10 left-0">
-                {data.precipitacion} mm/h {getTemperatureMessage(data.precipitacion)}
+                {data.precipitacion} mm/h {getRainMessage(data.precipitacion)}
               </div>
               <div className="text-center font-Poppins text-[#415c2e] bg-[transparent] h-full text-xl font-bold">
                 Precipitación
