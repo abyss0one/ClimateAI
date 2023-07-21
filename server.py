@@ -55,7 +55,8 @@ def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, m
         # Aquí debes implementar tu lógica de predicción basada en el modelo cargado
 
         # los dos modelos necesitan valor_anterior, mes
-
+        res_hume = ""
+        res_temp = ""
         #HACER PREDICCION DE TEMP Y HUME DESPUES DE LA PREDICCION DE PREC
 
         # Ejemplo de predicción ficticia
@@ -77,6 +78,9 @@ def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, m
             print("stop 3")
             poly_hume = feautres_hume.transform(datos_hume)
             pred_hume = model_hume.predict(poly_hume)
+            res_hume = pred_hume
+            res_temp = pred_temp
+
             print("pred hume : ", pred_hume)
             print("stop 4")
 
@@ -86,7 +90,7 @@ def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, m
             fecha_actual += pd.Timedelta(days=1)
 
         
-        return prediction
+        return [prediction, res_hume, res_temp]
     except Exception as e:
         print(f"Error al realizar la predicción: {str(e)}")
         return None
