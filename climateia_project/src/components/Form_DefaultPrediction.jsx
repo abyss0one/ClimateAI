@@ -79,7 +79,7 @@ class Form_DefaultPrediction extends Component {
       );
       console.log("Periodo seleccionado:", selectedYear);
             // handlePredictionSubmit(selectedComarcaId,selectedYear);
-            handleSPISubmit( selectedComarcaId,'55.66');
+            // handleSPISubmit( selectedComarcaId,'55.66');
 
 
       this.setState({ showError: false, showMap: true });
