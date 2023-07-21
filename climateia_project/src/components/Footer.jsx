@@ -3,32 +3,29 @@ import React from "react";
 const Footer = () => {
   return (
     <div id="contact">
-      <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-stretch mb-4">
-          <div className="w-1/3 ">
-            <div className="text-2xl font-bold font-Poppins md:pl-4">
-              Climate AI
-            </div>
-            <div className="text-sm font-Poppins leading-[22.4px] text-text_color_body md:text-left md:pl-4 text-justify">
+      <div>
+        <div className="flex flex-col md:flex-row  mb-4 ">
+          <div className="md:mx-20 mx-3">
+            <div className="text-2xl font-bold font-Poppins  ">Climate AI</div>
+            <div className=" font-Poppins leading-[30px] text-text_color_body text-justify  ">
               Innovadora plataforma de predicción climática que proporciona
               previsiones precisas de temperatura, precipitaciones y sequía en
               Cataluña. Manténgase informado y planifique con antelación con
-              nuestros datos fiables para tomar decisiones informadas.
+              nuestros datos.
             </div>
           </div>
-
-          <div className="text-xl font-Poppins mt-4 md:w-1/4 md:mt-0 md:text-left text-black">
-            Company
-            <div className="whitespace-nowrap text-sm font-Poppins leading-[28px] text-text_color_body">
+          <div className="md:mx-20 mx-3">
+            <div className="text-2xl font-Poppins">Compañía</div>
+            <div className=" font-Poppins leading-[30px] text-text_color_body">
               <a href="#">Sobre nosotros</a>
               <br />
-              <a href="#">Invierte con nosotros</a>
+              <a href="#">Ayúdanos a seguir creciendo</a>
             </div>
           </div>
 
-          <div className="text-xl font-Poppins mt-4 md:w-1/4 md:mt-0 md:text-left text-black">
-            Contact
-            <div className="whitespace-nowrap text-sm font-Poppins leading-[28px] text-text_color_body">
+          <div className="md:mx-20 mx-3">
+            <div className="text-2xl  font-Poppins">Contacto</div>
+            <div className=" font-Poppins leading-[30px] text-text_color_body">
               <a href="#">E-mail</a>
               <br />
               <a href="#">Soporte 24/7</a>
@@ -36,8 +33,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex justify-center gap-4 mb-6 md:justify-start md:ml-4">
-          <a href="https://github.com/abyss0one/ClimateAI.git" className="w-12">
+        <div className="flex justify-center gap-4 mb-6 md:justify-start md:mx-20 ">
+          <a href="https://github.com/abyss0one/ClimateAI.git">
             <img
               src="https://file.rendit.io/n/fpV4p7tT4c82C4NFNXca.svg"
               alt="Icon-github"
@@ -79,104 +76,6 @@ const Footer = () => {
         </div>
       </div>
     </div>
-
-    // <div>
-
-    //   <div className="flex justify-between items-stretch mb-4 mx-20  ">
-    //     <div className=" text-2xl font-['Poppins'] font-bold ">
-    //       Climate AI
-    //       <div className=" text-justify text-sm font-['Corbel'] leading-[22.4px] text-[#565656] w-[350px] ">
-    //         Innovative climate prediction platform providing accurate forecasts
-    //         for temperature, rainfall, and drought in Catalonia. Stay informed
-    //         and plan ahead with our reliable insights to make informed
-    //         decisions.
-    //       </div>
-    //     </div>
-
-    //     <div className="text-xl font-['Corbel'] ">
-    //       Company
-    //       <div className="whitespace-nowrap text-sm font-Corbel leading-[28px] ">
-    //         <a href="#">About Us</a>
-    //         <br />
-    //         <a href="#">Become Investor</a>
-    //       </div>
-    //     </div>
-
-    //     <div className="text-xl font-['Corbel']   ">
-    //       Contact
-    //       <div className="whitespace-nowrap text-sm font-Corbel leading-[28px]  ">
-    //         <a href="#">E-mail</a>
-    //         <br />
-    //         <a href="#">Support 24</a>
-    //       </div>
-    //     </div>
-    //   </div>
-
-    //     {/* <div className="whitespace-nowrap text-xl font-['Corbel']  ">
-    //       What We Do
-    //       <div className="whitespace-nowrap text-sm font-Corbel leading-[28px]">
-    //         <a href="#">Climate prediction</a>
-    //         <br />
-    //         <a href="#">Data Analysis</a>
-    //         <br />
-    //         <a href="#">Risk Assesment</a>
-    //         <br />
-    //         <a href="#">Education and Awareness</a>
-    //       </div>
-    //     </div>
-    //      */}
-
-    //     {/* <div className="text-xl font-['Corbel']   ">
-    //       Support
-    //       <div className="text-sm font-Corbel leading-[28px] ">
-    //         <a href="#">FAQ</a>
-    //         <br />
-    //         <a href="#">Policy</a>
-    //         <br />
-    //         <a href="#">Business</a>
-    //       </div>
-    //     </div> */}
-
-    //   <div className="flex flex-row justify-start gap-4 items-center mb-6 ml-20">
-    //     <a href="https://github.com/abyss0one/ClimateAI.git" className="w-12">
-    //       <img
-    //         src="https://file.rendit.io/n/fpV4p7tT4c82C4NFNXca.svg"
-    //         alt="Icon-github"
-    //       />
-    //     </a>
-    //     <a
-    //       href="https://www.linkedin.com/in/jairo-villarroel-rodriguez/"
-    //       className="w-12"
-    //     >
-    //       <img
-    //         src="https://file.rendit.io/n/z208jEY4F3oVVPFRf6Ss.svg"
-    //         alt="Icon-linkedin"
-    //       />
-    //     </a>
-    //     <a href="https://www.linkedin.com/in/laiagomezmessia/" className="w-12">
-    //       <img
-    //         src="https://file.rendit.io/n/z208jEY4F3oVVPFRf6Ss.svg"
-    //         alt="Icon-linkedin"
-    //       />
-    //     </a>
-    //     <a
-    //       href="https://www.linkedin.com/in/zulema-orellana-herrera/#"
-    //       className="w-12"
-    //     >
-    //       <img
-    //         src="https://file.rendit.io/n/z208jEY4F3oVVPFRf6Ss.svg"
-    //         alt="Icon-linkedin"
-    //       />
-    //     </a>
-    //   </div>
-    //   <div className="bg-[#415c2e] flex gap-4 h-16 items-center justify-center">
-    //     <div className="whitespace-nowrap text-20 font-Corbel text-white">
-    //       Copyright © 2023 Climate AI
-    //     </div>
-
-    //   </div>
-
-    // </div>
   );
 };
 

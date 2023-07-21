@@ -53,13 +53,14 @@
 .hover-underline:hover::after {
   transform: scaleX(1);
 }
+
 .floating-button {
   position: fixed;
   bottom: 60px;
   right: 20px;
   width: 40px;
   height: 40px;
-  background-color: #6b6565c5 ;
+  background-color: #6b6565c5;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -101,7 +102,47 @@
 .floating-button.visible2 {
   opacity: 1;
 }
-.icons_results{
+
+.icons_results {
   font-size: 30px;
-  color:#48924f;
+  color: #48924f;
+}
+
+.carousel {
+  padding-top: 4rem;
+  padding-bottom: 5.5rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  width: 100vw;
+}
+
+.box {
+  background-color: white;
+  padding: 1.5rem;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.slick-slide div {
+  margin: 0 1rem;
+}
+
+.slick-next {
+  right: -45px !important;
+}
+
+.slick-prev {
+  left: -45px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  margin-top: 20px;
+  color: white !important;
+}
+
+.slick-dots li button:before {
+  margin-top: 20px;
+  color: black !important;
+  font-size: 1rem !important;
+  top: 2rem !important;
 }

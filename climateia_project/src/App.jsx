@@ -19,7 +19,7 @@ function App() {
         <Context />
         <DefaultPrediction />
         {/* <ModifiedPrediction /> */}
-        {/* <AdviceNTips /> */}
+        <AdviceNTips />
         <Footer />
         <Btn_Up/>
         <Btn_down />
