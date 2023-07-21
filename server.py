@@ -64,20 +64,26 @@ def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, m
             pred_poly = features.transform(datos)
             prediction = model.predict(pred_poly)
             print("stop 1")
-            print(type(fecha_actual.month))
-            datos_hume = [[datos[0][0], fecha_actual.month]]
-            datos_temp = [[datos[0][1], fecha_actual.month]]
-            aux = datos[0]
+            print(datos.temp.values)
+            datos_temp = pd.DataFrame({'valor_anterior': datos.temp.values, 'mes': [fecha_actual.month]})
+            print(datos_temp)
+            datos_hume = pd.DataFrame({'valor_anterior': datos.hume.values, 'mes': [fecha_actual.month]})
+            print(datos_hume)
+            aux = datos
             print("stop 2")
             poly_temp = features_temp.transform(datos_temp)
             pred_temp = model_temp.predict(poly_temp)
+            print("pred temp : ", pred_temp)
             print("stop 3")
             poly_hume = feautres_hume.transform(datos_hume)
             pred_hume = model_hume.predict(poly_hume)
+            print("pred hume : ", pred_hume)
             print("stop 4")
 
-            datos = [[pred_temp[0], pred_hume[0], aux[0], prediction, aux[1]]]
-            print(datos)
+            # datos = [[pred_temp[0], pred_hume[0], aux[0], prediction[0], aux[1]]]
+            datos = pd.DataFrame({'temp': pred_temp, 'hume':pred_hume, 'temp_anterior': aux.temp.values, 'precip_anterior': prediction, 'hume_anterior':aux.hume.values})
+            print("datos al final:\n", datos)
+            fecha_actual += pd.Timedelta(days=1)
 
         
         return prediction
@@ -103,9 +109,10 @@ if __name__ == "__main__":
         df = pd.read_csv("./datasets_models/data.csv")
         df['data_lectura'] = pd.to_datetime(df['data_lectura'])
 
-        df = df.sort_values(by='data_lectura', ascending=False)
+        df = df[df['comarca'] == dict_comarques[id_comarca]].sort_values(by='data_lectura', ascending=False)
         fecha_actualizada = df.iloc[0]['data_lectura']
-        datos =  [df.iloc[0][['temp', 'hume', 'temp_anterior', 'precip_anterior', 'hume_anterior']].values]
+        datos =  df.iloc[0][['temp', 'hume', 'temp_anterior', 'precip_anterior', 'hume_anterior']]
+        datos = pd.DataFrame(datos).T.reset_index(drop=True)
         print(datos)
         if dict_models is not None:
             # Realizar la predicción
