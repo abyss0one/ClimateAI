@@ -1,5 +1,5 @@
-
 import React, { useState } from "react";
+import Nav from "./Nav";
 import {
   RiCheckboxBlankCircleFill,
   RiMenu3Fill,
@@ -16,17 +16,24 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full" id="hero">
       <div className="bg-[url(https://file.rendit.io/n/Ox0uyT8qDYqqfx8xY8aw.png)] bg-cover bg-50%_50% flex flex-col  h-screen">
-        <nav
-          className={`flex items-center font-Poppins justify-center flex-row gap-12 fixed w-[60%] md:w-[40%] xl:w-full h-full ${
+      <div className=" my-auto">
+        <Nav/>
+      </div>
+        {/* <nav
+          className={`flex items-center font-Poppins justify-center flex-row gap-12 fixed w-[80%] md:w-[40%] xl:w-full h-full ${
             showMenu ? "left-0" : "-left-full"
-          } top-0 xl:static flex-1 flex flex-col xl:flex-row items-center transition-all duration-500`}
+          } top-0 xl:static flex-1 flex flex-col xl:flex-row items-center justify-center gap-10 transition-all duration-500 z-50`}
         >
-          <img
-            src="https://file.rendit.io/n/7nQzShFnHjaBMmNTEuRV.png"
-            className="self-center mr-[700px] mt-5 h"
-          />
+          <a href="#hero" className="">
+            <img
+              src="/assets/icon_1_2.png"
+              className="self-center mr-[650px] mt-2 h-[60px]"
+            ></img>
+            <RiCheckboxBlankCircleFill className="absolute -left-3 -bottom-3 text-primary -z-10" />
+          </a>
+
           <a
             href="#context"
             className="text-white text-[18px] hover-underline"
@@ -65,10 +72,10 @@ const Hero = () => {
         </nav>
         <button
           onClick={() => setShowMenu(!showMenu)}
-          className="text-2xl p-2 xl:hidden text-white"
+          className="xl:hidden text-2xl p-2"
         >
           {showMenu ? <RiCloseLine /> : <RiMenu3Fill />}
-        </button>
+        </button> */}
         <div className="text-[100px] font-Poppins lg:text-[160px] font-bold text-white text-center">
           Climate AI
         </div>
