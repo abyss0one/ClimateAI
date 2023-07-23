@@ -5,11 +5,10 @@
 ## Climate AI is a cutting-edge boot camp project that uses machine learning to predict weather and raise awareness about climate change. Aligned with multiple SDGs, it strives for a sustainable future through data-driven insights: AÑADIR ENLACE
 
 ### Screenshot
-***
+
 ![Climate AI App Screenshot](./assets/screenshot.png)
 
 ## Table of Contents
-***
 1. [Description](#description)
 2. [Technologies](#technologies)
 3. [Getting Started](#getting-started)
@@ -20,7 +19,6 @@
 8. [Authors and Contact](#authors-and-contact)
 
 ## Description
-***
 
 The Climate AI is a final boot camp project is an innovative endeavor that focuses on predicting precipitation, temperature, and humidity patterns using state-of-the-art machine learning algorithms and data analysis. Beyond its scientific goals, Climate AI also strives to raise awareness about climate change and its global impact.
 
@@ -34,7 +32,7 @@ The Climate AI is a final boot camp project is an innovative endeavor that focus
 The Climate AI project aspires to become a catalyst for positive change, utilizing AI-driven solutions to tackle climate-related issues while promoting responsible environmental practices and global cooperation. Through its scientific endeavors and awareness-building initiatives, Climate AI envisions a world where data-driven insights and collective action lead to a sustainable and resilient future for all.
 
 ## Technologies
-***
+
 The project development utilized the following technologies:
 
 
@@ -86,7 +84,7 @@ TensorFlow and Keras??
 - vite v4.4.0
 
 ## Getting Started
-***
+
 To run the Climate AI project on your local machine, follow these steps:
 
 1. Clone this repository to your local machine.
@@ -97,17 +95,15 @@ npm run dev
 node server.js
 
 ## API Endpoints
-***
+
 The Climate AI server provides the following API endpoints:
 - **GET /prediction/:idcomarca/:dias**: Fetch data from the server for weather prediction. Parameters `idcomarca` and `dias` represent the region and number of days to predict, respectively.
 - **GET /calculate_SPI/:filename/:prediction**: Calculate the Standardized Precipitation Index (SPI) using historical data. Parameters `filename` and `prediction` are used as inputs for the calculation.
 
 ## Back Configuration
-***
-The project uses configuration in the `package.json` file. You can customize this configuration as needed.
 
-## Back Configuration
-// {
+The project uses configuration in the `package.json` file. You can customize this configuration as needed.
+{
  "back": {
 "someKey": "someValue",
   "anotherKey": "anotherValue"
@@ -115,7 +111,6 @@ The project uses configuration in the `package.json` file. You can customize thi
  }
 
 ## Organization
-***
 The Agile Scrum methodology was applied during the project development. The following organization process was followed:
 * Initial meeting to establish project goals and scope.
 * Development of the Minimum Viable Product (MVP).
@@ -124,7 +119,6 @@ The Agile Scrum methodology was applied during the project development. The foll
 * Final meeting to review the outcomes and evaluate the success of the project.
 
 ## Conclusions
-***
 The Des/Via project demonstrated good organization and coordination during development, successfully achieving the proposed MVP. However, there are areas for improvement in future versions, including:
 * Generation of routes between points of interest.
 * Implementation of a user rating system.
@@ -133,8 +127,6 @@ The Des/Via project demonstrated good organization and coordination during devel
 * Enhancements to the responsive version of the website.
 
 ## Authors and Contact
-***
-
 This project was developed by [Your Name] and [Contributor's Name]. Feel free to contact us with any questions or feedback!
 
 Email: [your.email@example.com]
