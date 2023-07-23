@@ -55,6 +55,8 @@ The project development utilized the following technologies:
 - react-router-dom v6.14.2
 - scipy v0.1.4
 - simple-statistics v7.8.3
+- slick-carousel v1.8.1
+
 
 **Machine Learning and Python**:
 - Python: The project leveraged Python as the primary programming language for all machine learning tasks. Python's versatility and extensive libraries made it an excellent choice for this purpose.
