@@ -76,10 +76,10 @@ const Hero = () => {
         >
           {showMenu ? <RiCloseLine /> : <RiMenu3Fill />}
         </button> */}
-        <div className="text-[100px] font-Poppins lg:text-[160px] font-bold text-white text-center">
+        <div className="text-[95px] font-Poppins lg:text-[160px] font-bold text-white text-center w-full">
           Climate AI
         </div>
-        <div className="bg-[rgba(24,24,24,0.37)] flex  py-2 rounded-[20px] md:mx-32 mx-auto mb-5">
+        <div className="bg-[rgba(24,24,24,0.37)] flex  py-2 rounded-[20px] md:mx-32 mx-[2rem] px-2 mb-5">
           <div className="text-center font-Poppins md:leading-[30px] md:text-[16px] text-[12px] text-white ">
             La inteligencia artificial para la predicción climatológica. Obtén
             pronósticos confiables del tiempo y descubre información detallada

@@ -1,45 +1,4 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
 .hover-underline::after {
   content: "";
   display: block;
@@ -114,6 +73,7 @@
   padding-right: 4rem;
   padding-left: 4rem;
   width: 100vw;
+  z-index: -2;
 }
 
 .box {
@@ -136,13 +96,110 @@
 }
 
 .slick-dots li.slick-active button:before {
-  margin-top: 20px;
+  margin-top: 10px;
   color: white !important;
 }
 
 .slick-dots li button:before {
-  margin-top: 20px;
+  margin-top: 10px;
   color: black !important;
   font-size: 1rem !important;
   top: 2rem !important;
+}
+
+/* -------------------------------------------- */
+:root {
+  --mainColor: #29335c;
+  --mainColorLight: #5767aa;
+  --secondaryColor: #db2b39;
+  --textColor: #eee;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: transparent;
+  color: var(--textColor);
+}
+
+nav a {
+  margin: 0 4rem;
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-size: 24px;
+}
+.nav_logo{
+  margin-right: 30rem;
+}
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+nav .nav-close-btn {
+  display: none; /* Ocultar el botón de cierre por defecto */
+}
+header div,
+nav {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+
+  }
+  .nav_logo{
+    visibility:hidden;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    left: -75%;
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: whitesmoke;
+    transition: 1.5s;
+  }
+
+  header .responsive_nav.active {
+    left: 0;
+  }
+
+  nav.active .nav-close-btn {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: green;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+    color: black;
+  }
+  nav a:hover {
+    font-size: 1.5rem;
+    color: green;
+  }
 }
