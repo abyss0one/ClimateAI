@@ -111,23 +111,31 @@ The project uses configuration in the `package.json` file. You can customize thi
  }
 
 ## Organization
-The Agile Scrum methodology was applied during the project development. The following organization process was followed:
-* Initial meeting to establish project goals and scope.
-* Development of the Minimum Viable Product (MVP).
-* Task division and assignment to team members.
-* Regular follow-up meetings every 1.5 hours to assess progress and address any issues.
-* Final meeting to review the outcomes and evaluate the success of the project.
+This project follows the Scrum methodology, enabling agile software development with Jira software for efficient task management and collaboration. We utilize GitHub for version control and code collaboration, allowing seamless integration of changes and effective teamwork. Additionally, Discord serves as our communication platform, facilitating real-time discussions and enhancing team coordination. The combination of Scrum, Jira, GitHub, and Discord ensures smooth development, adaptability, and successful project delivery. Regular sprint reviews and retrospectives guarantee continuous improvement throughout the development lifecycle.
 
 ## Conclusions
-The Des/Via project demonstrated good organization and coordination during development, successfully achieving the proposed MVP. However, there are areas for improvement in future versions, including:
-* Generation of routes between points of interest.
-* Implementation of a user rating system.
-* Scalability to incorporate additional cities.
-* Support for multiple languages.
-* Enhancements to the responsive version of the website.
+The Climate AI project exhibited commendable organization and coordination throughout its development, culminating in the successful achievement of the proposed Minimum Viable Product (MVP). Nevertheless, there are areas that can be further enhanced in future versions, including:
+
+- Completion of the interactive component: Incorporate user-friendly features on the webpage, allowing users to modify parameters and visualize the direct impact of climate change based on their inputs.
+- Integration of an updated data API: Implement an API to fetch real-time and up-to-date climate data, ensuring the accuracy and relevance of information presented to users.
+- Scalability for additional locations: Enhance the project's architecture to accommodate the inclusion of new locations, enabling a wider scope of analysis and comparison.
+- Multi-language support: Provide support for multiple languages to make the platform accessible to a diverse audience and facilitate global outreach.
+
+By addressing these areas for improvement, the Climate AI project can further elevate its impact and usability, empowering users with valuable insights into climate change and fostering a greater understanding of its consequences.
 
 ## Authors and Contact
-This project was developed by [Your Name] and [Contributor's Name]. Feel free to contact us with any questions or feedback!
+This project was developed by:
 
-Email: [your.email@example.com]
-LinkedIn: [Your LinkedIn Profile URL]
+Laia Gómez Messía
+LinkedIn: laiagomezmessia
+GitHub: laiagomezmessia
+
+Zulema Orellana Herrera
+LinkedIn: zulema-orellana-herrera
+GitHub: zuzu9627
+
+Jairo Villarroel Rodriguez
+LinkedIn: airo-villarroel-rodriguez
+GitHub: abyss0one
+
+Feel free to contact any of the authors with any questions or feedback!
