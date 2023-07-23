@@ -1,7 +1,7 @@
 # Climate AI Project
-***
 ![Climate AI Logo](./assets/climate-ai-logo.png)
 
+***
 ## Climate AI is a cutting-edge boot camp project that uses machine learning to predict weather and raise awareness about climate change. Aligned with multiple SDGs, it strives for a sustainable future through data-driven insights: AÑADIR ENLACE
 
 ### Screenshot
