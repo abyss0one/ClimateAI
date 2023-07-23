@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div id="contact">
       <div>
-        <div className="flex flex-col md:flex-row  mb-4 ">
+        <div className="flex flex-col md:flex-row  mb-4  md:text-base text-sm">
           <div className="md:mx-20 mx-3">
             <div className="text-2xl font-bold font-Poppins  ">Climate AI</div>
             <div className=" font-Poppins leading-[30px] text-text_color_body text-justify  ">
@@ -71,7 +71,7 @@ const Footer = () => {
       </div>
 
       <div className="bg-background_brown w-100% flex h-16 items-center justify-center">
-        <div className="text-white text-20 font-Poppins">
+        <div className="text-white text-sm font-Poppins">
           Copyright © 2023 Climate AI
         </div>
       </div>

@@ -165,8 +165,6 @@ import React, { useState } from "react";
 import Map_DefaultPrediction from "./Map_DefaultPrediction";
 import Form_DefaultPrediction from "./Form_DefaultPrediction";
 import Results_DefaultPrediction from "./Results_DefaultPrediction";
-import { WiNightStormShowers, WiThermometer, WiRaindrop } from "react-icons/wi";
-import { BsDropletHalf } from "react-icons/bs";
 const DefaultPrediction = () => {
   const [showInfo, setShowInfo] = useState(true);
 
@@ -176,9 +174,9 @@ const DefaultPrediction = () => {
         Predicción
       </div>
       <div className="flex flex-col lg:flex-row gap-8 mb-20 ml-4 mr-4 sm:ml-[148px] sm:mr-24">
-        <div className="text-justify font-Poppins md:leading-[30px] text-xs md:text-[16px] text-text_color_body  xs:w-100% w-full lg:w-1/2 leading-[30px]">
+        <div className="text-justify font-Poppins md:leading-[30px] text-sm md:text-base text-text_color_body  xs:w-100% w-full lg:w-1/2 leading-[30px]">
           <div>
-            <h2 className="text-text_green">¿Qué datos se necesitan?</h2>A
+            <h2 className="text-text_green text-base">¿Qué datos se necesitan?</h2>A
             continuación podrás realizar una predicción climática detallada para
             ello, necesitamos algunos datos importantes:
             <ul>
@@ -192,7 +190,7 @@ const DefaultPrediction = () => {
               </li>
             </ul>
             <br />
-            <h2 className="text-text_green">¿Qué resultados se obtendrán?</h2>
+            <h2 className="text-text_green text-base">¿Qué resultados se obtendrán?</h2>
             <ul>
               <li>
                 Temperatura: La predicción indica la temperatura promedio
@@ -218,12 +216,12 @@ const DefaultPrediction = () => {
             cambios, y siempre es recomendable verificar la predicción más
             cercana a la fecha de interés para obtener información actualizada.
           </div>
-          <div className={`w-[40%]  mt-10 ${showInfo ? "hidden" : "block" }` }>
+          <div className={`w-[50%]  mt-10 ${showInfo ? "hidden" : "block" }` }>
             <Results_DefaultPrediction />
           </div>
         </div>
         <div
-          className={`text-justify font-Poppins md:leading-[30px]  text-xs md:text-[16px] text-text_color_body xs:w-100% w-full lg:w-1/2 leading-[30px]`}
+          className={`text-justify font-Poppins md:leading-[30px]  text-sm md:text-base text-text_color_body xs:w-100% w-full lg:w-1/2 leading-[30px]`}
         >
           <Form_DefaultPrediction
             showInfo={showInfo}
