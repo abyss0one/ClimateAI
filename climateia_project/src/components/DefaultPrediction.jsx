@@ -166,7 +166,7 @@ import Map_DefaultPrediction from "./Map_DefaultPrediction";
 import Form_DefaultPrediction from "./Form_DefaultPrediction";
 import Results_DefaultPrediction from "./Results_DefaultPrediction";
 import { useTranslation } from 'react-i18next';
-// TODO para hacer la correcta traduccion importar el translate,añadir la constante de la funcion e ir modificando el Json según el idioma.NO TOCAR NADA fijarse en los modelos e ir actualizando.
+
 const DefaultPrediction = () => {
   const [showInfo, setShowInfo] = useState(true);
   const { t } = useTranslation();
@@ -174,50 +174,34 @@ const DefaultPrediction = () => {
     <div id="prediction" className="dark:bg-bkg_dark_mode">
       <div className="text-center text-3xl font-Poppins text-text_green text-bold mb-14 mx-auto dark:text-txt_dark_mode">
       {t('defaultPrediction.title')}
-      {/* TODO te has quedado aqui */}
       </div>
       <div className="flex flex-col lg:flex-row gap-8 pb-20 ml-4 mr-4 sm:ml-[148px] sm:mr-24 ">
         <div className="text-justify font-Poppins md:leading-[30px] text-sm md:text-base text-text_color_body  xs:w-100% w-full lg:w-1/2 leading-[30px] dark:text-txt_dark_mode">
           <div>
-            <h2 className="text-text_green text-base">{t('defaultPrediction.title')}</h2>
-            A continuación podrás realizar una predicción climática detallada para
-            ello, necesitamos algunos datos importantes:
+            <h2 className="text-text_green text-base">{t('defaultPrediction.subtitle1')}</h2>
+            {t('defaultPrediction.text1')}
             <ul>
               <li>
-                Periodo de interés:Por favor, ingresa la fecha para la cual
-                deseas conocer la predicción del clima.
+              {t('defaultPrediction.li1')}
               </li>
               <li>
-                Comarca: Indícanos la ubicación para la cual deseas obtener la
-                predicción meteorológica.En este caso,se proporciona la comarca.
+              {t('defaultPrediction.li2')}
               </li>
             </ul>
             <br />
-            <h2 className="text-text_green text-base">¿Qué resultados se obtendrán?</h2>
+            <h2 className="text-text_green text-base">{t('defaultPrediction.subtitle2')}</h2>
             <ul>
               <li>
-                Temperatura: La predicción indica la temperatura promedio
-                esperada para la fecha seleccionada en la ubicación indicada.
+              {t('defaultPrediction.li3')}
               </li>
               <li>
-                Precipitaciones: Esta sección muestra la cantidad de lluvia
-                estimada para el día seleccionado.
+              {t('defaultPrediction.li4')}
               </li>
               <li>
-                Índice de sequía: Indica la posible intensidad de la sequía para
-                el periodo seleccionado. Un índice de sequía alto indica
-                condiciones más secas y puede tener impactos en la agricultura,
-                el suministro de agua y la vegetación. Si se prevé una sequía
-                significativa, es importante estar preparado para tomar medidas
-                adecuadas de conservación de agua y recursos naturales.
+              {t('defaultPrediction.li5')}
               </li>
             </ul>
-            Una vez que completes los campos anteriores, nuestro sistema
-            procesará la información y te proporcionará una predicción
-            meteorológica para la fecha seleccionada en la ubicación
-            indicada.Recuerda que los datos meteorológicos están sujetos a
-            cambios, y siempre es recomendable verificar la predicción más
-            cercana a la fecha de interés para obtener información actualizada.
+            {t('defaultPrediction.text2')}
           </div>
           <div className={`w-[50%]  mt-10 ${showInfo ? "hidden" : "block" }` }>
             <Results_DefaultPrediction />

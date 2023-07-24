@@ -1,7 +1,8 @@
 import React from "react";
 import jsonData from "../data/datagenerated_defaultprediction.json"; // Importa el archivo JSON
-
+import { useTranslation } from "react-i18next";
 const Results_DefaultPrediction = () => {
+  const { t } = useTranslation();
   let data = {}; // Inicializa los datos vacíos
 
   try {
@@ -29,21 +30,22 @@ const Results_DefaultPrediction = () => {
       return "Valor de SPI no definido";
     }
   };
-  // Función para obtener el mensaje según el valor de SPI
+  // Función para clasificar tipo de lluvia según clasificación
   const getRainMessage = (precipitacion) => {
-    if (precipitacion / 24 < 2.0) {
-      return "Lluvias débiles";
-    } else if (precipitacion / 24 >= 2.0 && precipitacion / 24 <= 15) {
-      return "Lluvias moderadas";
-    } else if (precipitacion / 24 > 15 && precipitacion / 24 <= 30) {
-      return "Lluvias fuertes";
-    } else if (precipitacion / 24 > 30 && precipitacion / 24 <= 60) {
-      return "Lluvias muy fuertes";
-    } else if (precipitacion / 24 > 60) {
-      return "Torrenciales";
+    if (precipitacion == 1) {
+      return  t("results.rainG1");
+    } else if (precipitacion == 2) {
+      return  t("results.rainG2");
+    } else if (precipitacion == 3) {
+      return  t("results.rainG3");
+    } else if (precipitacion == 4) {
+      return t("results.rainG4") ;
+    } else if (precipitacion == 5) {
+      return t("results.rainG5") ;
     } else {
-      return "Intensidad de lluvia no definida";
+      return t("results.rainG6");
     }
+    // TODO verificar grupos de clasificación
   };
   return (
     <>
@@ -59,10 +61,10 @@ const Results_DefaultPrediction = () => {
               />
               <div className="relative flex flex-col pb-5 w-[180px]">
                 <div className="text-center w-[180px] h-[42.03%] font-bold leading-[22.4px] text-text_green absolute top-10 left-0">
-                  {data.temperatura} º C
+                  {data.temperatura.toFixed(2)} º C
                 </div>
                 <div className="text-center font-Poppins text-text_color_green bg-[transparent] h-full text-xl font-bold">
-                  Temperatura
+                  {t("results.title1")}
                 </div>
               </div>
             </div>
@@ -75,10 +77,10 @@ const Results_DefaultPrediction = () => {
               />
               <div className="relative flex flex-col pb-5 w-[180px]">
                 <div className="text-center w-[180px] h-[42.03%] font-bold leading-[22.4px] text-text_green absolute top-10 left-0">
-                  {data.precipitacion} mm/h {getRainMessage(data.precipitacion)}
+                  {getRainMessage(data.precipitacion)}
                 </div>
                 <div className="text-center font-Poppins text-text_color_green  bg-white text-black  h-full text-xl font-bold">
-                  Precipitación
+                  {t("results.title2")}
                 </div>
               </div>
             </div>
@@ -91,10 +93,10 @@ const Results_DefaultPrediction = () => {
               />
               <div className="relative flex flex-col pb-5 w-48">
                 <div className="text-center w-48 h-[42.03%] font-bold leading-[22.4px] text-text_green absolute top-10 left-0">
-                  {data.humedad} % {getSPIMessage(data.SPI)}
+                  {data.humedad.toFixed(2)} %
                 </div>
                 <div className="text-center font-Poppins text-text_color_green bg-[transparent] h-full text-xl font-bold">
-                  Humedad
+                  {t("results.title3")}
                 </div>
               </div>
             </div>
@@ -103,7 +105,7 @@ const Results_DefaultPrediction = () => {
       )}
 
       {/* Si no se pueden cargar los datos o el archivo JSON no existe */}
-      {Object.keys(data).length === 0 && <div>Error: Datos no encontrados</div>}
+      {Object.keys(data).length === 0 && <div> {t("results.error")}</div>}
     </>
   );
 };

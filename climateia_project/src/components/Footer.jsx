@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <div id="contact" className="dark:bg-bkg_dark_mode dark:text-txt_dark_mode">
       <div>
@@ -8,27 +9,24 @@ const Footer = () => {
           <div className="md:mx-20 mx-3 ">
             <div className="text-2xl font-bold font-Poppins  ">Climate AI</div>
             <div className=" font-Poppins leading-[30px] text-text_color_body text-justify dark:text-txt_dark_mode ">
-              Innovadora plataforma de predicción climática que proporciona
-              previsiones precisas de temperatura, precipitaciones y sequía en
-              Cataluña. Manténgase informado y planifique con antelación con
-              nuestros datos.
+            {t('footer.intro')}
             </div>
           </div>
           <div className="md:mx-20 mx-3">
-            <div className="text-2xl font-Poppins">Compañía</div>
+            <div className="text-2xl font-Poppins">{t('footer.company')}</div>
             <div className=" font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
-              <a href="#">Sobre nosotros</a>
+              <a href="#">{t('footer.about')}</a>
               <br />
-              <a href="#">Ayúdanos a seguir creciendo</a>
+              <a href="#">{t('footer.help')}</a>
             </div>
           </div>
 
           <div className="md:mx-20 mx-3">
-            <div className="text-2xl  font-Poppins">Contacto</div>
+            <div className="text-2xl  font-Poppins">{t('footer.contact')}</div>
             <div className=" font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
-              <a href="#">E-mail</a>
+              <a href="#">{t('footer.email')}</a>
               <br />
-              <a href="#">Soporte 24/7</a>
+              <a href="#">{t('footer.support')}</a>
             </div>
           </div>
         </div>
