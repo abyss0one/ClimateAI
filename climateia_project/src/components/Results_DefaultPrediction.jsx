@@ -83,7 +83,7 @@ const Results_DefaultPrediction = () => {
               </div>
             </div>
 
-            {/* Sequía IPS */}
+            {/* Humedad */}
             <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white text-black flex flex-row justify-center sm:h-20 h-[80px]  items-center rounded-[30px] gap-3 md:text-base text-sm">
               <img
                 src="https://file.rendit.io/n/BFDKisltuTtE978bOMpq.svg"
@@ -91,10 +91,10 @@ const Results_DefaultPrediction = () => {
               />
               <div className="relative flex flex-col pb-5 w-48">
                 <div className="text-center w-48 h-[42.03%] font-bold leading-[22.4px] text-text_green absolute top-10 left-0">
-                  {data.SPI} % {getSPIMessage(data.SPI)}
+                  {data.humedad} % {getSPIMessage(data.SPI)}
                 </div>
                 <div className="text-center font-Poppins text-text_color_green bg-[transparent] h-full text-xl font-bold">
-                  Sequía IPS
+                  Humedad
                 </div>
               </div>
             </div>
