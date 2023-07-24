@@ -46,7 +46,7 @@ const AdviceNTips = () => {
   };
   return (
     <div id="learn">
-      <div className="carousel relative bg-[url(https://file.rendit.io/n/YZwJKEcWyijHRrlYbAGM.png)] bg-cover bg-50%_50%  flex flex-col  md:h-[40vh] xs:h-100vh mb-10 w-full">
+      <div className="carousel relative bg-[url(https://file.rendit.io/n/YZwJKEcWyijHRrlYbAGM.png)] bg-cover bg-50%_50%  flex flex-col  md:h-[40vh] xs:h-100vh  w-full">
         <div className="before absolute inset-0 bg-text_green opacity-40"></div>
         <div className="text-Poppins leading-[22.7px] text-text_color_body">
           <Slider {...settings}>

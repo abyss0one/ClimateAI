@@ -3,7 +3,7 @@ import React from "react";
 const Info_1 = () => {
   return (
     <div>
-      <div className="mb-10 text-sm md:text-base">
+      <div className="mb-10 text-sm md:text-base dark:text-txt_dark_mode">
         <h2 className="text-text_green text-base">¿Cómo se realiza la predicción?</h2>
         Para predecir la temperatura y las precipitaciones en Barcelona, se
         tienen en cuenta varios factores. Para la temperatura, se consideran los

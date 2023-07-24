@@ -165,7 +165,7 @@ class Form_DefaultPrediction extends Component {
       <div>
         {this.props.showInfo && <Info_1 />}
         <form className="bg-gray-100 p-6 rounded-lg">
-          <div className="mb-6">
+          <div className="mb-6 items">
             <label
               htmlFor="yearSelect"
               className="block text-text_green font-bold mb-2"
@@ -187,7 +187,7 @@ class Form_DefaultPrediction extends Component {
             </select>
           </div>
 
-          <div>
+          <div >
             <label
               htmlFor="comarcaSelect"
               className="block text-text_green font-bold mb-2"
@@ -213,7 +213,7 @@ class Form_DefaultPrediction extends Component {
             )}
           </div>
         </form>
-        <div className="w-full lg:w-[30%] flex justify-center py-3 rounded-[35px] border border-text_green transition-colors hover:bg-hover_btn hover:font-bold mt-[5%] mb-[5%]">
+        <div className="w-full lg:w-[30%] flex justify-center py-3 rounded-[35px] border border-text_green transition-colors items-center bg-white hover:bg-hover_btn hover:font-bold mt-[5%] mb-[5%] mx-auto">
           <button
             type="button"
             onClick={this.handleButtonClick}

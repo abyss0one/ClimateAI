@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Dark_Light_mode from "./Dark_Light_mode";
+
 
 function Nav() {
   const navRef = useRef();
@@ -38,13 +40,14 @@ function Nav() {
         <a href="/#contact" className="hover-underline" onClick={(e) => handleClick(e, "#contact")}>
           Contacta
         </a>
+        <div><Dark_Light_mode/></div>
         {showMenu && (
           <button className="nav-close-btn" onClick={toggleMenu}>
             <FaTimes />
           </button>
         )}
       </nav>
-      <button className={`nav-btn ${showMenu ? "hidden" : ""}`} onClick={toggleMenu}>
+      <button className={`nav-btn  ${showMenu ? "hidden" : ""}`} onClick={toggleMenu}>
         <FaBars />
       </button>
     </header>

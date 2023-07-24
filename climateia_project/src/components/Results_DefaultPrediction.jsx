@@ -52,7 +52,7 @@ const Results_DefaultPrediction = () => {
         <>
           <div className="flex flex-row gap-5 sm:flex-col md:flex-row">
             {/* Temperatura */}
-            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-row justify-center  sm:h-20 h-[80px]  items-center rounded-[30px] gap-3 md:text-base text-sm">
+            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white text-black flex flex-row justify-center  sm:h-20 h-[80px]  items-center rounded-[30px] gap-3 md:text-base text-sm">
               <img
                 src="https://file.rendit.io/n/YEd8w5sfU8i9gyOuN5qM.svg"
                 className="min-h-0 min-w-0 w-5"
@@ -68,7 +68,7 @@ const Results_DefaultPrediction = () => {
             </div>
 
             {/* Precipitación */}
-            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-row justify-center sm:h-20 h-[80px] items-center rounded-[30px] gap-3 md:text-base text-sm">
+            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white text-blackflex flex-row justify-center sm:h-20 h-[80px] items-center rounded-[30px] gap-3 md:text-base text-sm">
               <img
                 src="https://file.rendit.io/n/sOBspRzRkGrffSNZxAIj.svg"
                 className="min-h-0 min-w-0 w-7 "
@@ -84,7 +84,7 @@ const Results_DefaultPrediction = () => {
             </div>
 
             {/* Sequía IPS */}
-            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-row justify-center sm:h-20 h-[80px]  items-center rounded-[30px] gap-3 md:text-base text-sm">
+            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white text-black flex flex-row justify-center sm:h-20 h-[80px]  items-center rounded-[30px] gap-3 md:text-base text-sm">
               <img
                 src="https://file.rendit.io/n/BFDKisltuTtE978bOMpq.svg"
                 className="min-h-0 min-w-0 self-start mt-4 w-5 ml-1"

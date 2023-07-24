@@ -2,12 +2,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div id="contact">
+    <div id="contact" className="dark:bg-bkg_dark_mode dark:text-txt_dark_mode">
       <div>
-        <div className="flex flex-col md:flex-row  mb-4  md:text-base text-sm">
-          <div className="md:mx-20 mx-3">
+        <div className="flex flex-col md:flex-row  mb-4  md:text-base text-sm pt-10">
+          <div className="md:mx-20 mx-3 ">
             <div className="text-2xl font-bold font-Poppins  ">Climate AI</div>
-            <div className=" font-Poppins leading-[30px] text-text_color_body text-justify  ">
+            <div className=" font-Poppins leading-[30px] text-text_color_body text-justify dark:text-txt_dark_mode ">
               Innovadora plataforma de predicción climática que proporciona
               previsiones precisas de temperatura, precipitaciones y sequía en
               Cataluña. Manténgase informado y planifique con antelación con
@@ -16,7 +16,7 @@ const Footer = () => {
           </div>
           <div className="md:mx-20 mx-3">
             <div className="text-2xl font-Poppins">Compañía</div>
-            <div className=" font-Poppins leading-[30px] text-text_color_body">
+            <div className=" font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
               <a href="#">Sobre nosotros</a>
               <br />
               <a href="#">Ayúdanos a seguir creciendo</a>
@@ -25,7 +25,7 @@ const Footer = () => {
 
           <div className="md:mx-20 mx-3">
             <div className="text-2xl  font-Poppins">Contacto</div>
-            <div className=" font-Poppins leading-[30px] text-text_color_body">
+            <div className=" font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
               <a href="#">E-mail</a>
               <br />
               <a href="#">Soporte 24/7</a>

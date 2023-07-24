@@ -169,12 +169,12 @@ const DefaultPrediction = () => {
   const [showInfo, setShowInfo] = useState(true);
 
   return (
-    <div id="prediction">
-      <div className="text-center text-3xl font-Poppins text-text_green text-bold mb-14 mx-auto">
+    <div id="prediction" className="dark:bg-bkg_dark_mode">
+      <div className="text-center text-3xl font-Poppins text-text_green text-bold mb-14 mx-auto dark:text-txt_dark_mode">
         Predicción
       </div>
-      <div className="flex flex-col lg:flex-row gap-8 mb-20 ml-4 mr-4 sm:ml-[148px] sm:mr-24">
-        <div className="text-justify font-Poppins md:leading-[30px] text-sm md:text-base text-text_color_body  xs:w-100% w-full lg:w-1/2 leading-[30px]">
+      <div className="flex flex-col lg:flex-row gap-8 pb-20 ml-4 mr-4 sm:ml-[148px] sm:mr-24 ">
+        <div className="text-justify font-Poppins md:leading-[30px] text-sm md:text-base text-text_color_body  xs:w-100% w-full lg:w-1/2 leading-[30px] dark:text-txt_dark_mode">
           <div>
             <h2 className="text-text_green text-base">¿Qué datos se necesitan?</h2>A
             continuación podrás realizar una predicción climática detallada para
