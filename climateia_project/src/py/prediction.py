@@ -26,7 +26,8 @@ def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, m
         # Aquí debes implementar tu lógica de predicción basada en el modelo cargado
 
         # los dos modelos necesitan valor_anterior, mes
-
+        res_hume = ""
+        res_temp = ""
         #HACER PREDICCION DE TEMP Y HUME DESPUES DE LA PREDICCION DE PREC
 
         # Ejemplo de predicción ficticia

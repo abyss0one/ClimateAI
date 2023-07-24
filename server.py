@@ -39,6 +39,9 @@ import sys
 import joblib
 import pandas as pd
 from datetime import datetime
+import os
+import json
+
 
 # def load_models(model_path):
 #     try:
@@ -48,6 +51,35 @@ from datetime import datetime
 #     except Exception as e:
 #         print(f"Error al cargar el modelo: {str(e)}")
 #         return None
+
+prediction = []
+
+def createJson(precip, temp, hum, file_path):
+    try:
+        # Crear un diccionario con los valores de temperatura y humedad
+        data = {
+            "precipitacion": precip,
+            "temperatura": temp,
+            "humedad": hum
+        }
+
+        # Convertir el diccionario en una cadena JSON
+        json_data = json.dumps(data)
+
+        # Crear el directorio si no existe
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+        print(os.path.abspath(file_path))
+
+        # Escribir la cadena JSON en el archivo especificado por file_path
+        with open(file_path, 'w') as file:
+            file.write(json_data)
+
+        return True
+
+    except Exception as e:
+        print("Error al crear el JSON:", e)
+        return False
 
 def predict(model,fecha_actual, fecha_prediction, datos, model_temp, model_hume, features_temp, features_hume):
     try:
@@ -90,6 +122,7 @@ def predict(model,fecha_actual, fecha_prediction, datos, model_temp, model_hume,
 
         print(f'fecha final: {fecha_actual}')
         return [prediction, res_hume, res_temp]
+
     except Exception as e:
         print(f"Error al realizar la predicción: {str(e)}")
         return None
@@ -120,7 +153,17 @@ if __name__ == "__main__":
         if dict_models is not None:
             # Realizar la predicción
             prediction = predict(dict_models[dict_comarques[id_comarca]], fecha_actualizada, fecha_prediction, datos, dict_models_temp[dict_comarques[id_comarca]], dict_models_hume[dict_comarques[id_comarca]], dict_features_temp[dict_comarques[id_comarca]], dict_features_hume[dict_comarques[id_comarca]])
-            print("Predicción:", prediction)
+            print(prediction[0], prediction[1], prediction[2])
+
+            # Ruta del archivo donde se guardará el JSON (ruta absoluta)
+            ruta_archivo = os.path.abspath("c:/Users/laiag/Desktop/FE_IP_IAPython/ProyectoFinal/ClimateAI/climateia_project/src/data/datagenerated_defaultprediction.json")
+
+            # Llamar a la función createJson con los valores proporcionados y la ruta del archivo
+            if createJson(prediction[0], prediction[1], prediction[2], ruta_archivo):
+                print("JSON creado y guardado correctamente en:", ruta_archivo)
+            else:
+                print("Error al crear el JSON y guardar el archivo.")
+            
     else:
         print("Por favor, especifique la ruta del modelo y los parámetros como argumentos.")
 # En este código, se ha agregado la función load_model para cargar el modelo desde el archivo pkl utilizando la biblioteca joblib. Luego, se ha agregado la función predict que realiza la predicción utilizando el modelo y los parámetros comarca y fecha_prediction. Dentro de esta función, debes implementar la lógica de predicción específica para tu modelo.
@@ -128,3 +171,9 @@ if __name__ == "__main__":
 # En el bloque if __name__ == "__main__", se obtiene la ruta del modelo y los parámetros comarca y fecha_prediction como argumentos de línea de comandos. Luego, se carga el modelo utilizando load_model y se realiza la predicción utilizando predict. El resultado de la predicción se imprime en la consola.
 
 # Recuerda que debes proporcionar la ruta correcta del archivo pkl del modelo al ejecutar el script y asegurarte de que el modelo y los parámetros sean compatibles con la lógica de predicción implementada.
+
+
+# # Valores de temperatura y humedad como variables
+# res_temp = 25.5
+# res_hume = 60.0
+

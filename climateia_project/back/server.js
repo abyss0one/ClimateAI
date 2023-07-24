@@ -20,7 +20,7 @@ app.get('/prediction/:idcomarca/:dias', (req, res) => {
 
       // Ruta completa al script de Python para PREDICTION
 
-      const pythonScriptPath = path.join(__dirname, 'src/py/prediction.py');
+      const pythonScriptPath = path.join(__dirname, '../sever.py');
 
 
       // Ejecutar el script de Python y pasar el nombre del archivo como argumento
