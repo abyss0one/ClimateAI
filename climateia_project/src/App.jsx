@@ -18,7 +18,7 @@ function App() {
         <Hero />
         <Context />
         <DefaultPrediction />
-        {/* <ModifiedPrediction /> */}
+        <ModifiedPrediction />
         <AdviceNTips />
         <Footer />
         <Btn_Up/>

@@ -25,7 +25,8 @@ const Context = () => {
           concienciación sobre el uso del agua y alternativas sostenibles para
           hacer frente a la sequía y el cambio climático en Cataluña.
         </div>
-        <div className="flex flex-col gap-5 lg:flex-row">
+        <div className="flex flex-col gap-5 lg:flex-row pb-10">
+        {/* TODO al haber comentado la sección del SPI se a añadido arriba un pb-10 si se vuelve a poner,quitarlo. */}
           <div className=" shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
             <div className="text-center text-2xl font-Poppins text-text_green bg-[transparent] mb-5 w-2/3 h-[16.99%]">
               Pluviometría media mensual - Cataluña
@@ -44,7 +45,7 @@ const Context = () => {
           </div>
         </div>
 
-        <div className="my-8 text-justify text-sm md:text-base font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
+        {/* <div className="my-8 text-justify text-sm md:text-base font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
           <p>
             La sequía pluviométrica se puede evaluar utilizando varios índices.
             Uno de los más ampliamente utilizados es el índice SPI (del inglés
@@ -91,7 +92,7 @@ const Context = () => {
           </ul>
           <p>Fuente:
             https://www.meteo.cat/wpweb/climatologia/evolucio-observada-del-clima/estat-de-la-sequera/</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

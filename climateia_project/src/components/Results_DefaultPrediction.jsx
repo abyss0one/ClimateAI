@@ -68,7 +68,7 @@ const Results_DefaultPrediction = () => {
             </div>
 
             {/* Precipitación */}
-            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white text-blackflex flex-row justify-center sm:h-20 h-[80px] items-center rounded-[30px] gap-3 md:text-base text-sm">
+            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white text-black flex flex-row justify-center sm:h-20 h-[80px] items-center rounded-[30px] gap-3 md:text-base text-sm">
               <img
                 src="https://file.rendit.io/n/sOBspRzRkGrffSNZxAIj.svg"
                 className="min-h-0 min-w-0 w-7 "
@@ -77,7 +77,7 @@ const Results_DefaultPrediction = () => {
                 <div className="text-center w-[180px] h-[42.03%] font-bold leading-[22.4px] text-text_green absolute top-10 left-0">
                   {data.precipitacion} mm/h {getRainMessage(data.precipitacion)}
                 </div>
-                <div className="text-center font-Poppins text-text_color_green bg-[transparent] h-full text-xl font-bold">
+                <div className="text-center font-Poppins text-text_color_green  bg-white text-black  h-full text-xl font-bold">
                   Precipitación
                 </div>
               </div>
