@@ -1,12 +1,12 @@
 # Climate AI Project
-![Climate AI Logo](./assets/climate-ai-logo.png)
+![Climate AI Logo](../ClimateAI/climateia_project/public/assets/icon_1.png)
 
 ***
 ## Climate AI is a cutting-edge boot camp project that uses machine learning to predict weather and raise awareness about climate change. Aligned with multiple SDGs, it strives for a sustainable future through data-driven insights: AÑADIR ENLACE
 
 ### Screenshot
 
-![Climate AI App Screenshot](./assets/screenshot.png)
+![Climate AI App Screenshot](../ClimateAI/climateia_project/public/assets/hero_climateAI.png)
 
 ## Table of Contents
 1. [Description](#description)
@@ -129,15 +129,16 @@ By addressing these areas for improvement, the Climate AI project can further el
 This project was developed by:
 
 Laia Gómez Messía
-LinkedIn: laiagomezmessia
-GitHub: laiagomezmessia
+[LinkedIn](https://www.linkedin.com/in/laiagomezmessia/)
+[GitHub](https://github.com/laiagomezmessia/)
 
 Zulema Orellana Herrera
-LinkedIn: zulema-orellana-herrera
-GitHub: zuzu9627
+[LinkedIn](https://www.linkedin.com/in/zulema-orellana-herrera/)
+[GitHub](https://github.com/zuzu9627/)
 
 Jairo Villarroel Rodriguez
-LinkedIn: airo-villarroel-rodriguez
-GitHub: abyss0one
+[LinkedIn](https://www.linkedin.com/in/Jairo-villarroel-rodriguez/)
+[GitHub](https://github.com/abyss0one/)
+
 
 Feel free to contact any of the authors with any questions or feedback!
