@@ -5,6 +5,10 @@
     "nav.context": "Context",
     "nav.prediction": "Prediction",
     "nav.learn": "Learn",
-    "nav.contact": "Contact"
+    "nav.contact": "Contact",    
+    "context.title": "Context",
+    "context.text1":"Drought, low rainfall and high temperatures are of concern in Catalonia. There is a drastic decrease in rainfall, reducing water resources. High temperatures aggravated by climate change increase evaporation. The bar graphs will show the decrease in precipitation and its impact on water supply. There is an urgent need to address the situation with efficient water management,water use awareness and sustainable alternatives to cope with drought and climate change in Catalonia.",
+    "context.titleMap1":"Average monthly rainfall - Catalonia",
+    "context.titleMap2":"Average monthly temperature - Catalonia"
   }
   

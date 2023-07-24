@@ -5,6 +5,10 @@
     "nav.context": "Contexto",
     "nav.prediction": "Predicción",
     "nav.learn": "Aprende",
-    "nav.contact": "Contacta"
+    "nav.contact": "Contacta",
+    "context.title": "Contexto",
+    "context.text1":"La sequía, las escasas precipitaciones y las altas temperaturas preocupan a Cataluña. Hay una disminución drástica de las precipitaciones,reduciendo los recursos hídricos. Las altas temperaturas agravadas por el cambio climático aumentan la evaporación. Los gráficos de barras mostrarán la disminución de las precipitaciones y su impacto en el suministro de agua. Es urgente abordar la situación con una gestión eficiente del agua,concienciación sobre el uso del agua y alternativas sostenibles para hacer frente a la sequía y el cambio climático en Cataluña.",
+    "context.titleMap1":"Pluviometría media mensual - Cataluña",
+    "context.titleMap2":"Temperatura media mensual - Cataluña"
   }
   

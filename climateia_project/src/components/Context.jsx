@@ -3,8 +3,9 @@ import LineChart from "./LineChart";
 import BarChart from "./BarChart";
 import LineChartCat from "./LineChartCat";
 import BarChartCat from "./BarChartCat";
-
+import { useTranslation } from 'react-i18next';
 const Context = () => {
+  const { t } = useTranslation();
   return (
     <div
       id="context"
@@ -12,24 +13,16 @@ const Context = () => {
     >
       <div className=" flex flex-col justify-between mt-6 gap-3  ml-4 mr-4 sm:ml-[148px] sm:mr-24 ">
         <div className="text-center justify-center items-center  text-3xl font-Poppins text-text_green text-bold mx-8 md:mx-24 dark:text-txt_dark_mode">
-          Contexto
+        {t('context.title')}
         </div>
         <div className="my-8 text-justify font-Poppins leading-[30px] text-text_color_body text-sm md:text-base dark:text-txt_dark_mode">
-          La sequía, las escasas precipitaciones y las altas temperaturas
-          preocupan a Cataluña. Hay una disminución drástica de las
-          precipitaciones, reduciendo los recursos hídricos. Las altas
-          temperaturas agravadas por el cambio climático aumentan la
-          evaporación. Los gráficos de barras mostrarán la disminución de las
-          precipitaciones y su impacto en el suministro de agua. Es urgente
-          abordar la situación con una gestión eficiente del agua,
-          concienciación sobre el uso del agua y alternativas sostenibles para
-          hacer frente a la sequía y el cambio climático en Cataluña.
+        {t('context.text1')}
         </div>
         <div className="flex flex-col gap-5 lg:flex-row pb-10">
         {/* TODO al haber comentado la sección del SPI se a añadido arriba un pb-10 si se vuelve a poner,quitarlo. */}
           <div className=" shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
             <div className="text-center text-2xl font-Poppins text-text_green bg-[transparent] mb-5 w-2/3 h-[16.99%]">
-              Pluviometría media mensual - Cataluña
+            {t('context.titleMap1')}
             </div>
             <div className="aspect-w-2 aspect-h-1 w-full items-center justify-center">
               <LineChartCat />
@@ -37,7 +30,7 @@ const Context = () => {
           </div>
           <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
             <div className="text-center text-2xl font-Poppins text-text_green bg-[transparent] mb-5 w-2/3 h-[16.99%]">
-              Temperatura media mensual - Cataluña
+            {t('context.titleMap2')}
             </div>
             <div className="aspect-w-2 aspect-h-1 w-full items-center justify-center">
               <BarChartCat />
