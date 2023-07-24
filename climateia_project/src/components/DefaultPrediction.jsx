@@ -165,6 +165,7 @@ import React, { useState } from "react";
 import Map_DefaultPrediction from "./Map_DefaultPrediction";
 import Form_DefaultPrediction from "./Form_DefaultPrediction";
 import Results_DefaultPrediction from "./Results_DefaultPrediction";
+// TODO para hacer la correcta traduccion importar el translate,añadir la constante de la funcion e ir modificando el Json según el idioma.NO TOCAR NADA fijarse en los modelos e ir actualizando.
 const DefaultPrediction = () => {
   const [showInfo, setShowInfo] = useState(true);
 
