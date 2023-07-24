@@ -69,7 +69,7 @@ def createJson(precip, temp, hum, file_path):
         # Crear el directorio si no existe
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
-        print(os.path.abspath(file_path))
+        print(os.path.relpath(file_path))
 
         # Escribir la cadena JSON en el archivo especificado por file_path
         with open(file_path, 'w') as file:
@@ -121,7 +121,7 @@ def predict(model,fecha_actual, fecha_prediction, datos, model_temp, model_hume,
             fecha_actual += pd.Timedelta(days=1)
 
         print(f'fecha final: {fecha_actual}')
-        return [prediction, res_hume, res_temp]
+        return [prediction[0], res_hume[0], res_temp[0]]
 
     except Exception as e:
         print(f"Error al realizar la predicción: {str(e)}")
@@ -153,10 +153,10 @@ if __name__ == "__main__":
         if dict_models is not None:
             # Realizar la predicción
             prediction = predict(dict_models[dict_comarques[id_comarca]], fecha_actualizada, fecha_prediction, datos, dict_models_temp[dict_comarques[id_comarca]], dict_models_hume[dict_comarques[id_comarca]], dict_features_temp[dict_comarques[id_comarca]], dict_features_hume[dict_comarques[id_comarca]])
-            print(prediction[0], prediction[1], prediction[2])
+            print(prediction)
 
             # Ruta del archivo donde se guardará el JSON (ruta absoluta)
-            ruta_archivo = os.path.abspath("c:/Users/laiag/Desktop/FE_IP_IAPython/ProyectoFinal/ClimateAI/climateia_project/src/data/datagenerated_defaultprediction.json")
+            ruta_archivo = os.path.relpath("./climateia_project/src/data/datagenerated_defaultprediction.json")
 
             # Llamar a la función createJson con los valores proporcionados y la ruta del archivo
             if createJson(prediction[0], prediction[1], prediction[2], ruta_archivo):
