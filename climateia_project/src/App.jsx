@@ -8,18 +8,21 @@ import AdviceNTips from "./components/AdviceNTips";
 import Footer from "./components/Footer";
 import Btn_down from "./components/Btn_down";
 import Btn_Up from "./components/Btn_Up";
+import LanguageSwitcher from "./components/LanguageSwitcher";
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const { t } = useTranslation();
   return (
     <>
       <div>
+      <LanguageSwitcher/>
         <Hero />
         <Context />
         <DefaultPrediction />
-        {/* <ModifiedPrediction /> */}
-        {/* <AdviceNTips /> */}
+        <ModifiedPrediction />
+        <AdviceNTips />
         <Footer />
         <Btn_Up/>
         <Btn_down />

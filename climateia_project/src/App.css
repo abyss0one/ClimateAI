@@ -1,45 +1,23 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --mainColor: ;
+  --mainColorLight: ;
+  --secondaryColor: ;
+  --textColor: #eee;
+}
+.wallpaper{
+  position: relative;
+}
+.wallpaper:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradiente CSS (puedes ajustar los colores y direcciones según tus necesidades) */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.308));
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
 .hover-underline::after {
   content: "";
   display: block;
@@ -53,13 +31,14 @@
 .hover-underline:hover::after {
   transform: scaleX(1);
 }
+
 .floating-button {
   position: fixed;
   bottom: 60px;
   right: 20px;
   width: 40px;
   height: 40px;
-  background-color: #6b6565c5 ;
+  background-color: #6b6565c5;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -101,7 +80,146 @@
 .floating-button.visible2 {
   opacity: 1;
 }
-.icons_results{
+
+.icons_results {
   font-size: 30px;
-  color:#48924f;
+  color: #48924f;
+}
+
+.carousel {
+  padding-top: 4rem;
+  padding-bottom: 5.5rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  width: 100vw;
+  z-index: -2;
+}
+
+.box {
+  background-color: white;
+  padding: 1.5rem;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.slick-slide div {
+  margin: 0 1rem;
+}
+
+.slick-next {
+  right: -45px !important;
+  visibility: hidden;
+}
+
+.slick-prev {
+  left: -45px !important;  visibility: hidden;
+  /* TODO verificar por que no funcionan las flechas  */
+}
+
+.slick-dots li.slick-active button:before {
+  margin-top: 10px;
+  color: white !important;
+}
+
+.slick-dots li button:before {
+  margin-top: 10px;
+  color: black !important;
+  font-size: 1rem !important;
+  top: 2rem !important;
+}
+
+/* -------------------------------------------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: transparent;
+  color: var(--textColor);
+}
+
+nav a {
+  margin: 0 4rem;
+  color: var(--textColor);
+  text-decoration: none;
+  transition: font-size 0.3s ease; /* Propiedad de transición */
+
+}
+
+nav a:hover {
+  font-size: 19px;
+}
+.nav_logo{
+  margin-right: 30rem;
+}
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+nav .nav-close-btn {
+  display: none; /* Ocultar el botón de cierre por defecto */
+}
+header div,
+nav {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    left: 2rem; /* Ajustamos la posición a 2 rem desde el borde izquierdo */
+    top: 2rem; /* Ajustamos la posición a 2 rem desde la parte superior */
+    z-index: 2;
+
+  }
+  .nav_logo{
+    visibility:hidden;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    left: -75%;
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: rgba(185, 185, 185, 0.927);
+    transition: 1.5s;
+  }
+
+  header .responsive_nav.active {
+    left: 0;
+  }
+
+  nav.active .nav-close-btn {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: green;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+    color: whitesmoke;
+  }
+  nav a:hover {
+    font-size: 1.5rem;
+    color: green;
+  }
 }

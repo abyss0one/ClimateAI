@@ -1,1 +1,6 @@
-{"precipitacion": "0", "temperatura": 66.67270313685222, "humedad": 22.543973332310095}
+{
+  "temperatura": "12.4",
+  "humedad": "32.4",
+  "precipitacion": "32",
+  "SPI": "2.3"
+}
