@@ -9,6 +9,17 @@
     "context.title": "Contexto",
     "context.text1":"La sequía, las escasas precipitaciones y las altas temperaturas preocupan a Cataluña. Hay una disminución drástica de las precipitaciones,reduciendo los recursos hídricos. Las altas temperaturas agravadas por el cambio climático aumentan la evaporación. Los gráficos de barras mostrarán la disminución de las precipitaciones y su impacto en el suministro de agua. Es urgente abordar la situación con una gestión eficiente del agua,concienciación sobre el uso del agua y alternativas sostenibles para hacer frente a la sequía y el cambio climático en Cataluña.",
     "context.titleMap1":"Pluviometría media mensual - Cataluña",
-    "context.titleMap2":"Temperatura media mensual - Cataluña"
+    "context.titleMap2":"Temperatura media mensual - Cataluña",
+    "defaultPrediction.title":"Predicción",
+    
+    "defaultPrediction.subtitle1":"¿Qué datos se necesitan?",
+    "defaultPrediction.text1":"A continuación podrás realizar una predicción climática detallada para ello, necesitamos algunos datos importantes:",
+    "defaultPrediction.li1":"Periodo de interés:Por favor, ingresa la fecha para la cual deseas conocer la predicción del clima.",
+    "defaultPrediction.li2":"Comarca: Indícanos la ubicación para la cual deseas obtener la predicción meteorológica.En este caso,se proporciona la comarca.",
+    "defaultPrediction.subtitle2":"¿Qué resultados se obtendrán?",
+    "defaultPrediction.li3":"Temperatura: La predicción indica la temperatura promedio esperada para la fecha seleccionada en la ubicación indicada.",
+    "defaultPrediction.li4":"Precipitaciones: Esta sección muestra la cantidad de lluvia estimada para el día seleccionado.",
+    "defaultPrediction.li5":"Índice de sequía: Indica la posible intensidad de la sequía para el periodo seleccionado. Un índice de sequía alto indica condiciones más secas y puede tener impactos en la agricultura,el suministro de agua y la vegetación. Si se prevé una sequía significativa, es importante estar preparado para tomar medidas adecuadas de conservación de agua y recursos naturales.",
+    "defaultPrediction.text2":"Una vez que completes los campos anteriores, nuestro sistema procesará la información y te proporcionará una predicción meteorológica para la fecha seleccionada en la ubicación indicada.Recuerda que los datos meteorológicos están sujetos a cambios, y siempre es recomendable verificar la predicción más cercana a la fecha de interés para obtener información actualizada."
   }
   

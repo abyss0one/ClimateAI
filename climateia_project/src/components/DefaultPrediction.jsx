@@ -165,20 +165,22 @@ import React, { useState } from "react";
 import Map_DefaultPrediction from "./Map_DefaultPrediction";
 import Form_DefaultPrediction from "./Form_DefaultPrediction";
 import Results_DefaultPrediction from "./Results_DefaultPrediction";
+import { useTranslation } from 'react-i18next';
 // TODO para hacer la correcta traduccion importar el translate,añadir la constante de la funcion e ir modificando el Json según el idioma.NO TOCAR NADA fijarse en los modelos e ir actualizando.
 const DefaultPrediction = () => {
   const [showInfo, setShowInfo] = useState(true);
-
+  const { t } = useTranslation();
   return (
     <div id="prediction" className="dark:bg-bkg_dark_mode">
       <div className="text-center text-3xl font-Poppins text-text_green text-bold mb-14 mx-auto dark:text-txt_dark_mode">
-        Predicción
+      {t('defaultPrediction.title')}
+      {/* TODO te has quedado aqui */}
       </div>
       <div className="flex flex-col lg:flex-row gap-8 pb-20 ml-4 mr-4 sm:ml-[148px] sm:mr-24 ">
         <div className="text-justify font-Poppins md:leading-[30px] text-sm md:text-base text-text_color_body  xs:w-100% w-full lg:w-1/2 leading-[30px] dark:text-txt_dark_mode">
           <div>
-            <h2 className="text-text_green text-base">¿Qué datos se necesitan?</h2>A
-            continuación podrás realizar una predicción climática detallada para
+            <h2 className="text-text_green text-base">{t('defaultPrediction.title')}</h2>
+            A continuación podrás realizar una predicción climática detallada para
             ello, necesitamos algunos datos importantes:
             <ul>
               <li>
