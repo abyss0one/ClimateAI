@@ -7,10 +7,6 @@ from datetime import datetime
 import json
 import os
 
-res_hume = ""
-res_temp = ""
-
-
 # def load_models(model_path):
 #     try:
 #         # Cargar el modelo desde el archivo pkl
@@ -21,13 +17,17 @@ res_temp = ""
 #         return None
 
 def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, model_hume, features_temp, feautres_hume):
+
+    global res_hume
+    global res_temp
+    # global prediction
+
     try:
         # Realizar las predicciones utilizando el modelo y los parámetros
         # Aquí debes implementar tu lógica de predicción basada en el modelo cargado
 
         # los dos modelos necesitan valor_anterior, mes
-        res_hume = ""
-        res_temp = ""
+
         #HACER PREDICCION DE TEMP Y HUME DESPUES DE LA PREDICCION DE PREC
 
         # Ejemplo de predicción ficticia
@@ -60,8 +60,9 @@ def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, m
             print("datos al final:\n", datos)
             fecha_actual += pd.Timedelta(days=1)
 
-        
-        return [prediction, res_hume, res_temp]
+
+        return [res_hume, res_temp]
+
     except Exception as e:
         print(f"Error al realizar la predicción: {str(e)}")
         return None
@@ -72,7 +73,7 @@ if __name__ == "__main__":
         id_comarca = int(sys.argv[1])
         # comarca = sys.argv[2]
         fecha_prediction = sys.argv[2]
-        
+
         dict_models = joblib.load("./models/all_models.pkl")
         dict_features = joblib.load("./models/all_features.pkl")
         dict_comarques = joblib.load("./comarques.joblib")
@@ -95,11 +96,14 @@ if __name__ == "__main__":
             print("Predicción:", prediction)
     else:
         print("Por favor, especifique la ruta del modelo y los parámetros como argumentos.")
+
 # En este código, se ha agregado la función load_model para cargar el modelo desde el archivo pkl utilizando la biblioteca joblib. Luego, se ha agregado la función predict que realiza la predicción utilizando el modelo y los parámetros comarca y fecha_prediction. Dentro de esta función, debes implementar la lógica de predicción específica para tu modelo.
 
 # En el bloque if __name__ == "__main__", se obtiene la ruta del modelo y los parámetros comarca y fecha_prediction como argumentos de línea de comandos. Luego, se carga el modelo utilizando load_model y se realiza la predicción utilizando predict. El resultado de la predicción se imprime en la consola.
 
 # Recuerda que debes proporcionar la ruta correcta del archivo pkl del modelo al ejecutar el script y asegurarte de que el modelo y los parámetros sean compatibles con la lógica de predicción implementada.
+
+print(res_temp, res_hume)
 
 def createJson(temp, hum, file_path):
     try:
@@ -128,8 +132,8 @@ def createJson(temp, hum, file_path):
         return False
 
 # # Valores de temperatura y humedad como variables
-# temperatura = 25.5
-# humedad = 60.0
+# res_temp = 25.5
+# res_hume = 60.0
 
 # Ruta del archivo donde se guardará el JSON (ruta absoluta)
 ruta_archivo = os.path.abspath("c:/Users/laiag/Desktop/FE_IP_IAPython/ProyectoFinal/ClimateAI/climateia_project/src/data/datagenerated_defaultprediction.json")
