@@ -16,10 +16,9 @@ import os
 #         print(f"Error al cargar el modelo: {str(e)}")
 #         return None
 
-def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, model_hume, features_temp, feautres_hume):
+prediction = []
 
-    global res_hume
-    global res_temp
+def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, model_hume, features_temp, feautres_hume):
     # global prediction
 
     try:
@@ -103,7 +102,9 @@ if __name__ == "__main__":
 
 # Recuerda que debes proporcionar la ruta correcta del archivo pkl del modelo al ejecutar el script y asegurarte de que el modelo y los parámetros sean compatibles con la lógica de predicción implementada.
 
-print(res_temp, res_hume)
+print(prediction[0], prediction[1])
+
+
 
 def createJson(temp, hum, file_path):
     try:
@@ -139,7 +140,7 @@ def createJson(temp, hum, file_path):
 ruta_archivo = os.path.abspath("c:/Users/laiag/Desktop/FE_IP_IAPython/ProyectoFinal/ClimateAI/climateia_project/src/data/datagenerated_defaultprediction.json")
 
 # Llamar a la función createJson con los valores proporcionados y la ruta del archivo
-if createJson(res_temp, res_hume, ruta_archivo):
+if createJson(prediction[0], prediction[1], ruta_archivo):
     print("JSON creado y guardado correctamente en:", ruta_archivo)
 else:
     print("Error al crear el JSON y guardar el archivo.")
