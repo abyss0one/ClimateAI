@@ -1,9 +1,10 @@
 import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Dark_Light_mode from "./Dark_Light_mode";
-
+import { useTranslation } from 'react-i18next';
 
 function Nav() {
+  const { t } = useTranslation();
   const navRef = useRef();
   const [showMenu, setShowMenu] = useState(false);
 
@@ -29,16 +30,16 @@ function Nav() {
           <img src="/assets/icon_1_2.png" className="h-[60px] nav_logo" alt="Logo"></img>
         </a>
         <a href="/#context" className="hover-underline" onClick={(e) => handleClick(e, "#context")}>
-          Contexto
+        {t('nav.context')}
         </a>
         <a href="/#prediction" className="hover-underline" onClick={(e) => handleClick(e, "#prediction")}>
-          Predición
+        {t('nav.prediction')}
         </a>
         <a href="/#learn" className="hover-underline" onClick={(e) => handleClick(e, "#learn")}>
-          Aprende
+        {t('nav.learn')}
         </a>
         <a href="/#contact" className="hover-underline" onClick={(e) => handleClick(e, "#contact")}>
-          Contacta
+        {t('nav.contact')}
         </a>
         <div><Dark_Light_mode/></div>
         {showMenu && (
