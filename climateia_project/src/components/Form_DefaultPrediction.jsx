@@ -78,7 +78,7 @@ class Form_DefaultPrediction extends Component {
         selectedComarca.properties.nom_comar
       );
       console.log("Periodo seleccionado:", selectedYear);
-            // handlePredictionSubmit(selectedComarcaId,selectedYear);
+            handlePredictionSubmit(selectedComarcaId,selectedYear);
             // handleSPISubmit( selectedComarcaId,'55.66');
 
 
