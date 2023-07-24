@@ -4,6 +4,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import joblib
+import os
+script_directory = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_directory)
 
 df = pd.read_csv('../datasets_models/data.csv')
 comarques_df = pd.read_csv("../comarques.csv")
@@ -38,7 +41,7 @@ for comarca in comarques_bcn:
     comarques_dict[comarca]["precip_encoded"] = comarques_dict[comarca]["precip_encoded"].astype(str)
 
     # Dividir los datos en características (X) y la columna a predecir (y)
-    X = comarques_dict[comarca].drop(columns=["data_lectura", "precip_encoded"])
+    x = comarques_dict[comarca].drop(columns=["data_lectura", "precip_encoded"])
     y = comarques_dict[comarca]["precip_encoded"]
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=47)

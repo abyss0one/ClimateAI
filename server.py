@@ -49,7 +49,7 @@ from datetime import datetime
 #         print(f"Error al cargar el modelo: {str(e)}")
 #         return None
 
-def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, model_hume, features_temp, feautres_hume):
+def predict(model,fecha_actual, fecha_prediction, datos, model_temp, model_hume, features_temp, features_hume):
     try:
         # Realizar las predicciones utilizando el modelo y los parámetros
         # Aquí debes implementar tu lógica de predicción basada en el modelo cargado
@@ -62,8 +62,7 @@ def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, m
         # Ejemplo de predicción ficticia
         for i in range(int(fecha_prediction)):
             print("stop 0")
-            pred_poly = features.transform(datos)
-            prediction = model.predict(pred_poly)
+            prediction = model.predict(datos)
             print("stop 1")
             print(datos.temp.values)
             datos_temp = pd.DataFrame({'valor_anterior': datos.temp.values, 'mes': [fecha_actual.month]})
@@ -76,7 +75,7 @@ def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, m
             pred_temp = model_temp.predict(poly_temp)
             print("pred temp : ", pred_temp)
             print("stop 3")
-            poly_hume = feautres_hume.transform(datos_hume)
+            poly_hume = features_hume.transform(datos_hume)
             pred_hume = model_hume.predict(poly_hume)
             res_hume = pred_hume
             res_temp = pred_temp
@@ -85,11 +84,11 @@ def predict(model, features,fecha_actual, fecha_prediction, datos, model_temp, m
             print("stop 4")
 
             # datos = [[pred_temp[0], pred_hume[0], aux[0], prediction[0], aux[1]]]
-            datos = pd.DataFrame({'temp': pred_temp, 'hume':pred_hume, 'temp_anterior': aux.temp.values, 'precip_anterior': prediction, 'hume_anterior':aux.hume.values})
+            datos = pd.DataFrame({'temp': pred_temp, 'hume':pred_hume, 'temp_anterior': aux.temp.values, 'hume_anterior':aux.hume.values})
             print("datos al final:\n", datos)
             fecha_actual += pd.Timedelta(days=1)
 
-        
+        print(f'fecha final: {fecha_actual}')
         return [prediction, res_hume, res_temp]
     except Exception as e:
         print(f"Error al realizar la predicción: {str(e)}")
@@ -102,8 +101,8 @@ if __name__ == "__main__":
         # comarca = sys.argv[2]
         fecha_prediction = sys.argv[2]
         
-        dict_models = joblib.load("./models/all_models.pkl")
-        dict_features = joblib.load("./models/all_features.pkl")
+        dict_models = joblib.load("./models/all_rf_models.pkl")
+        # dict_features = joblib.load("./models/all_features.pkl")
         dict_comarques = joblib.load("./comarques.joblib")
         dict_models_temp = joblib.load("./models/all_temp_models.pkl")
         dict_models_hume = joblib.load("./models/all_hume_models.pkl")
@@ -115,12 +114,12 @@ if __name__ == "__main__":
 
         df = df[df['comarca'] == dict_comarques[id_comarca]].sort_values(by='data_lectura', ascending=False)
         fecha_actualizada = df.iloc[0]['data_lectura']
-        datos =  df.iloc[0][['temp', 'hume', 'temp_anterior', 'precip_anterior', 'hume_anterior']]
+        datos =  df.iloc[0][['temp', 'hume', 'temp_anterior', 'hume_anterior']]
         datos = pd.DataFrame(datos).T.reset_index(drop=True)
         print(datos)
         if dict_models is not None:
             # Realizar la predicción
-            prediction = predict(dict_models[dict_comarques[id_comarca]], dict_features[dict_comarques[id_comarca]], fecha_actualizada, fecha_prediction, datos, dict_models_temp[dict_comarques[id_comarca]], dict_models_hume[dict_comarques[id_comarca]], dict_features_temp[dict_comarques[id_comarca]], dict_features_hume[dict_comarques[id_comarca]])
+            prediction = predict(dict_models[dict_comarques[id_comarca]], fecha_actualizada, fecha_prediction, datos, dict_models_temp[dict_comarques[id_comarca]], dict_models_hume[dict_comarques[id_comarca]], dict_features_temp[dict_comarques[id_comarca]], dict_features_hume[dict_comarques[id_comarca]])
             print("Predicción:", prediction)
     else:
         print("Por favor, especifique la ruta del modelo y los parámetros como argumentos.")
