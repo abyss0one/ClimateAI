@@ -11,7 +11,7 @@ export default {
         hover_btn: "#301f05",
         text_green: "#48924f",
         background_brown: "#314223",
-        bkg_dark_mode: "#121212",
+        bkg_dark_mode: "#0c181c",
         txt_dark_mode:"#FFFFFF",
       },
       fontFamily: {

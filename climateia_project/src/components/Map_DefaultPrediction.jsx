@@ -104,7 +104,7 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import mapData from "../data/comarcas.json";
 import "leaflet/dist/leaflet.css";
 import dataDefaultGenerated from "../data/datagenerated_defaultprediction.json"; // Import the data file
-
+// TODO VERIFICAR
 class Map_DefaultPrediction extends Component {
   constructor(props) {
     super(props);

@@ -102,7 +102,7 @@ class Form_DefaultPrediction extends Component {
     return (
       <div>
         {this.props.showInfo && <Info_1 />}
-        <form className="bg-gray-100 p-6 rounded-lg">
+        <form className="bg-bg_charts p-6 rounded-lg">
           <div className="mb-6 items">
             <label
               htmlFor="yearSelect"
