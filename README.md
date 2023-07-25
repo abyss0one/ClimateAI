@@ -44,6 +44,7 @@ The project development utilized the following technologies:
 
 **Front-end Dependencies**:
 - axios v1.4.0
+- tailwindcss v3.3.2
 - chart.js v4.3.0
 - file-saver v2.0.5
 - jstat v1.9.6
