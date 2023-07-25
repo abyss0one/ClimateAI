@@ -118,10 +118,9 @@ This project follows the Scrum methodology, enabling agile software development 
 ## Conclusions
 The Climate AI project exhibited commendable organization and coordination throughout its development, culminating in the successful achievement of the proposed Minimum Viable Product (MVP). Nevertheless, there are areas that can be further enhanced in future versions, including:
 
-- Completion of the interactive component: Incorporate user-friendly features on the webpage, allowing users to modify parameters and visualize the direct impact of climate change based on their inputs.
+- Completion of the interactive component and chatbot: Incorporate user-friendly features on the webpage, allowing users to modify parameters and visualize the direct impact of climate change based on their inputs. There will be a chatbot available to provide advice on how to be more sustainable in daily life.
 - Integration of an updated data API: Implement an API to fetch real-time and up-to-date climate data, ensuring the accuracy and relevance of information presented to users.
 - Scalability for additional locations: Enhance the project's architecture to accommodate the inclusion of new locations, enabling a wider scope of analysis and comparison.
-- Multi-language support: Provide support for multiple languages to make the platform accessible to a diverse audience and facilitate global outreach.
 
 By addressing these areas for improvement, the Climate AI project can further elevate its impact and usability, empowering users with valuable insights into climate change and fostering a greater understanding of its consequences.
 
