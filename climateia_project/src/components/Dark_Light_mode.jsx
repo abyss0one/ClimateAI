@@ -13,20 +13,12 @@ function Dark_Light_mode() {
   const isNight = () => {
     const now = new Date();
     const hour = now.getHours();
-    return hour >= 21 || hour < 5;
+    return hour >= 21 || hour < 6;
   };
 
   useEffect(() => {
     // Establecer el modo oscuro automáticamente al cargar la página si es de noche
     setDarkMode(isNight());
-
-    // Configurar un intervalo para verificar si es de noche y cambiar el modo oscuro automáticamente
-    const interval = setInterval(() => {
-      setDarkMode(isNight());
-    }, 1000 * 60); // Verificar cada minuto
-
-    // Limpiar el intervalo cuando se desmonte el componente
-    return () => clearInterval(interval);
   }, []);
 
   return (

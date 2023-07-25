@@ -180,7 +180,7 @@ const DefaultPrediction = () => {
           <div>
             <h2 className="text-text_green text-base">{t('defaultPrediction.subtitle1')}</h2>
             {t('defaultPrediction.text1')}
-            <ul>
+            <ul class="list-disc indented-list">
               <li>
               {t('defaultPrediction.li1')}
               </li>
@@ -190,7 +190,7 @@ const DefaultPrediction = () => {
             </ul>
             <br />
             <h2 className="text-text_green text-base">{t('defaultPrediction.subtitle2')}</h2>
-            <ul>
+            <ul class="list-disc indented-list">
               <li>
               {t('defaultPrediction.li3')}
               </li>

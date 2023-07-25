@@ -61,7 +61,7 @@ const Results_DefaultPrediction = () => {
                 className="min-h-0 min-w-0 w-5"
               />
               <div className="relative flex flex-col pb-5 w-[180px]">
-                <div className="text-center w-[180px] h-[42.03%] font-bold leading-[22.4px] text-text_green absolute top-10 left-0">
+                <div className="text-center h-[42.03%] font-bold leading-[22.4px] text-text_green absolute top-8 left-0">
                   {data.temperatura.toFixed(2)} º C
                 </div>
                 <div className="text-center font-Poppins text-text_color_green bg-[transparent] h-full text-xl font-bold">

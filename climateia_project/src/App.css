@@ -303,3 +303,8 @@ justify-content: center;
 .lang-menu:hover ul {
     display: block;
 }
+/* Estilo personalizado para el listado */
+.indented-list {
+  list-style-type: disc; /* Establece la viñeta como un círculo */
+  padding-left: 1rem; /* Ajusta el espaciado entre la viñeta y el texto */
+}
