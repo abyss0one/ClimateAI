@@ -61,5 +61,5 @@ for comarca in comarques_bcn:
 
     dicc_RF_models[comarca] = rf_model
 
-joblib.dump(dicc_RF_models, "../models/all_rf_models.pkl")
+joblib.dump(dicc_RF_models, "../models/all_rf_models.joblib")
 

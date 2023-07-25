@@ -15,12 +15,12 @@ app.use(cors());
 
 // Ruta para abrir un archivo desde el script de Python
 app.get('/prediction/:idcomarca/:dias', (req, res) => {
-    const {comarca} = req.params.idcomarca;
-    const {dias} = req.params.dias;
+    const comarca = req.params.idcomarca;
+    const dias = req.params.dias;
 
       // Ruta completa al script de Python para PREDICTION
 
-      const pythonScriptPath = path.join(__dirname, '../sever.py');
+      const pythonScriptPath = path.join(__dirname, '../../server.py');
 
 
       // Ejecutar el script de Python y pasar el nombre del archivo como argumento

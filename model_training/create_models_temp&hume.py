@@ -84,8 +84,8 @@ for i in range(len(comarques_bcn)):
     dicc_models_temp[comarques_bcn[i]] = model
     dicc_poly_features_temp[comarques_bcn[i]] = poly_features
 
-joblib.dump(dicc_models_temp, folder_output + "all_temp_models.pkl")
-joblib.dump(dicc_poly_features_temp, folder_output + "all_temp_features.pkl")
+joblib.dump(dicc_models_temp, folder_output + "all_temp_models.joblib")
+joblib.dump(dicc_poly_features_temp, folder_output + "all_temp_features.joblib")
 
 
 #########################
@@ -117,5 +117,5 @@ for i in range(len(comarques_bcn)):
     dicc_models_hume[comarques_bcn[i]] = model
     dicc_poly_features_hume[comarques_bcn[i]] = poly_features
 
-joblib.dump(dicc_models_hume, folder_output + "all_hume_models.pkl")
-joblib.dump(dicc_poly_features_hume, folder_output + "all_hume_features.pkl")
+joblib.dump(dicc_models_hume, folder_output + "all_hume_models.joblib")
+joblib.dump(dicc_poly_features_hume, folder_output + "all_hume_features.joblib")
