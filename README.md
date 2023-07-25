@@ -68,8 +68,6 @@ The project development utilized the following technologies:
 - Additional Libraries: The project also made use of several additional libraries, including python, sys, joblib, datetime, sklearn.model_selection import train_test_split, sklearn.linear_model import LinearRegression, sklearn.preprocessing import PolynomialFeatures, sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score, matplotlib.pyplot as plt, and matplotlib.dates as mdates. These libraries provided various functionalities, such as system interactions, date handling, and evaluation metrics, which contributed to the success of the machine learning process.
 - Database Usage: In addition to the mentioned libraries, the project involved working with databases. SQL was utilized for this purpose, allowing the project to store and retrieve data from the database efficiently.
 
-TensorFlow and Keras??
-
 
 **Development Dependencies**:
 - @types/react v18.2.14
@@ -89,11 +87,12 @@ TensorFlow and Keras??
 To run the Climate AI project on your local machine, follow these steps:
 
 1. Clone this repository to your local machine.
-2. Install the required dependencies using npm:
+2. Install the required dependencies in climateia_project and climateia_project/back with:
 npm install
-3. Run the app:
-npm run dev
+3. Run the server on climateia_project/back with:
 node server.js
+4. Run the frontend on climateia_project with:
+npm run dev
 
 ## API Endpoints
 
