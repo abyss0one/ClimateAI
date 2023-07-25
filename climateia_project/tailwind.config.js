@@ -8,7 +8,7 @@ export default {
         text_color_body: "#565656",
         hover_btn: "#301f05",
         text_green: "#48924f",
-        background_brown: "#415c2e",
+        background_brown: "#314223",
         bkg_dark_mode: "#121212",
         txt_dark_mode:"#FFFFFF",
       },
@@ -16,6 +16,7 @@ export default {
         Poppins: ["Poppins", "sans-serif"],
       },
       fontSize: {
+        xs:"12px",
         sm: "14px", // Small font size
         base: "16px", // Default font size
         lg: "18px", // Large font size
