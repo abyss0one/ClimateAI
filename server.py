@@ -42,6 +42,9 @@ from datetime import datetime
 import os
 import json
 
+script_directory = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_directory)
+
 
 # def load_models(model_path):
 #     try:
@@ -121,7 +124,7 @@ def predict(model,fecha_actual, fecha_prediction, datos, model_temp, model_hume,
             fecha_actual += pd.Timedelta(days=1)
 
         print(f'fecha final: {fecha_actual}')
-        return [prediction[0], res_hume[0], res_temp[0]]
+        return [prediction[0], res_temp[0], res_hume[0]]
 
     except Exception as e:
         print(f"Error al realizar la predicción: {str(e)}")
@@ -134,13 +137,13 @@ if __name__ == "__main__":
         # comarca = sys.argv[2]
         fecha_prediction = sys.argv[2]
         
-        dict_models = joblib.load("./models/all_rf_models.pkl")
-        # dict_features = joblib.load("./models/all_features.pkl")
+        dict_models = joblib.load("./models/all_rf_models.joblib")
+        # dict_features = joblib.load("./models/all_features.joblib")
         dict_comarques = joblib.load("./comarques.joblib")
-        dict_models_temp = joblib.load("./models/all_temp_models.pkl")
-        dict_models_hume = joblib.load("./models/all_hume_models.pkl")
-        dict_features_temp = joblib.load("./models/all_temp_features.pkl")
-        dict_features_hume = joblib.load("./models/all_hume_features.pkl")
+        dict_models_temp = joblib.load("./models/all_temp_models.joblib")
+        dict_models_hume = joblib.load("./models/all_hume_models.joblib")
+        dict_features_temp = joblib.load("./models/all_temp_features.joblib")
+        dict_features_hume = joblib.load("./models/all_hume_features.joblib")
 
         df = pd.read_csv("./datasets_models/data.csv")
         df['data_lectura'] = pd.to_datetime(df['data_lectura'])
