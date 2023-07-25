@@ -25,14 +25,14 @@ function Dark_Light_mode() {
     <div>
       {/* Contenido de tu aplicación */}
       <button
-        className={darkMode ? "bg-white_soft w-11 h-11 rounded-full flex items-center justify-center" : "bg-black w-11 h-11 rounded-full flex items-center justify-center "}
+        className={darkMode ? "bg-white_soft w-11 h-11 rounded-full flex items-center justify-center" : "bg-bkg_dark_mode w-11 h-11 rounded-full flex items-center justify-center "}
         onClick={() => setDarkMode(!darkMode)}
       >
         {/* Utilizamos el ícono de la luna si está en dark mode, o el sol si está en light mode */}
         {darkMode ? (
-          <WiDaySunny size={24} className="text-gray-600" />
+          <WiDaySunny size={24} className="text-text_color_body" />
         ) : (
-          <WiNightClear size={24} className="text-gray-600" />
+          <WiNightClear size={24} className="text-txt_dark_mode" />
         )}
       </button>
     </div>
