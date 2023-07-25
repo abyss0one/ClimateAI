@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <div id="contact" className="dark:bg-bkg_dark_mode dark:text-txt_dark_mode">
+    <div id="contact" className="dark:bg-bkg_dark_mode dark:text-txt_dark_mode bg-white_soft">
       <div>
         <div className="flex flex-col md:flex-row  mb-4  md:text-base text-sm pt-10">
           <div className="md:mx-20 mx-3 ">

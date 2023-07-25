@@ -88,68 +88,6 @@ class Form_DefaultPrediction extends Component {
       this.setState({ showError: true, showMap: false });
     }
   };
-
-  // pythonConnect = (comarca, fecha) => {
-  //   const pythonScriptPath = "../src/py/server.py";
-
-  //   const COMARCA = Form_DefaultPrediction.state.selectedComarca;
-  //   const fecha_prediction = Form_DefaultPrediction.state.selectedYear;
-
-  //   console.log(pythonScriptPath);
-  //   console.log(COMARCA);
-  //   console.log(fecha_prediction);
-
-  //   const pythonScript = spawn("python", [
-  //     pythonScriptPath,
-  //     COMARCA,
-  //     fecha_prediction,
-  //   ]);
-  //   console.log(pythonScript);
-
-  //   // Manejar la salida del script de Python
-  //   pythonScript.stdout.on("data", (data) => {
-  //     console.log(`Salida del script de Python: ${data}`);
-  //     setPrediction(data);
-  //     return data;
-  //   });
-
-  //   // Manejar los errores del script de Python
-  //   pythonScript.stderr.on("data", (data) => {
-  //     console.error(`Error en el script de Python: ${data}`);
-  //   });
-
-  // };
-
-  // pythonSPI = (datosHist, prediccion) => {
-  //   const { spawn } = require("child_process");
-  //   const pythonScriptPath = "../src/py/SPI.py";
-
-  //   datosHist = 'src/public/assets/dh_' + comarca + '.json'
-
-  //   console.log(pythonScriptPath)
-  //   console.log(datosHist)
-  //   console.log({prediction})
-
-  //   const pythonScript = spawn("python", [
-  //     pythonScriptPath,
-  //     datosHist,
-  //     {prediction},
-  //   ]);
-  //   console.log(pythonScript);
-
-  //   // Manejar la salida del script de Python
-  //   pythonScript.stdout.on("data", (data) => {
-  //     console.log(`Salida del script de Python: ${data}`);
-  //     return data;
-  //   });
-
-  //   // Manejar los errores del script de Python
-  //   pythonScript.stderr.on("data", (data) => {
-  //     console.error(`Error en el script de Python: ${data}`);
-  //   });
-
-  // };
-
   render() {
     const { selectedComarcaId, selectedYear, showError, showMap } = this.state;
 

@@ -33,19 +33,20 @@ const Results_DefaultPrediction = () => {
   // Función para clasificar tipo de lluvia según clasificación
   const getRainMessage = (precipitacion) => {
     if (precipitacion == 1) {
-      return  t("results.rainG1");
+      return t("results.rainG1");
     } else if (precipitacion == 2) {
-      return  t("results.rainG2");
+      return t("results.rainG2");
     } else if (precipitacion == 3) {
-      return  t("results.rainG3");
+      return t("results.rainG3");
     } else if (precipitacion == 4) {
-      return t("results.rainG4") ;
+      return t("results.rainG4");
     } else if (precipitacion == 5) {
-      return t("results.rainG5") ;
+      return t("results.rainG5");
+    } else if (precipitacion == 0) {
+      return t("results.rainG6");
     } else {
       return t("results.rainG6");
     }
-    // TODO verificar grupos de clasificación
   };
   return (
     <>
@@ -54,7 +55,7 @@ const Results_DefaultPrediction = () => {
         <>
           <div className="flex flex-row gap-5 sm:flex-col md:flex-row">
             {/* Temperatura */}
-            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white text-black flex flex-row justify-center  sm:h-20 h-[80px]  items-center rounded-[30px] gap-3 md:text-base text-sm">
+            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-bg_charts text-black flex flex-row justify-center  sm:h-20 h-[80px]  items-center rounded-[30px] gap-3 md:text-base text-sm">
               <img
                 src="https://file.rendit.io/n/YEd8w5sfU8i9gyOuN5qM.svg"
                 className="min-h-0 min-w-0 w-5"
@@ -70,23 +71,23 @@ const Results_DefaultPrediction = () => {
             </div>
 
             {/* Precipitación */}
-            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white text-black flex flex-row justify-center sm:h-20 h-[80px] items-center rounded-[30px] gap-3 md:text-base text-sm">
+            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-bg_charts text-black flex flex-row justify-center sm:h-20 h-[80px] items-center rounded-[30px] gap-3 md:text-base text-sm">
               <img
                 src="https://file.rendit.io/n/sOBspRzRkGrffSNZxAIj.svg"
                 className="min-h-0 min-w-0 w-7 "
               />
               <div className="relative flex flex-col pb-5 w-[180px]">
-                <div className="text-center w-[180px] h-[42.03%] font-bold leading-[22.4px] text-text_green absolute top-10 left-0">
+                <div className="text-center w-full h-[42.03%] font-bold leading-[22.4px] text-text_green absolute top-10 left-0">
                   {getRainMessage(data.precipitacion)}
                 </div>
-                <div className="text-center font-Poppins text-text_color_green  bg-white text-black  h-full text-xl font-bold">
+                <div className="text-center font-Poppins text-text_color_green text-black  h-full mx-auto text-xl font-bold">
                   {t("results.title2")}
                 </div>
               </div>
             </div>
 
             {/* Humedad */}
-            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white text-black flex flex-row justify-center sm:h-20 h-[80px]  items-center rounded-[30px] gap-3 md:text-base text-sm">
+            <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-bg_charts text-black flex flex-row justify-center sm:h-20 h-[80px]  items-center rounded-[30px] gap-3 md:text-base text-sm">
               <img
                 src="https://file.rendit.io/n/BFDKisltuTtE978bOMpq.svg"
                 className="min-h-0 min-w-0 self-start mt-4 w-5 ml-1"

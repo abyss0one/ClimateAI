@@ -9,18 +9,19 @@ const Context = () => {
   return (
     <div
       id="context"
-      className="flex flex-col items-center dark:bg-bkg_dark_mode "
+      className="flex flex-col items-center dark:bg-bkg_dark_mode bg-white_soft "
     >
       <div className=" flex flex-col justify-between mt-6 gap-3  ml-4 mr-4 sm:ml-[148px] sm:mr-24 ">
-        <div className="text-center justify-center items-center  text-3xl font-Poppins text-text_green text-bold mx-8 md:mx-24 dark:text-txt_dark_mode">
+        {/* <div className="text-center justify-center items-center  text-3xl font-Poppins text-text_green text-bold mx-8 md:mx-24 dark:text-txt_dark_mode">
           {t("context.title")}
-        </div>
+        </div> */}
+        {/* TODO quitar esto */}
         <div className="my-8 text-justify font-Poppins leading-[30px] text-text_color_body text-sm md:text-base dark:text-txt_dark_mode">
           {t("context.text1")}
         </div>
         <div className="flex flex-col gap-5 lg:flex-row pb-10">
           {/* TODO al haber comentado la sección del SPI se a añadido arriba un pb-10 si se vuelve a poner,quitarlo. */}
-          <div className=" shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
+          <div className=" shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-bg_charts flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
             <div className="text-center text-2xl font-Poppins text-text_green bg-[transparent] mb-5 w-2/3 h-[16.99%]">
               {t("context.titleMap1")}
             </div>
@@ -29,7 +30,7 @@ const Context = () => {
               
             </div>
           </div>
-          <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
+          <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-bg_charts flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
             <div className="text-center text-2xl font-Poppins text-text_green bg-[transparent] mb-5 w-2/3 h-[16.99%]">
               {t("context.titleMap2")}
             </div>

@@ -171,7 +171,7 @@ const DefaultPrediction = () => {
   const [showInfo, setShowInfo] = useState(true);
   const { t } = useTranslation();
   return (
-    <div id="prediction" className="dark:bg-bkg_dark_mode">
+    <div id="prediction" className="dark:bg-bkg_dark_mode bg-white_soft">
       <div className="text-center text-3xl font-Poppins text-text_green text-bold mb-14 mx-auto dark:text-txt_dark_mode">
       {t('defaultPrediction.title')}
       </div>

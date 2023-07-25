@@ -6,6 +6,8 @@ export default {
     extend: {
       colors: {
         text_color_body: "#565656",
+        white_soft:"#F4F1EC",
+        bg_charts:"#FFFDFA",
         hover_btn: "#301f05",
         text_green: "#48924f",
         background_brown: "#314223",
