@@ -57,6 +57,7 @@ The project development utilized the following technologies:
 - react-router-dom v6.14.2
 - simple-statistics v7.8.3
 - slick-carousel v1.8.1
+- i18NEXT v23.2.11
 
 
 **Machine Learning and Python**:
