@@ -62,7 +62,6 @@ The project development utilized the following technologies:
 - Python: The project leveraged Python as the primary programming language for all machine learning tasks. Python's versatility and extensive libraries made it an excellent choice for this purpose.
 - Jupyter: Jupyter notebooks played a vital role in enabling interactive data exploration, analysis, and model development. They provided a convenient environment for experimenting with code snippets and visualizing data.
 - NumPy: Version 1.23.5 of NumPy was used to handle arrays and perform various numerical computations efficiently. NumPy's array operations significantly enhanced the project's performance.
-- SciPy: Version 1.9.3 of SciPy complemented NumPy by providing additional scientific computing capabilities. It was used for tasks such as integration, interpolation, optimization, and more.
 - Scikit-learn: Version 1.0.2 of Scikit-learn, a powerful machine learning library, played a central role in building and evaluating machine learning models. It provided a wide range of algorithms and utilities for classification, regression, clustering, and more.
 - Pandas: Pandas version 1.4.4 was utilized for data manipulation and analysis. It provided convenient data structures, such as DataFrames, that made it easier to clean and preprocess data.
 - Matplotlib: Version 3.6.2 of Matplotlib was used for creating visualizations and graphs. Its capabilities helped in understanding data patterns and model performance.
