@@ -31,8 +31,8 @@ const AdviceNTips = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -47,71 +47,71 @@ const AdviceNTips = () => {
   };
   return (
     <div id="learn">
-      <div className="carousel relative bg-[url(https://file.rendit.io/n/YZwJKEcWyijHRrlYbAGM.png)] bg-cover bg-50%_50%  flex flex-col  md:h-[40vh] xs:h-100vh  w-full">
+      <div className="carousel relative bg-[url(https://file.rendit.io/n/YZwJKEcWyijHRrlYbAGM.png)] bg-cover bg-50%_50%  flex flex-col  md:h-[35vh] xs:h-100vh  w-full">
         <div className="before absolute inset-0 bg-text_green opacity-40"></div>
         <div className="text-Poppins leading-[22.7px] text-text_color_body">
           <Slider {...settings}>
-            <div className="box rounded-lg md:h-[150px] h-[300px]  ">
+            <div className="box rounded-lg md:h-[160px] h-[400px]  ">
               <p className="text-center">
               {t('advices.tip1')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip2')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip3')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip4')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip5')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip6')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip7')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip8')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip9')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip10')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip11')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip12')}
               </p>
             </div>
-            <div className="box rounded-lg  md:h-[150px] h-[300px] ">
+            <div className="box rounded-lg  md:h-[160px] h-[400px] ">
               <p className="text-center">
               {t('advices.tip13')}.
               </p>

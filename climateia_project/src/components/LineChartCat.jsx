@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../../public/assets/datos_precip.json";
 console.log(data);
-
+const colors = ["#6F957D", "#97B4A2", "#BBCDC3", "#2F5C41"];
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -41,6 +41,9 @@ const cfg = {
     datasets: [
       {
         data: transformedData,
+        backgroundColor: colors[2], // Aquí se aplica el color rojo (#FF6384) al dataset
+        borderColor: colors[0], // También puedes definir el borde del gráfico con el mismo color
+        fill: true,
       },
     ],
   },
@@ -72,8 +75,6 @@ const cfg = {
     },
   },
 };
-
-const colors = ["#FF6384", "#36A2EB", "#4BC0C0"];
 
 export default function LineChartCat() {
   return (

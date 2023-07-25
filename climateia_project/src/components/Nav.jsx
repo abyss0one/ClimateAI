@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Dark_Light_mode from "./Dark_Light_mode";
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function Nav() {
   const { t } = useTranslation();
@@ -41,6 +42,7 @@ function Nav() {
         <a href="/#contact" className="hover-underline" onClick={(e) => handleClick(e, "#contact")}>
         {t('nav.contact')}
         </a>
+      <LanguageSwitcher/>
         <div><Dark_Light_mode/></div>
         {showMenu && (
           <button className="nav-close-btn" onClick={toggleMenu}>

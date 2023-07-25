@@ -3,7 +3,7 @@ import LineChart from "./LineChart";
 import BarChart from "./BarChart";
 import LineChartCat from "./LineChartCat";
 import BarChartCat from "./BarChartCat";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 const Context = () => {
   const { t } = useTranslation();
   return (
@@ -13,16 +13,16 @@ const Context = () => {
     >
       <div className=" flex flex-col justify-between mt-6 gap-3  ml-4 mr-4 sm:ml-[148px] sm:mr-24 ">
         <div className="text-center justify-center items-center  text-3xl font-Poppins text-text_green text-bold mx-8 md:mx-24 dark:text-txt_dark_mode">
-        {t('context.title')}
+          {t("context.title")}
         </div>
         <div className="my-8 text-justify font-Poppins leading-[30px] text-text_color_body text-sm md:text-base dark:text-txt_dark_mode">
-        {t('context.text1')}
+          {t("context.text1")}
         </div>
         <div className="flex flex-col gap-5 lg:flex-row pb-10">
-        {/* TODO al haber comentado la sección del SPI se a añadido arriba un pb-10 si se vuelve a poner,quitarlo. */}
+          {/* TODO al haber comentado la sección del SPI se a añadido arriba un pb-10 si se vuelve a poner,quitarlo. */}
           <div className=" shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
             <div className="text-center text-2xl font-Poppins text-text_green bg-[transparent] mb-5 w-2/3 h-[16.99%]">
-            {t('context.titleMap1')}
+              {t("context.titleMap1")}
             </div>
             <div className="aspect-w-2 aspect-h-1 w-full items-center justify-center">
               <LineChartCat />
@@ -30,29 +30,23 @@ const Context = () => {
           </div>
           <div className="shadow-[0px_10px_30px_0px_rgba(16,_51,_30,_0.2)] bg-white flex flex-col gap-3 w-full lg:w-1/2 items-center px-5 py-4 rounded-[30px]">
             <div className="text-center text-2xl font-Poppins text-text_green bg-[transparent] mb-5 w-2/3 h-[16.99%]">
-            {t('context.titleMap2')}
+              {t("context.titleMap2")}
             </div>
             <div className="aspect-w-2 aspect-h-1 w-full items-center justify-center">
               <BarChartCat />
             </div>
           </div>
         </div>
-
+        <div className="my-8 text-justify text-sm md:text-base font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
+          <p>
+          {t("context.text2")}
+          </p>
+        </div>
         {/* <div className="my-8 text-justify text-sm md:text-base font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
           <p>
-            La sequía pluviométrica se puede evaluar utilizando varios índices.
-            Uno de los más ampliamente utilizados es el índice SPI (del inglés
-            Standardized Precipitation Index), también conocido como Índice de
-            Precipitación Estándar (IPE), que permite realizar una evaluación
-            del déficit o exceso de precipitación en el territorio y para una
-            variedad de escaleras temporales. Los intervalos más largos
-            (superiores a 12 meses) aportan información sobre el estado de las
-            aguas subterráneas, los cursos de agua y el almacenamiento de agua
-            en los embalses. Por el contrario, los intervalos más cortos
-            (inferiores a 9 meses) son útiles para estimar la humedad del suelo,
-            aspecto muy importante para la agricultura y los bosques, y
-            responden de forma inmediata a la presencia o ausencia de
-            precipitaciones.
+          Nuestra misión va más allá de brindar simplemente datos meteorológicos. Aprovecharemos esta plataforma para sensibilizar y concienciar a todos sobre la problemática del cambio climático que se está manifestando en nuestra propia región. Nuestro chatbot estará disponible para brindar consejos sobre cómo ser más sostenibles en el día a día, porque cada pequeña acción cuenta y puede marcar la diferencia.
+Invitamos a todos a reflexionar sobre nuestras acciones cotidianas y cómo pueden impactar en el medio ambiente. Juntos, podemos tomar decisiones más conscientes, adoptar prácticas sostenibles y promover cambios positivos para preservar el entorno natural, no solo para nosotros, sino también para las generaciones futuras.
+En esta travesía hacia la concienciación y la acción climática, esperamos que nuestra plataforma sea una fuente de conocimiento, inspiración y colaboración. Únete a nosotros en esta importante misión de proteger y conservar nuestro planeta, haciendo frente al cambio climático y construyendo un futuro más sostenible para Cataluña y el mundo entero. ¡Juntos podemos marcar la diferencia!
           </p>
         </div>
 
@@ -93,9 +87,7 @@ const Context = () => {
 
 export default Context;
 
-
-
-// // EDITANDO RESPONSIVE 
+// // EDITANDO RESPONSIVE
 // import React from "react";
 // import LineChart from "./LineChart";
 // import BarChart from "./BarChart";

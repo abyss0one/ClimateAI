@@ -8,7 +8,6 @@ import AdviceNTips from "./components/AdviceNTips";
 import Footer from "./components/Footer";
 import Btn_down from "./components/Btn_down";
 import Btn_Up from "./components/Btn_Up";
-import LanguageSwitcher from "./components/LanguageSwitcher";
 import { useTranslation } from 'react-i18next';
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
   return (
     <>
       <div>
-      <LanguageSwitcher/>
         <Hero />
         <Context />
         <DefaultPrediction />

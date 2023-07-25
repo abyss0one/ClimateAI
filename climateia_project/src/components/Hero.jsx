@@ -1,6 +1,12 @@
 import React from "react";
 import Nav from "./Nav";
 import { useTranslation } from 'react-i18next';
+
+const scrollToContext = () => {
+  const contextSection = document.getElementById('context');
+  contextSection.scrollIntoView({ behavior: 'smooth' });
+};
+
 const Hero = () => {
   const { t } = useTranslation();
   return (
@@ -19,7 +25,7 @@ const Hero = () => {
           </div>
         </div>
         <button className="bg-white mx-auto justify-center h-14 items-center rounded-[60px] lg:mb-20  md:mb-[130px] mb-6 transition-colors hover:bg-hover_btn  hover:font-bold">
-          <div className="text-xl font-Poppins text-text_green mx-8  font-bold hover:text-white">
+          <div className="text-xl font-Poppins text-text_green mx-8  font-bold hover:text-white" onClick={scrollToContext}>
             <a href="#context">{t('hero.button')}</a>
           </div>
         </button>
