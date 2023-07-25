@@ -55,7 +55,6 @@ The project development utilized the following technologies:
 - react-icons v4.10.1
 - react-leaflet v4.2.1
 - react-router-dom v6.14.2
-- scipy v0.1.4
 - simple-statistics v7.8.3
 - slick-carousel v1.8.1
 
