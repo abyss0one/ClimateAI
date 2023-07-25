@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Btn_down from "./components/Btn_down";
 import Btn_Up from "./components/Btn_Up";
 import { useTranslation } from 'react-i18next';
+import Chatbot from "./components/Chatbot";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <div>
+      <Chatbot/>
         <Hero />
         <Context />
         <DefaultPrediction />
