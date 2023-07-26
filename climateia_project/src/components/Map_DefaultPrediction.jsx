@@ -104,7 +104,7 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import mapData from "../data/comarcas.json";
 import "leaflet/dist/leaflet.css";
 import dataDefaultGenerated from "../data/datagenerated_defaultprediction.json"; // Import the data file
-// TODO VERIFICAR
+// TODO  el error del mapa se causa debido al sobreescribir el json de dataDefaultGenerated,se debe corregir el código de modo que al generarse el código se vuelva a renderizar el mapa con la nueva información.
 class Map_DefaultPrediction extends Component {
   constructor(props) {
     super(props);
