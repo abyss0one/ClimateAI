@@ -25,7 +25,11 @@ function Dark_Light_mode() {
     <div>
       {/* Contenido de tu aplicación */}
       <button
-        className={darkMode ? "bg-white_soft w-11 h-11 rounded-full flex items-center justify-center" : "bg-bkg_dark_mode w-11 h-11 rounded-full flex items-center justify-center "}
+        className={
+          darkMode
+            ? "bg-white_soft w-11 h-11 rounded-full flex items-center justify-center"
+            : "bg-bkg_dark_mode w-11 h-11 rounded-full flex items-center justify-center "
+        }
         onClick={() => setDarkMode(!darkMode)}
       >
         {/* Utilizamos el ícono de la luna si está en dark mode, o el sol si está en light mode */}

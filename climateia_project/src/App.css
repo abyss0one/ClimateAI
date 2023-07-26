@@ -1,14 +1,20 @@
 :root {
-  --mainColor: ;
-  --mainColorLight: ;
-  --secondaryColor: ;
   --textColor: #eee;
+  --text_color_body: #565656;
+  --white_soft: #F4F1EC;
+  --bg_charts: #FFFDFA;
+  --hover_btn: #301f05;
+  --text_green: #48924f;
+  --background_brown: #314223;
+  --bkg_dark_mode: #0c181c;
+  --txt_dark_mode: #FFFFFF;
 }
 
-.wallpaper{
+.wallpaper {
   position: relative;
 }
-.wallpaper:after{
+
+.wallpaper:after {
   content: "";
   position: absolute;
   top: 0;
@@ -24,7 +30,7 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #F4F1EC;
+  background-color: var(--white_soft);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -84,7 +90,7 @@
 
 .icons_results {
   font-size: 30px;
-  color: #48924f;
+  color:var(--text_green);
 }
 
 .carousel {
@@ -97,7 +103,7 @@
 }
 
 .box {
-  background-color: #F4F1EC;
+  background-color: var(--white_soft);
   padding: 1.5rem;
   display: flex !important;
   align-items: center !important;
@@ -113,11 +119,12 @@
 }
 
 .slick-prev {
-  left: -45px !important;  visibility: hidden;
+  left: -45px !important;
+  visibility: hidden;
   /* TODO verificar por que no funcionan las flechas  */
 }
 
-.slick-dots li.slick-active button:before {
+/* .slick-dots li.slick-active button:before {
   margin-top: 10px;
   color: white !important;
 }
@@ -127,7 +134,7 @@
   color: black !important;
   font-size: 1rem !important;
   top: 2rem !important;
-}
+} */
 
 header {
   display: flex;
@@ -136,37 +143,43 @@ header {
   height: 80px;
   padding: 0 2rem;
   background-color: transparent;
-  color: var(--textColor);
+  color: var(--txt_dark_mode);
 }
 
 nav a {
   margin: 0 4rem;
-  color: var(--textColor);
+  color: var(--txt_dark_mode);
   text-decoration: none;
-  transition: font-size 0.3s ease; /* Propiedad de transición */
+  transition: font-size 0.3s ease;
+  /* Propiedad de transición */
 
 }
 
 nav a:hover {
   font-size: 19px;
 }
-.nav_logo{
+
+.nav_logo {
   margin-right: 26rem;
 }
+
 header .nav-btn {
   padding: 5px;
   cursor: pointer;
   background: transparent;
   border: none;
   outline: none;
-  color: var(--textColor);
+  color: var(--txt_dark_mode);
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
 }
+
 nav .nav-close-btn {
-  display: none; /* Ocultar el botón de cierre por defecto */
+  display: none;
+  /* Ocultar el botón de cierre por defecto */
 }
+
 header div,
 nav {
   display: flex;
@@ -178,13 +191,16 @@ nav {
     visibility: visible;
     opacity: 1;
     position: absolute;
-    left: 2rem; /* Ajustamos la posición a 2 rem desde el borde izquierdo */
-    top: 2rem; /* Ajustamos la posición a 2 rem desde la parte superior */
+    left: 2rem;
+    /* Ajustamos la posición a 2 rem desde el borde izquierdo */
+    top: 2rem;
+    /* Ajustamos la posición a 2 rem desde la parte superior */
     z-index: 2;
 
   }
-  .nav_logo{
-    visibility:hidden;
+
+  .nav_logo {
+    visibility: hidden;
   }
 
   header nav {
@@ -204,6 +220,7 @@ nav {
 
   header .responsive_nav.active {
     left: 0;
+
   }
 
   nav.active .nav-close-btn {
@@ -211,71 +228,76 @@ nav {
     position: absolute;
     top: 2rem;
     right: 2rem;
-    color: green;
+    color: var(--text_green);
+
   }
 
   nav a {
     font-size: 1.5rem;
-    color: whitesmoke;
+    color: var(--txt_dark_mode);
+    font-size: 18px;
   }
+
   nav a:hover {
     font-size: 1.5rem;
-    color: green;
+    color:  var(--text_green);
   }
 }
 
 
 /* ------------------------------------------ */
 .lang-menu {
-    width: 100px;
-    /* text-align: right; */
-    font-weight: bold;
+  width: 100px;
+  /* text-align: right; */
+  font-weight: bold;
 }
+
 .lang-menu .selected-lang {
-    display: flex;   
-    justify-content: space-between;
-    line-height: 2;
-    cursor: pointer;
-    
+  display: flex;
+  justify-content: space-between;
+  line-height: 2;
+  cursor: pointer;
+
 }
+
 .lang-menu .selected-lang:before {
-    content: '';
-    display: inline-block;
-    /* width: 35px;
+  content: '';
+  display: inline-block;
+  /* width: 35px;
     height: 35px; */
-    /* background-image: url(/assets/translate_icon.png); */
-    background-size: contain;
-    background-repeat: no-repeat;
+  /* background-image: url(/assets/translate_icon.png); */
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .lang-menu ul {
-    margin-left: 0.3rem;
-    display: none;
-    background-color: transparent;
-    width: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  margin-left: 0.3rem;
+  display: none;
+  background-color: transparent;
+  width: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 
 .lang-menu ul li {
-    list-style: none;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    background-color: #f8f8f88b;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f88b;
 }
 
 .lang-menu ul li button {
   text-decoration: none;
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
   padding: 10px 10px;
   align-items: center;
 }
 
 .lang-menu ul li:hover {
-    background-color: #f3f3f397;
+  background-color: #f3f3f397;
 }
 
 .lang-menu ul li button:before {
@@ -283,28 +305,32 @@ justify-content: center;
   display: inline-block;
   width: 25px;
   height: 25px;
-  vertical-align:middle;
+  vertical-align: middle;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .cat:before {
-    background-image: url(/assets/cat_flag.png);
+  background-image: url(/assets/cat_flag.png);
 }
 
 .en:before {
-    background-image: url(/assets/en_flag.png);
+  background-image: url(/assets/en_flag.png);
 }
+
 .es:before {
-    background-image: url(/assets/es_flag.png);
+  background-image: url(/assets/es_flag.png);
 }
 
 
 .lang-menu:hover ul {
-    display: block;
+  display: block;
 }
+
 /* Estilo personalizado para el listado */
 .indented-list {
-  list-style-type: disc; /* Establece la viñeta como un círculo */
-  padding-left: 1rem; /* Ajusta el espaciado entre la viñeta y el texto */
+  list-style-type: disc;
+  /* Establece la viñeta como un círculo */
+  padding-left: 1rem;
+  /* Ajusta el espaciado entre la viñeta y el texto */
 }
