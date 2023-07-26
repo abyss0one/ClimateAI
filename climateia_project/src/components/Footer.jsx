@@ -16,27 +16,30 @@ const Footer = () => {
               {t("footer.intro")}
             </div>
           </div>
-          <div className="md:mx-20 mx-3">
-            <div className="text-2xl font-Poppins">{t("footer.company")}</div>
-            <div className=" font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
-              <a href="#">{t("footer.about")}</a>
-              <br />
-              <a href="#">{t("footer.help")}</a>
-            </div>
-          </div>
-
+          
           <div className="md:mx-20 mx-3">
             <div className="text-2xl  font-Poppins">{t("footer.contact")}</div>
             <div className=" font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
-              <a href="#">{t("footer.email")}</a>
+            <a href="mailto:contacto@climateai.com">{t("footer.email")}</a>
               <br />
-              <a href="#">{t("footer.support")}</a>
+              <a href="https://www.google.com/maps/place/Fundaci%C3%B3+Catalana+de+l'Esplai/@41.3156732,2.0798735,17z/data=!3m1!4b1!4m6!3m5!1s0x12a49e947b49f78f:0x35233620ad0e081a!8m2!3d41.3156732!4d2.0824484!16s%2Fg%2F122whf_j?entry=ttu" target="_blank">{t("footer.support")}</a>
             </div>
           </div>
+
+          <div className="md:mx-20 mx-3">
+            <div className="text-2xl font-Poppins">{t("footer.company")}</div>
+            <div className=" font-Poppins leading-[30px] text-text_color_body dark:text-txt_dark_mode">
+              <a href="#context">{t("footer.about")}</a>
+              <br />
+              {/* <a href="#">{t("footer.help")}</a> */}
+            </div>
+          </div>
+
+          
         </div>
 
         <div className="flex justify-center gap-4 mb-6 md:justify-start md:mx-20  align-middle">
-          <a href="https://github.com/abyss0one/ClimateAI.git">
+          <a href="https://github.com/abyss0one/ClimateAI.git" target="_blank">
             {/* <img
               src="https://file.rendit.io/n/fpV4p7tT4c82C4NFNXca.svg"
               alt="Icon-github"
@@ -44,8 +47,8 @@ const Footer = () => {
             <AiFillGithub className="w-12 h-9" />
           </a>
           <a
-            href="https://www.linkedin.com/in/jairo-villarroel-rodriguez/"
-            className="w-12"
+            href="https://www.linkedin.com/in/jairo-villarroel-rodriguez/" 
+            className="w-12"  target="_blank"
           >
             {/* <img
               src="https://file.rendit.io/n/z208jEY4F3oVVPFRf6Ss.svg"
@@ -55,7 +58,7 @@ const Footer = () => {
           </a>
           <a
             href="https://www.linkedin.com/in/laiagomezmessia/"
-            className="w-12"
+            className="w-12" target="_blank"
           >
             {/* <img
               src="https://file.rendit.io/n/z208jEY4F3oVVPFRf6Ss.svg"
@@ -65,7 +68,7 @@ const Footer = () => {
           </a>
           <a
             href="https://www.linkedin.com/in/zulema-orellana-herrera/#"
-            className="w-12"
+            className="w-12" target="_blank"
           >
             {/* <img
               src="https://file.rendit.io/n/z208jEY4F3oVVPFRf6Ss.svg"
