@@ -244,7 +244,7 @@ class Map_DefaultPrediction extends Component {
       <div>
         {mapVisible && (
           <div>
-            <MapContainer
+            <MapContainer className="mx-auto"
               style={{ height: "85vh", width: "100%" }}
               zoom={7.5}
               center={[41.92038080757445, 1.5259606707365279]}
