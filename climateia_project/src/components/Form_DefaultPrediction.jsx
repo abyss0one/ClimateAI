@@ -1,7 +1,7 @@
 // VERSION 3 AGREGADA FUNCION DE DESAPARECER TEXTO
 import React, { Component } from "react";
 import Map_DefaultPrediction from "./Map_DefaultPrediction";
-import mapData from "../data/archivo_actualizado.json";
+import mapData from "../data/comarcas_updated.json";
 import Info_1 from "./Info_1";
 
 const handlePredictionSubmit = (id, dias) => {

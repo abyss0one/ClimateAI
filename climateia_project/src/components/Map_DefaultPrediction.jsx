@@ -206,7 +206,7 @@
 // export default Map_DefaultPrediction;
 import React, { Component } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
-import mapData from "../data/comarcas.json";
+import mapData from "../data/comarcas_updated.json";
 import "leaflet/dist/leaflet.css";
 
 class Map_DefaultPrediction extends Component {
@@ -270,7 +270,9 @@ class Map_DefaultPrediction extends Component {
                   layer.bindPopup(`
                   <div>
   <h2 style="color: #48924f; font-weight: bold; text-transform: uppercase;">${properties.nom_comar}</h2>
+  <p>Capital: ${properties.capital} </p>
   <p>Superficie: ${properties.sup_comar} km²</p>
+  <p>Población: ${properties.population} hab.</p>
 </div>
 
                   `);
