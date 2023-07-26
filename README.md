@@ -40,7 +40,6 @@ The project development utilized the following technologies:
 - Node.js
 - cors v2.8.5
 - express v4.18.2
-- multer v1.4.5-lts.1
 
 **Front-end Dependencies**:
 - axios v1.4.0
