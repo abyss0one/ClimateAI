@@ -182,23 +182,23 @@ const DefaultPrediction = () => {
             {t('defaultPrediction.text1')}
             <ul className="list-disc indented-list">
               <li>
-              {t('defaultPrediction.li1')}
+              <span className="font-bold"> {t('defaultPrediction.li1')} </span> {t('defaultPrediction.li1a')}  
               </li>
               <li>
-              {t('defaultPrediction.li2')}
+              <span className="font-bold"> {t('defaultPrediction.li2')} </span> {t('defaultPrediction.li2a')}  
               </li>
             </ul>
             <br />
             <h2 className="text-text_green text-base">{t('defaultPrediction.subtitle2')}</h2>
             <ul className="list-disc indented-list">
               <li>
-              {t('defaultPrediction.li3')}
+              <span className="font-bold"> {t('defaultPrediction.li3')} </span> {t('defaultPrediction.li3a')}  
               </li>
               <li>
-              {t('defaultPrediction.li4')}
+              <span className="font-bold"> {t('defaultPrediction.li4')} </span> {t('defaultPrediction.li4a')}  
               </li>
               <li>
-              {t('defaultPrediction.li5')}
+              <span className="font-bold"> {t('defaultPrediction.li5')} </span> {t('defaultPrediction.li5a')}
               </li>
             </ul>
             {t('defaultPrediction.text2')}
