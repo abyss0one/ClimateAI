@@ -14,6 +14,8 @@ export default {
         background_brown: "#314223",
         bkg_dark_mode: "#0c181c",
         txt_dark_mode:"#FFFFFF",
+        chatbot_bg:"rgba(185, 185, 185, 0.927)",
+        bg_form_charts: "#BBCDC3",
       },
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],

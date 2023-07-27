@@ -1,0 +1,280 @@
+{
+    "consejos": [
+      {
+        "titulo": "Utiliza energías renovables",
+        "descripcion": "Usar fuentes de energía renovable, como solar y eólica, reduce las emisiones de gases de efecto invernadero y disminuye el impacto del cambio climático.",
+        "fuente": "Agencia Internacional de Energías Renovables (IRENA)"
+      },
+      {
+        "titulo": "Fomenta la movilidad sostenible",
+        "descripcion": "Prefiere caminar, usar bicicletas y el transporte público en lugar de vehículos privados para reducir las emisiones de gases contaminantes y el calentamiento global.",
+        "fuente": "Organización Mundial de la Salud (OMS)"
+      },
+      {
+        "titulo": "Promueve la agricultura sostenible",
+        "descripcion": "Practica técnicas agrícolas sostenibles, como la agroforestería y la rotación de cultivos, para reducir las emisiones de gases de efecto invernadero y conservar los suelos.",
+        "fuente": "Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)"
+      },
+      {
+        "titulo": "Fomenta la reforestación",
+        "descripcion": "Plantar árboles ayuda a capturar el dióxido de carbono y a mitigar el cambio climático, además de brindar otros beneficios ambientales y sociales.",
+        "fuente": "Unión Internacional para la Conservación de la Naturaleza (UICN)"
+      },
+      {
+        "titulo": "Reduce el consumo de carne",
+        "descripcion": "Reducir el consumo de carne, especialmente la de ganado, ayuda a disminuir las emisiones de gases de efecto invernadero y la deforestación asociada con la producción de alimentos para animales.",
+        "fuente": "Panel Intergubernamental del Cambio Climático (IPCC)"
+      },
+      {
+        "titulo": "Adopta una dieta sostenible",
+        "descripcion": "Una dieta basada en alimentos locales y de temporada, con menor huella de carbono, ayuda a reducir el impacto ambiental asociado con la producción y transporte de alimentos.",
+        "fuente": "Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)"
+      },
+      {
+        "titulo": "Ahorra energía en el hogar",
+        "descripcion": "Implementa medidas de eficiencia energética, como el uso de electrodomésticos de bajo consumo y la mejoría en el aislamiento, para reducir el uso de energía y las emisiones de gases contaminantes.",
+        "fuente": "Agencia Internacional de Energía (IEA)"
+      },
+      {
+        "titulo": "Reduce, reutiliza y recicla",
+        "descripcion": "Practica el principio de las tres R para reducir la generación de residuos, el consumo de recursos naturales y la contaminación asociada con el manejo de desechos.",
+        "fuente": "Programa de las Naciones Unidas para el Medio Ambiente (PNUMA)"
+      },
+      {
+        "titulo": "Apaga las luces y equipos electrónicos",
+        "descripcion": "Apagar luces y dispositivos electrónicos cuando no se utilicen contribuye a ahorrar energía y reducir las emisiones de gases contaminantes.",
+        "fuente": "Agencia de Protección Ambiental de EE. UU. (EPA)"
+      },
+      {
+        "titulo": "Fomenta la construcción sostenible",
+        "descripcion": "Promover edificaciones eficientes en el uso de energía y recursos ayuda a disminuir las emisiones de gases de efecto invernadero y el impacto ambiental de la construcción.",
+        "fuente": "Consejo de Construcción Sostenible (USGBC)"
+      },
+      {
+        "titulo": "Utiliza iluminación LED",
+        "descripcion": "Reemplazar bombillas tradicionales por LED reduce el consumo de energía y contribuye a disminuir las emisiones de gases contaminantes.",
+        "fuente": "Departamento de Energía de EE. UU. (DOE)"
+      },
+      {
+        "titulo": "Mantén tu vehículo en buen estado",
+        "descripcion": "Realizar un mantenimiento regular del vehículo ayuda a mejorar su eficiencia y reducir las emisiones de gases contaminantes.",
+        "fuente": "Agencia de Protección Ambiental de EE. UU. (EPA)"
+      },
+      {
+        "titulo": "Aprovecha la energía solar",
+        "descripcion": "Instalar paneles solares en viviendas y edificaciones contribuye a generar energía limpia y renovable.",
+        "fuente": "Agencia Internacional de Energías Renovables (IRENA)"
+      },
+      {
+        "titulo": "Evita el uso de plásticos de un solo uso",
+        "descripcion": "Reducir el uso de plásticos desechables y optar por alternativas reutilizables ayuda a reducir la contaminación por plásticos en los océanos y el medio ambiente.",
+        "fuente": "Greenpeace"
+      },
+      {
+        "titulo": "Cuida el agua",
+        "descripcion": "Usar el agua de manera responsable y evitar el desperdicio contribuye a conservar este recurso vital y reducir el consumo energético asociado con el tratamiento y distribución del agua.",
+        "fuente": "Organización de las Naciones Unidas (ONU)"
+      },
+      {
+        "titulo": "Participa en iniciativas de conservación",
+        "descripcion": "Sumarse a proyectos de conservación y restauración de ecosistemas ayuda a proteger la biodiversidad y el equilibrio ecológico.",
+        "fuente": "Fondo Mundial para la Naturaleza (WWF)"
+      },
+      {
+        "titulo": "Reduce el uso de aire acondicionado",
+        "descripcion": "Usar el aire acondicionado de manera consciente y moderada ayuda a reducir el consumo energético y las emisiones de gases contaminantes asociadas con su funcionamiento.",
+        "fuente": "Agencia de Protección Ambiental de EE. UU. (EPA)"
+      },
+      {
+        "titulo": "Apaga los dispositivos electrónicos completamente",
+        "descripcion": "Apagar los dispositivos electrónicos completamente (en lugar de dejarlos en modo de espera) reduce el consumo de energía y evita la liberación de gases de efecto invernadero.",
+        "fuente": "Agencia de Protección Ambiental de EE. UU. (EPA)"
+      },
+      {
+        "titulo": "Reduce el uso de papel",
+        "descripcion": "Reducir la impresión innecesaria y optar por formatos digitales ayuda a disminuir la tala de árboles y el consumo de recursos naturales.",
+        "fuente": "Fondo Mundial para la Naturaleza (WWF)"
+      },
+      {
+        "titulo": "Consume productos locales y de temporada",
+        "descripcion": "Preferir alimentos producidos localmente y en su temporada reduce las emisiones de gases asociadas con el transporte y almacenamiento de alimentos.",
+        "fuente": "Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)"
+      },
+      {
+        "titulo": "Participa en proyectos de energía comunitaria",
+        "descripcion": "Sumarse a proyectos de energía comunitaria, como parques eólicos y solares, ayuda a promover la generación de energía limpia y sostenible.",
+        "fuente": "Agencia Internacional de Energías Renovables (IRENA)"
+      },
+      {
+        "titulo": "Implementa techos verdes",
+        "descripcion": "Instalar techos verdes en edificaciones ayuda a reducir el efecto isla de calor urbano y mejorar la calidad del aire.",
+        "fuente": "Departamento de Energía de EE. UU. (DOE)"
+      },
+      {
+        "titulo": "Promueve el comercio justo",
+        "descripcion": "Apoyar el comercio justo y responsable ayuda a reducir la huella de carbono asociada con la producción y transporte de bienes.",
+        "fuente": "Organización Internacional del Trabajo (OIT)"
+      },
+      {
+        "titulo": "Ahorra agua en el hogar",
+        "descripcion": "Implementar medidas de ahorro de agua, como la instalación de grifos eficientes y la reutilización de agua de lluvia, contribuye a conservar este recurso vital.",
+        "fuente": "Agencia de Protección Ambiental de EE. UU. (EPA)"
+      },
+      {
+        "titulo": "Utiliza electrodomésticos de alta eficiencia",
+        "descripcion": "Optar por electrodomésticos de alta eficiencia energética ayuda a reducir el consumo de energía y las emisiones de gases contaminantes.",
+        "fuente": "Agencia de Protección Ambiental de EE. UU. (EPA)"
+      },
+      {
+        "titulo": "Fomenta la economía circular",
+        "descripcion": "Promover la economía circular, basada en el reciclaje y la reutilización, ayuda a reducir la generación de residuos y la demanda de recursos naturales.",
+        "fuente": "Fondo Mundial para la Naturaleza (WWF)"
+      },
+      {
+        "titulo": "Usa tecnología eficiente en iluminación",
+        "descripcion": "Optar por tecnologías eficientes en iluminación, como bombillas LED y sensores de luz, contribuye a reducir el consumo de energía y las emisiones de gases contaminantes.",
+        "fuente": "Departamento de Energía de EE. UU. (DOE)"
+      },
+      {
+        "titulo": "Promueve la educación ambiental",
+        "descripcion": "La educación ambiental fomenta la conciencia y el conocimiento sobre el cambio climático, lo que puede llevar a cambios positivos en el comportamiento y la toma de decisiones.",
+        "fuente": "Programa de las Naciones Unidas para el Medio Ambiente (PNUMA)"
+      },
+      {
+        "titulo": "Optimiza el uso del agua en la agricultura",
+        "descripcion": "Utilizar prácticas de riego eficiente y tecnologías de conservación de agua en la agricultura ayuda a reducir el consumo de agua y la contaminación.",
+        "fuente": "Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)"
+      },
+      {
+        "titulo": "Promueve la movilidad eléctrica",
+        "descripcion": "Impulsar el uso de vehículos eléctricos ayuda a reducir las emisiones de gases contaminantes y la dependencia de los combustibles fósiles.",
+        "fuente": "Agencia Internacional de Energías Renovables (IRENA)"
+      },
+      {
+        "titulo": "Implementa prácticas de conservación del suelo",
+        "descripcion": "Practicar técnicas de conservación del suelo, como la siembra directa y la cobertura vegetal, ayuda a reducir la erosión y aumentar la captura de carbono.",
+        "fuente": "Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)"
+      },
+      {
+        "titulo": "Reduce el uso de fertilizantes químicos",
+        "descripcion": "Reducir el uso de fertilizantes químicos en la agricultura disminuye la liberación de óxido nitroso, un potente gas de efecto invernadero.",
+        "fuente": "Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)"
+      },
+      {
+        "titulo": "Crea conciencia sobre el cambio climático",
+        "descripcion": "Crear conciencia sobre el cambio climático y sus impactos ayuda a generar acciones colectivas para enfrentar este desafío global.",
+        "fuente": "Programa de las Naciones Unidas para el Medio Ambiente (PNUMA)"
+      },
+      {
+        "titulo": "Promueve el reciclaje de residuos electrónicos",
+        "descripcion": "Reciclar dispositivos electrónicos en desuso ayuda a reducir la generación de residuos peligrosos y a recuperar materiales valiosos para su reutilización.",
+        "fuente": "Programa de las Naciones Unidas para el Medio Ambiente (PNUMA)"
+      },
+      {
+        "titulo": "Instala ventanas eficientes",
+        "descripcion": "Utilizar ventanas eficientes con doble acristalamiento ayuda a mejorar el aislamiento térmico de los edificios y reducir el consumo de energía.",
+        "fuente": "Departamento de Energía de EE. UU. (DOE)"
+      },
+      {
+        "titulo": "Reduce el uso de plásticos",
+        "descripcion": "Reducir el consumo de productos plásticos de un solo uso ayuda a disminuir la contaminación y la acumulación de residuos plásticos en el medio ambiente.",
+        "fuente": "Greenpeace"
+      },
+      {
+        "titulo": "Fomenta la investigación en energías limpias",
+        "descripcion": "Apoyar la investigación y desarrollo de tecnologías de energía limpia contribuye a acelerar la transición hacia un sistema energético más sostenible.",
+        "fuente": "Agencia Internacional de Energías Renovables (IRENA)"
+      },
+      {
+        "titulo": "Utiliza transporte compartido",
+        "descripcion": "Compartir vehículos para desplazamientos reduce la cantidad de automóviles en las carreteras y las emisiones de gases contaminantes.",
+        "fuente": "Agencia de Protección Ambiental de EE. UU. (EPA)"
+      },
+      {
+        "titulo": "Participa en proyectos de captura de carbono",
+        "descripcion": "Sumarse a proyectos de captura y almacenamiento de carbono ayuda a reducir la concentración de dióxido de carbono en la atmósfera.",
+        "fuente": "Iniciativa de Captura y Almacenamiento de Carbono (CSI)"
+      },
+      {
+        "titulo": "Optimiza la gestión de residuos",
+        "descripcion": "Implementar un adecuado manejo de residuos, incluyendo la reducción, reutilización y reciclaje, ayuda a disminuir las emisiones de gases de efecto invernadero.",
+        "fuente": "Programa de las Naciones Unidas para el Medio Ambiente (PNUMA)"
+      },
+      {
+        "titulo": "Apoya políticas de conservación ambiental",
+        "descripcion": "Apoyar políticas y medidas gubernamentales que promuevan la conservación ambiental y la reducción de emisiones ayuda a generar un impacto positivo a gran escala.",
+        "fuente": "Programa de las Naciones Unidas para el Medio Ambiente (PNUMA)"
+      },
+      {
+        "titulo": "Reduce la deforestación",
+        "descripcion": "Reducir la deforestación y proteger los bosques ayuda a mantener reservas de carbono y a preservar la biodiversidad.",
+        "fuente": "Programa de las Naciones Unidas para el Medio Ambiente (PNUMA)"
+      },
+      {
+        "titulo": "Fomenta la adaptación al cambio climático",
+        "descripcion": "Promover estrategias de adaptación al cambio climático ayuda a reducir la vulnerabilidad de las comunidades ante eventos climáticos extremos.",
+        "fuente": "Convención Marco de las Naciones Unidas sobre el Cambio Climático (CMNUCC)"
+      },
+      {
+        "titulo": "Crea jardines y espacios verdes",
+        "descripcion": "Crear jardines y áreas verdes en entornos urbanos ayuda a mejorar la calidad del aire, reducir la temperatura y aumentar la biodiversidad.",
+        "fuente": "Organización Mundial de la Salud (OMS)"
+      },
+      {
+        "titulo": "Promueve el uso de bicicletas",
+        "descripcion": "Impulsar el uso de la bicicleta como medio de transporte contribuye a reducir las emisiones de gases contaminantes y a mejorar la salud.",
+        "fuente": "Organización Mundial de la Salud (OMS)"
+      },
+      {
+        "titulo": "Evita el desperdicio de alimentos",
+        "descripcion": "Reducir el desperdicio de alimentos ayuda a disminuir las emisiones de gases de efecto invernadero asociadas con la producción, transporte y eliminación de alimentos.",
+        "fuente": "Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)"
+      },
+      {
+        "titulo": "Promueve la energía geotérmica",
+        "descripcion": "Impulsar el uso de energía geotérmica ayuda a aprovechar el calor del subsuelo para generar electricidad de manera sostenible.",
+        "fuente": "Agencia Internacional de Energías Renovables (IRENA)"
+      },
+      {
+        "titulo": "Fomenta la educación ambiental en escuelas",
+        "descripcion": "Incorporar la educación ambiental en el currículo escolar ayuda a concienciar a las futuras generaciones sobre la importancia de la protección del medio ambiente.",
+        "fuente": "Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (UNESCO)"
+      },
+      {
+        "titulo": "Promueve la eficiencia energética en la industria",
+        "descripcion": "Fomentar la eficiencia energética en procesos industriales ayuda a reducir el consumo de energía y las emisiones de gases contaminantes.",
+        "fuente": "Agencia Internacional de Energía (IEA)"
+      },
+      {
+        "titulo": "Optimiza la gestión del agua en la agricultura",
+        "descripcion": "Implementar prácticas de riego eficiente y tecnologías de conservación de agua en la agricultura ayuda a reducir el consumo de agua y la contaminación.",
+        "fuente": "Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)"
+      },
+      {
+        "titulo": "Fomenta el ecoturismo",
+        "descripcion": "Promover el ecoturismo y el turismo responsable ayuda a preservar los ecosistemas y la diversidad biológica.",
+        "fuente": "Unión Internacional para la Conservación de la Naturaleza (UICN)"
+      },
+      {
+        "titulo": "Utiliza sistemas de calefacción eficientes",
+        "descripcion": "Optar por sistemas de calefacción eficientes ayuda a reducir el consumo de energía y las emisiones de gases contaminantes en los hogares y edificios.",
+        "fuente": "Agencia de Protección Ambiental de EE. UU. (EPA)"
+      },
+      {
+        "titulo": "Fomenta la investigación en energía solar",
+        "descripcion": "Apoyar la investigación y desarrollo de tecnologías de energía solar contribuye a impulsar la adopción de esta fuente de energía renovable.",
+        "fuente": "Agencia Internacional de Energías Renovables (IRENA)"
+      },
+      {
+        "titulo": "Apoya a empresas sostenibles",
+        "descripcion": "Preferir y apoyar a empresas con prácticas sostenibles y responsables con el medio ambiente contribuye a promover un modelo económico más sostenible.",
+        "fuente": "Global Reporting Initiative (GRI)"
+      },
+      {
+        "titulo": "Fomenta la eficiencia en el uso del agua",
+        "descripcion": "Optar por tecnologías y prácticas de eficiencia en el uso del agua ayuda a conservar este recurso y reducir la demanda de energía asociada con su tratamiento y distribución.",
+        "fuente": "Organización Mundial de la Salud (OMS)"
+      }
+    ]
+  }
+  

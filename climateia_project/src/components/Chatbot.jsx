@@ -1,212 +1,23 @@
-// import React, { useState } from 'react';
 
-// const ChatBot = () => {
-//   const [messages, setMessages] = useState([{ text: 'Hola!', sender: 'bot' }]);
-//   const [showOptions, setShowOptions] = useState(true);
-//   const [showWeatherInput, setShowWeatherInput] = useState(false);
-//   const [zipCode, setZipCode] = useState('');
-//   const API_KEY = 'TU_API_KEY'; // Reemplaza con tu API key de la API climatológica
-
-//   const handleMessageSend = () => {
-//     if (showOptions) {
-//       setMessages([
-//         ...messages,
-//         { text: '¿Qué te gustaría saber?', sender: 'bot' },
-//         { text: '1. Clima ahora', sender: 'bot' },
-//         { text: '2. Consejos', sender: 'bot' },
-//       ]);
-//     } else {
-//       setMessages([...messages, { text: `Has seleccionado la opción ${zipCode === '1' ? 'Clima ahora' : 'Consejos'}`, sender: 'user' }]);
-//       if (zipCode === '1') {
-//         setShowWeatherInput(true);
-//       }
-//     }
-//     setShowOptions(!showOptions);
-//   };
-
-//   const handleOptionClick = (option) => {
-//     setMessages([...messages, { text: `Has seleccionado ${option}`, sender: 'user' }]);
-//     setZipCode(option);
-//     handleMessageSend();
-//   };
-
-//   const handleWeatherInputSubmit = () => {
-//     // Aquí deberías hacer la llamada a la API climatológica para obtener la información del clima actual utilizando el ZIP Code proporcionado por el usuario.
-//     // Puedes usar librerías como axios para hacer la llamada a la API.
-//     // Por ejemplo, si utilizas OpenWeatherMap, la URL sería algo así:
-//     // `http://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&appid=${API_KEY}`
-//     // Recuerda que algunas APIs requieren registro y la obtención de una API key válida.
-//     setShowWeatherInput(false);
-//     // Lógica para obtener la información del clima y mostrarla en el chat
-//   };
-
-//   return (
-//     <div className="fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg">
-//       {messages.map((message, index) => (
-//         <div
-//           key={index}
-//           className={`mb-2 ${message.sender === 'bot' ? 'text-green-500' : 'text-blue-500'} font-semibold`}
-//         >
-//           {message.text}
-//         </div>
-//       ))}
-//       {showOptions && (
-//         <button
-//           onClick={handleMessageSend}
-//           className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2"
-//         >
-//           Hello!
-//         </button>
-//       )}
-//       {showWeatherInput && (
-//         <div>
-//           <input
-//             type="text"
-//             value={zipCode}
-//             onChange={(e) => setZipCode(e.target.value)}
-//             className="border border-gray-300 rounded-lg p-2 mt-2"
-//             placeholder="Introduce tu código postal/ZIP"
-//           />
-//           <button
-//             onClick={handleWeatherInputSubmit}
-//             className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2"
-//           >
-//             Obtener clima
-//           </button>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default ChatBot;
-
-// CORRECIÓN DEL MSN DEL BTN Y OPCIONES
-// import React, { useState } from 'react';
-
-// const ChatBot = () => {
-//   const [messages, setMessages] = useState([]);
-//   const [showOptions, setShowOptions] = useState(false);
-//   const [showWeatherInput, setShowWeatherInput] = useState(false);
-//   const [zipCode, setZipCode] = useState('');
-//   const API_KEY = 'c9fb4d861d57aa1cada026a6ec424394'; // Reemplaza con tu API key de la API climatológica
-
-//   const handleHelloButtonClick = () => {
-//     setShowOptions(!showOptions);
-//     if (!showOptions) {
-//       setMessages([
-//         {
-//           text: '¡Hola! Bienvenido@ al asistente de ClimateAI. Mi misión es ayudarte con consultas relacionadas al clima como la predicción actual del lugar donde te encuentras y consejos sobre cómo cuidar el medio ambiente.',
-//           sender: 'bot'
-//         },
-//         {
-//           text: '¿Qué te gustaría hacer?',
-//           sender: 'bot'
-//         },
-//       ]);
-//     }
-//   };
-
-//   const handleOptionClick = (option) => {
-//     setMessages([...messages, { text: `Has seleccionado ${option}`, sender: 'user' }]);
-//     setZipCode('');
-//     setShowOptions(false);
-
-//     if (option === '1') {
-//       setShowWeatherInput(true);
-//     } else {
-//       setShowWeatherInput(false);
-//     }
-//   };
-
-//   const handleWeatherInputSubmit = () => {
-//     // Lógica para obtener la información del clima y mostrarla en el chat
-//     fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${API_KEY}`)
-//       .then((response) => response.json())
-//       .then((data) => {
-//         setMessages([...messages, { text: `El clima en ${data.name} es: ${data.weather[0].description}`, sender: 'bot' }]);
-//       })
-//       .catch((error) => {
-//         console.error('Error fetching weather data:', error);
-//       });
-
-//     setShowWeatherInput(false);
-//   };
-
-//   return (
-//     <div className="fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg">
-//       {messages.map((message, index) => (
-//         <div
-//           key={index}
-//           className={`mb-2 ${message.sender === 'bot' ? 'text-green-500' : 'text-blue-500'} font-semibold`}
-//         >
-//           {message.text}
-//         </div>
-//       ))}
-//       {showOptions && (
-//         <div>
-//           <button
-//             onClick={() => handleOptionClick('1')}
-//             className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2 mr-2"
-//           >
-//             Clima ahora
-//           </button>
-//           <button
-//             onClick={() => handleOptionClick('2')}
-//             className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2"
-//           >
-//             Consejos
-//           </button>
-//         </div>
-//       )}
-//       {!showOptions && (
-//         <button
-//           onClick={handleHelloButtonClick}
-//           className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2"
-//         >
-//           Hello!
-//         </button>
-//       )}
-//       {showWeatherInput && (
-//         <div>
-//           <input
-//             type="text"
-//             value={zipCode}
-//             onChange={(e) => setZipCode(e.target.value)}
-//             className="border border-gray-300 rounded-lg p-2 mt-2"
-//             placeholder="Introduce tu código postal/ZIP"
-//           />
-//           <button
-//             onClick={handleWeatherInputSubmit}
-//             className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2"
-//           >
-//             Obtener clima
-//           </button>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default ChatBot;
-
-
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from "react";
+import chatData from "../data/tips_for_chatbot.json";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const ChatBot = () => {
   const [messages, setMessages] = useState([]);
   const [showOptions, setShowOptions] = useState(false);
-  const [showWeatherInput, setShowWeatherInput] = useState(false);
-  const [zipCode, setZipCode] = useState('');
-  const API_KEY_GEOCODING = 'c9fb4d861d57aa1cada026a6ec424394'; // Reemplaza con tu API key de Geocoding
-  const API_KEY_WEATHER = 'c9fb4d861d57aa1cada026a6ec424394'; // Reemplaza con tu API key de la API climatológica
+  const [isTyping, setIsTyping] = useState(false);
+  const [showChatIcon, setShowChatIcon] = useState(true);
+
+  const chatContainerRef = useRef(null);
 
   const handleHelloButtonClick = () => {
     setShowOptions(!showOptions);
+    setShowChatIcon(false);
     if (!showOptions) {
       setMessages([
         {
-          text: '¡Hola! Bienvenido@ al asistente de ClimateAI. Mi misión es ayudarte con consultas relacionadas al clima como la predicción actual del lugar donde te encuentras y consejos sobre cómo cuidar el medio ambiente.',
+          text: '¡Hola! Bienvenido@ al asistente de ClimateAI. Mi misión es ayudarte dándote consejos sobre cómo cuidar el medio ambiente.',
           sender: 'bot'
         },
         {
@@ -217,111 +28,110 @@ const ChatBot = () => {
     }
   };
 
-  const handleOptionClick = (option) => {
-    setMessages([...messages, { text: `Has seleccionado ${option}`, sender: 'user' }]);
-    setZipCode('');
-    setShowOptions(false);
-
-    if (option === '1') {
-      setShowWeatherInput(true);
-    } else {
-      setShowWeatherInput(false);
+  const handleOptionClick = async (option) => {
+    if (option === 'consejo') {
+      setIsTyping(true);
+      setTimeout(() => {
+        // Mostrar consejo aleatorio al seleccionar la opción "Recibir consejo"
+        const randomTip = chatData.consejos[Math.floor(Math.random() * chatData.consejos.length)];
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { text: randomTip.descripcion, sender: 'bot' }
+        ]);
+        setIsTyping(false);
+      }, 1500); // Simulamos un tiempo de respuesta de 1.5 segundos antes de mostrar el consejo
+    } else if (option === 'cerrar') {
+      handleCloseChat();
     }
   };
 
-  const getCoordinatesFromAddress = () => {
-    const address = zipCode; // Usaremos el código postal introducido por el usuario como dirección
-
-    const url = `https://api.openweathermap.org/geo/1.0/direct?q=08940,ES&appid=c9fb4d861d57aa1cada026a6ec424394`;
-    // http://api.openweathermap.org/geo/1.0/zip?zip=08940,ES&appid=c9fb4d861d57aa1cada026a6ec424394
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.length > 0) {
-          const { lat, lon } = data[0];
-          // Aquí puedes usar lat y lon (latitud y longitud) para realizar la consulta del clima en la API climatológica
-          console.log('Latitud:', lat);
-          console.log('Longitud:', lon);
-          // Llama a la función para obtener el clima usando las coordenadas (lat, lon)
-          getWeatherData(lat, lon);
-        } else {
-          console.error('No se encontraron coordenadas para la dirección proporcionada.');
-        }
-      })
-      .catch((error) => {
-        console.error('Error fetching coordinates:', error);
-      });
+  const handleCloseChat = () => {
+    setMessages([{ text: 'Hasta la próxima!', sender: 'bot' }]);
+    setShowOptions(false);
+    setShowChatIcon(true);
   };
 
-  const getWeatherData = (lat, lon) => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY_WEATHER}`;
-
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        // Aquí puedes hacer lo que desees con los datos climáticos obtenidos
-        console.log('Datos climáticos:', data);
-        setMessages([...messages, { text: `El clima en ${data.name} es: ${data.weather[0].description}`, sender: 'bot' }]);
-      })
-      .catch((error) => {
-        console.error('Error fetching weather data:', error);
-      });
-  };
-
-  const handleWeatherInputSubmit = () => {
-    getCoordinatesFromAddress(); // Llamada a la función para obtener las coordenadas antes de consultar el clima
-    setShowWeatherInput(false);
-  };
+  useEffect(() => {
+    // Hacer scroll hacia el final del chat al agregar nuevos mensajes o mostrar "Escribiendo..."
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages, isTyping]);
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg">
-      {messages.map((message, index) => (
-        <div
-          key={index}
-          className={`mb-2 ${message.sender === 'bot' ? 'text-green-500' : 'text-blue-500'} font-semibold`}
-        >
-          {message.text}
-        </div>
-      ))}
-      {showOptions && (
-        <div>
-          <button
-            onClick={() => handleOptionClick('1')}
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2 mr-2"
-          >
-            Clima ahora
-          </button>
-          <button
-            onClick={() => handleOptionClick('2')}
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2"
-          >
-            Consejos
-          </button>
-        </div>
-      )}
-      {!showOptions && (
+    <div className="fixed bottom-44 right-4 bg-chatbot_bg p-4 rounded-lg shadow-lg">
+      {showChatIcon && (
         <button
           onClick={handleHelloButtonClick}
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2"
+          className=" text-white  rounded-lg  transform hover:scale-105 transition-all"
         >
-          Hello!
+          <img
+            src="/assets/icono_w_bg-removebg-preview.png" // Reemplaza "ruta/del/icono-del-chatbot.png" con la ruta del icono del chatbot
+            alt="Chatbot Icon"
+            className="w-10 h-10"
+          />
         </button>
       )}
-      {showWeatherInput && (
+      {!showChatIcon && (
         <div>
-          <input
-            type="text"
-            value={zipCode}
-            onChange={(e) => setZipCode(e.target.value)}
-            className="border border-gray-300 rounded-lg p-2 mt-2"
-            placeholder="Introduce tu código postal/ZIP"
-          />
-          <button
-            onClick={handleWeatherInputSubmit}
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2"
+          <div
+            ref={chatContainerRef}
+            id="chat-container"
+            className="mb-2 flex flex-col space-y-2"
+            style={{ maxHeight: "300px", overflowY: "auto" }}
           >
-            Obtener clima
-          </button>
+            <TransitionGroup component={null}>
+              {messages.map((message, index) => (
+                <CSSTransition key={index} timeout={500} classNames="fade">
+                  <div className={`mb-4 flex items-start space-x-2 ${message.sender === 'bot' ? 'justify-start' : 'justify-end'}`}>
+                    {message.sender === 'bot' && (
+                      <img
+                        src="/assets/icono_w_bg-removebg-preview.png" // Reemplaza "ruta/del/avatar-del-chatbot.png" con la ruta de tu avatar
+                        alt="Avatar del Chatbot"
+                        className="w-8 h-8 rounded-full"
+                      />
+                    )}
+                    <div className="relative">
+                      <div
+                        className={`${
+                          message.sender === 'bot' ? 'bg-text_green text-white' : 'bg-blue-500 text-white'
+                        } px-4 py-2 rounded-lg max-w-full`}
+                        style={{ width: "200px" }}
+                      >
+                        {message.text}
+                      </div>
+                      {message.sender === 'bot' && (
+                        <div className="absolute top-1 -left-1 h-5 w-4 rounded bg-text_green transform -rotate-45" />
+                      )}
+                    </div>
+                  </div>
+                </CSSTransition>
+              ))}
+            </TransitionGroup>
+            {isTyping && (
+              <div className="flex items-center">
+                <div className="bg-bg_form_charts text-white px-4 py-2 rounded-lg max-w-full animate-pulse">
+                  Generando...
+                </div>
+              </div>
+            )}
+          </div>
+          {showOptions && (
+            <div className="flex items-center">
+              <button
+                onClick={() => handleOptionClick('consejo')}
+                className="bg-text_color_body text-white px-4 py-2 rounded-lg mt-2 mr-2 transform hover:scale-105 transition-all"
+              >
+                Recibir consejo
+              </button>
+              <button
+                onClick={() => handleOptionClick('cerrar')}
+                className="bg-hover_btn text-white px-4 py-2 rounded-lg mt-2 transform hover:scale-105 transition-all"
+              >
+                Cerrar chat
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -329,3 +139,156 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
+
+
+// // CON BTN PARA DARK MODE Y LIGHT MODE APARTTE DEL SISTEMA
+// import React, { useState, useEffect, useRef } from "react";
+// import chatData from "../data/tips_for_chatbot.json";
+// import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+// const ChatBot = () => {
+//   const [messages, setMessages] = useState([]);
+//   const [showOptions, setShowOptions] = useState(false);
+//   const [isTyping, setIsTyping] = useState(false);
+//   const [showChatIcon, setShowChatIcon] = useState(true);
+//   const [darkMode, setDarkMode] = useState(false); // Variable para el modo oscuro
+
+//   const chatContainerRef = useRef(null);
+
+//   const handleHelloButtonClick = () => {
+//     setShowOptions(!showOptions);
+//     setShowChatIcon(false);
+//     if (!showOptions) {
+//       setMessages([
+//         {
+//           text: '¡Hola! Bienvenido@ al asistente de ClimateAI. Mi misión es ayudarte dándote consejos sobre cómo cuidar el medio ambiente.',
+//           sender: 'bot'
+//         },
+//         {
+//           text: '¿Qué te gustaría hacer?',
+//           sender: 'bot'
+//         },
+//       ]);
+//     }
+//   };
+//   const handleOptionClick = async (option) => {
+//     if (option === 'consejo') {
+//       setIsTyping(true);
+//       setTimeout(() => {
+//         // Mostrar consejo aleatorio al seleccionar la opción "Recibir consejo"
+//         const randomTip = chatData.consejos[Math.floor(Math.random() * chatData.consejos.length)];
+//         setMessages((prevMessages) => [
+//           ...prevMessages,
+//           { text: randomTip.descripcion, sender: 'bot' }
+//         ]);
+//         setIsTyping(false);
+//       }, 1500); // Simulamos un tiempo de respuesta de 1.5 segundos antes de mostrar el consejo
+//     } else if (option === 'cerrar') {
+//       handleCloseChat();
+//     }
+//   };
+
+//   const handleCloseChat = () => {
+//     setMessages([{ text: 'Hasta la próxima!', sender: 'bot' }]);
+//     setShowOptions(false);
+//     setShowChatIcon(true);
+//   };
+
+//   useEffect(() => {
+//     // Hacer scroll hacia el final del chat al agregar nuevos mensajes o mostrar "Escribiendo..."
+//     if (chatContainerRef.current) {
+//       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+//     }
+//   }, [messages, isTyping]);
+//   const toggleDarkMode = () => {
+//     setDarkMode(!darkMode);
+//   };
+//   return (
+//     <div className={`fixed bottom-44 right-4 p-4 rounded-lg shadow-lg ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
+
+//             {showChatIcon && (
+//         <button
+//           onClick={handleHelloButtonClick}
+//           className={`rounded-lg transform hover:scale-105 transition-all ${darkMode ? 'border-white border-opacity-25' : 'border-black border-opacity-25'}`}
+//         >
+//           <img
+//             src="/assets/icono_w_bg-removebg-preview.png" // Reemplaza "ruta/del/icono-del-chatbot.png" con la ruta del icono del chatbot
+//             alt="Chatbot Icon"
+//             className="w-10 h-10 rounded-full"
+//           />
+//         </button>
+//       )}
+//       {!showChatIcon && (
+//         <div>
+//           <div
+//             ref={chatContainerRef}
+//             id="chat-container"
+//             className="mb-2 flex flex-col space-y-2"
+//             style={{ maxHeight: "300px", overflowY: "auto" }}
+//           >
+//             <TransitionGroup component={null}>
+//               {messages.map((message, index) => (
+//                 <CSSTransition key={index} timeout={500} classNames="fade">
+//                   <div className={`mb-4 flex items-start space-x-2 ${message.sender === 'bot' ? 'justify-start' : 'justify-end'}`}>
+//                     {message.sender === 'bot' && (
+//                       <img
+//                         src="/assets/icono_w_bg-removebg-preview.png" // Reemplaza "ruta/del/avatar-del-chatbot.png" con la ruta de tu avatar
+//                         alt="Avatar del Chatbot"
+//                         className="w-8 h-8 rounded-full"
+//                       />
+//                     )}
+//                     <div className="relative">
+//                       <div
+//                         className={`${
+//                           message.sender === 'bot' ? 'bg-green-500 text-white' : 'bg-blue-500 text-white'
+//                         } px-4 py-2 rounded-lg max-w-full`}
+//                         style={{ width: "200px" }}
+//                       >
+//                         {message.text}
+//                       </div>
+//                       {message.sender === 'bot' && (
+//                         <div className="absolute top-1 -left-1 h-5 w-4 rounded bg-green-500 transform -rotate-45" />
+//                       )}
+//                     </div>
+//                   </div>
+//                 </CSSTransition>
+//               ))}
+//             </TransitionGroup>
+//             {isTyping && (
+//               <div className="flex items-center">
+//                 <div className="bg-blue-500 text-white px-4 py-2 rounded-lg max-w-full animate-pulse">
+//                   Escribiendo...
+//                 </div>
+//               </div>
+//             )}
+//           </div>
+//           {showOptions && (
+//             <div className="flex items-center">
+//               <button
+//                 onClick={() => handleOptionClick('consejo')}
+//                 className="bg-green-500 text-white px-4 py-2 rounded-lg mt-2 mr-2 transform hover:scale-105 transition-all"
+//               >
+//                 Recibir consejo
+//               </button>
+//               <button
+//                 onClick={() => handleOptionClick('cerrar')}
+//                 className="bg-red-500 text-white px-4 py-2 rounded-lg mt-2 transform hover:scale-105 transition-all"
+//               >
+//                 Cerrar chat
+//               </button>
+//             </div>
+//           )}
+          
+//         </div>
+//       )}
+//       <button
+//         onClick={toggleDarkMode}
+//         className={`text-sm ml-auto bg-transparent border-none cursor-pointer focus:outline-none ${darkMode ? 'text-white' : 'text-black'}`}
+//       >
+//         {darkMode ? 'Modo Claro' : 'Modo Oscuro'}
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default ChatBot;
